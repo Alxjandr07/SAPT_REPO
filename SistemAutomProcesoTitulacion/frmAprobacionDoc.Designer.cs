@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRechazar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnDescargar = new System.Windows.Forms.Button();
             this.btnAprobar = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -48,6 +48,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(800, 48);
             this.panel3.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(671, 6);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(117, 39);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "UTEQ";
             // 
             // panel1
             // 
@@ -71,6 +82,13 @@
             this.btnRechazar.Text = "Rechazar";
             this.btnRechazar.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(59, 55);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(682, 295);
+            this.panel2.TabIndex = 0;
+            // 
             // btnDescargar
             // 
             this.btnDescargar.Location = new System.Drawing.Point(113, 356);
@@ -88,24 +106,6 @@
             this.btnAprobar.TabIndex = 14;
             this.btnAprobar.Text = "Aprobar";
             this.btnAprobar.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(113, 55);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(574, 295);
-            this.panel2.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(671, 6);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 39);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "UTEQ";
             // 
             // frmAprobacionDoc
             // 
