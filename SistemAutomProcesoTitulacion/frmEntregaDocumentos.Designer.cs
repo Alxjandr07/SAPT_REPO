@@ -38,11 +38,9 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.lblFormatoEntrega = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,21 +149,9 @@
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::SistemAutomProcesoTitulacion.Properties.Resources.licencias;
-            this.pictureBox1.Location = new System.Drawing.Point(349, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 149);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.btnDescargar);
             this.panel4.Controls.Add(this.btnEliminar);
             this.panel4.Controls.Add(this.lblFormatoEntrega);
@@ -201,7 +187,6 @@
             this.Load += new System.EventHandler(this.frmEntregaDocumentos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
@@ -220,7 +205,6 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label lblFormatoEntrega;
         private System.Windows.Forms.Button btnAtras;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button1;
     }
