@@ -31,5 +31,10 @@ namespace SistemAutomProcesoTitulacion
         {
 
         }
+
+        private void btnDescargar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
