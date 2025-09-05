@@ -17,6 +17,18 @@ namespace SistemAutomProcesoTitulacion
             InitializeComponent();
         }
 
+        private void AbrirFormularioEnPanel(Form formHijo)
+        {
+            if (this.panelContenedorDocEst.Controls.Count > 0)
+                this.panelContenedorDocEst.Controls.RemoveAt(0);
+
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            this.panelContenedorDocEst.Controls.Add(formHijo);
+            this.panelContenedorDocEst.Tag = formHijo;
+            formHijo.Show();
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -34,7 +46,12 @@ namespace SistemAutomProcesoTitulacion
 
         private void btnDescargar_Click(object sender, EventArgs e)
         {
+            AbrirFormularioEnPanel(new frmModDocumentosEstud());
+        }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }

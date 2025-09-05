@@ -61,6 +61,8 @@
             this.panelEncabezLogin.Name = "panelEncabezLogin";
             this.panelEncabezLogin.Size = new System.Drawing.Size(888, 30);
             this.panelEncabezLogin.TabIndex = 0;
+            this.panelEncabezLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.panelEncabezLogin_Paint);
+            this.panelEncabezLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelEncabezLogin_MouseDown);
             // 
             // label4
             // 

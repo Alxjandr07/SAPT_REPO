@@ -33,6 +33,18 @@ namespace SistemAutomProcesoTitulacion
                 MenuVertical.Width = 250;
             }
         }
+        private void AbrirFormularioEnPanel(Form formHijo)
+        {
+            if (this.panelContenedorEstud.Controls.Count > 0)
+                this.panelContenedorEstud.Controls.RemoveAt(0);
+
+            formHijo.TopLevel = false;       
+            formHijo.FormBorderStyle = FormBorderStyle.None; 
+            this.panelContenedorEstud.Controls.Add(formHijo);
+            this.panelContenedorEstud.Tag = formHijo;
+            formHijo.Show();
+        }
+
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
@@ -90,6 +102,16 @@ namespace SistemAutomProcesoTitulacion
             login.Show();
 
             this.Close();
+        }
+
+        private void btnAnteproyecto_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioEnPanel(new frmEntregarDocumentos());
+        }
+
+        private void panelContenedorEstud_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
