@@ -33,9 +33,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEditar = new System.Windows.Forms.Button();
             this.pnlCentral = new System.Windows.Forms.Panel();
+            this.dgvEntregarDoc = new System.Windows.Forms.DataGridView();
             this.btnSubir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.dgvEntregarDoc = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlCentral.SuspendLayout();
@@ -45,6 +46,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Green;
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -93,6 +95,16 @@
             this.pnlCentral.Size = new System.Drawing.Size(682, 295);
             this.pnlCentral.TabIndex = 0;
             // 
+            // dgvEntregarDoc
+            // 
+            this.dgvEntregarDoc.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvEntregarDoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEntregarDoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEntregarDoc.Location = new System.Drawing.Point(0, 0);
+            this.dgvEntregarDoc.Name = "dgvEntregarDoc";
+            this.dgvEntregarDoc.Size = new System.Drawing.Size(682, 295);
+            this.dgvEntregarDoc.TabIndex = 0;
+            // 
             // btnSubir
             // 
             this.btnSubir.Location = new System.Drawing.Point(113, 356);
@@ -112,15 +124,16 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // dgvEntregarDoc
+            // label1
             // 
-            this.dgvEntregarDoc.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvEntregarDoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEntregarDoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEntregarDoc.Location = new System.Drawing.Point(0, 0);
-            this.dgvEntregarDoc.Name = "dgvEntregarDoc";
-            this.dgvEntregarDoc.Size = new System.Drawing.Size(682, 295);
-            this.dgvEntregarDoc.TabIndex = 0;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(12, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(411, 39);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Entrega de Documentos";
             // 
             // frmEntregarDocumentos
             // 
@@ -152,5 +165,6 @@
         private System.Windows.Forms.Button btnSubir;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridView dgvEntregarDoc;
+        private System.Windows.Forms.Label label1;
     }
 }
