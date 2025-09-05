@@ -29,98 +29,109 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRechazar = new System.Windows.Forms.Button();
-            this.btnAprobar = new System.Windows.Forms.Button();
             this.btnDescargar = new System.Windows.Forms.Button();
+            this.btnAprobar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Controls.Add(this.panel1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.BackColor = System.Drawing.Color.Green;
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(800, 450);
+            this.panel3.Size = new System.Drawing.Size(800, 48);
             this.panel3.TabIndex = 4;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 49);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(800, 401);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.btnRechazar);
-            this.panel1.Controls.Add(this.btnAprobar);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnDescargar);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Controls.Add(this.btnAprobar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 48);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 49);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(800, 402);
+            this.panel1.TabIndex = 5;
             // 
             // btnRechazar
             // 
-            this.btnRechazar.Location = new System.Drawing.Point(223, 3);
+            this.btnRechazar.Location = new System.Drawing.Point(583, 356);
             this.btnRechazar.Name = "btnRechazar";
             this.btnRechazar.Size = new System.Drawing.Size(104, 43);
-            this.btnRechazar.TabIndex = 11;
+            this.btnRechazar.TabIndex = 13;
             this.btnRechazar.Text = "Rechazar";
             this.btnRechazar.UseVisualStyleBackColor = true;
             // 
+            // btnDescargar
+            // 
+            this.btnDescargar.Location = new System.Drawing.Point(113, 356);
+            this.btnDescargar.Name = "btnDescargar";
+            this.btnDescargar.Size = new System.Drawing.Size(104, 43);
+            this.btnDescargar.TabIndex = 12;
+            this.btnDescargar.Text = "Descargar";
+            this.btnDescargar.UseVisualStyleBackColor = true;
+            // 
             // btnAprobar
             // 
-            this.btnAprobar.Location = new System.Drawing.Point(113, 3);
+            this.btnAprobar.Location = new System.Drawing.Point(473, 356);
             this.btnAprobar.Name = "btnAprobar";
             this.btnAprobar.Size = new System.Drawing.Size(104, 43);
-            this.btnAprobar.TabIndex = 11;
+            this.btnAprobar.TabIndex = 14;
             this.btnAprobar.Text = "Aprobar";
             this.btnAprobar.UseVisualStyleBackColor = true;
             // 
-            // btnDescargar
+            // panel2
             // 
-            this.btnDescargar.Location = new System.Drawing.Point(3, 3);
-            this.btnDescargar.Name = "btnDescargar";
-            this.btnDescargar.Size = new System.Drawing.Size(104, 43);
-            this.btnDescargar.TabIndex = 10;
-            this.btnDescargar.Text = "Descargar";
-            this.btnDescargar.UseVisualStyleBackColor = true;
+            this.panel2.Location = new System.Drawing.Point(113, 55);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(574, 295);
+            this.panel2.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(671, 6);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(117, 39);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "UTEQ";
             // 
             // frmAprobacionDoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAprobacionDoc";
             this.Text = "frmAprobacionDoc";
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnRechazar;
-        private System.Windows.Forms.Button btnAprobar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnDescargar;
+        private System.Windows.Forms.Button btnAprobar;
+        private System.Windows.Forms.Label label5;
     }
 }
