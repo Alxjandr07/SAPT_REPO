@@ -10,19 +10,24 @@ using System.Windows.Forms;
 
 namespace SistemAutomProcesoTitulacion
 {
-    public partial class frmAprobacionDoc : Form
+    public partial class frmEntregarDocumentos : Form
     {
-        public frmAprobacionDoc()
+        public frmEntregarDocumentos()
         {
             InitializeComponent();
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
 
         }
