@@ -58,6 +58,12 @@
     <Compile Include="frmAprobacionDoc.Designer.cs">
       <DependentUpon>frmAprobacionDoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEntregarDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEntregarDocumentos.Designer.cs">
+      <DependentUpon>frmEntregarDocumentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAprobacionDoc.resx">
       <DependentUpon>frmAprobacionDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEntregarDocumentos.resx">
+      <DependentUpon>frmEntregarDocumentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>

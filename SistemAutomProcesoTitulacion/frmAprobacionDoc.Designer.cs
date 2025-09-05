@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnDescargar = new System.Windows.Forms.Button();
-            this.btnAprobar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnRechazar = new System.Windows.Forms.Button();
+            this.btnAprobar = new System.Windows.Forms.Button();
+            this.btnDescargar = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -50,6 +50,17 @@
             this.panel3.Size = new System.Drawing.Size(800, 450);
             this.panel3.TabIndex = 4;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 49);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(800, 401);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnRechazar);
@@ -61,24 +72,14 @@
             this.panel1.Size = new System.Drawing.Size(800, 49);
             this.panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // btnRechazar
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 49);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(800, 401);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // btnDescargar
-            // 
-            this.btnDescargar.Location = new System.Drawing.Point(3, 3);
-            this.btnDescargar.Name = "btnDescargar";
-            this.btnDescargar.Size = new System.Drawing.Size(104, 43);
-            this.btnDescargar.TabIndex = 10;
-            this.btnDescargar.Text = "Descargar";
-            this.btnDescargar.UseVisualStyleBackColor = true;
+            this.btnRechazar.Location = new System.Drawing.Point(223, 3);
+            this.btnRechazar.Name = "btnRechazar";
+            this.btnRechazar.Size = new System.Drawing.Size(104, 43);
+            this.btnRechazar.TabIndex = 11;
+            this.btnRechazar.Text = "Rechazar";
+            this.btnRechazar.UseVisualStyleBackColor = true;
             // 
             // btnAprobar
             // 
@@ -89,14 +90,14 @@
             this.btnAprobar.Text = "Aprobar";
             this.btnAprobar.UseVisualStyleBackColor = true;
             // 
-            // btnRechazar
+            // btnDescargar
             // 
-            this.btnRechazar.Location = new System.Drawing.Point(223, 3);
-            this.btnRechazar.Name = "btnRechazar";
-            this.btnRechazar.Size = new System.Drawing.Size(104, 43);
-            this.btnRechazar.TabIndex = 11;
-            this.btnRechazar.Text = "Rechazar";
-            this.btnRechazar.UseVisualStyleBackColor = true;
+            this.btnDescargar.Location = new System.Drawing.Point(3, 3);
+            this.btnDescargar.Name = "btnDescargar";
+            this.btnDescargar.Size = new System.Drawing.Size(104, 43);
+            this.btnDescargar.TabIndex = 10;
+            this.btnDescargar.Text = "Descargar";
+            this.btnDescargar.UseVisualStyleBackColor = true;
             // 
             // frmAprobacionDoc
             // 
@@ -108,8 +109,8 @@
             this.Name = "frmAprobacionDoc";
             this.Text = "frmAprobacionDoc";
             this.panel3.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
