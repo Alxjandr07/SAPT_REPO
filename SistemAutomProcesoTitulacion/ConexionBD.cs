@@ -11,7 +11,7 @@ namespace SistemAutomProcesoTitulacion
 {
     public class ConexionBD
     {
-        private static string cadena = "Server=ALXJANDR07PC\\SQLEXPRESS; Database=BD_SistemaTitulacion; Integrated Security=true";
+        private static string cadena = "Server=ALXJANDR07PC\\SQLEXPRESS; Database=SistemaTitulacionUTEQ; Integrated Security=true";
         private static SqlConnection conexion = new SqlConnection(cadena);
 
         public static SqlConnection ObtenerConexion()
@@ -58,7 +58,13 @@ namespace SistemAutomProcesoTitulacion
                 {
                     con.Open();
 
-                    string query = "SELECT rol FROM Usuarios WHERE correo=@correo AND contrasena=@contrasena";
+                    // 🔎 Consulta con JOIN para obtener el nombre del rol desde la tabla Roles
+                    string query = @"SELECT r.NombreRol 
+                             FROM Usuarios u
+                             INNER JOIN Roles r ON u.IdRol = r.IdRol
+                             WHERE u.CorreoInstitucional = @correo 
+                               AND u.Contrasena = @contrasena
+                               AND u.Estado = 1";  // opcional si manejas estado activo/inactivo
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
@@ -69,7 +75,7 @@ namespace SistemAutomProcesoTitulacion
 
                         if (reader.Read())
                         {
-                            rol = reader["rol"].ToString();
+                            rol = reader["NombreRol"].ToString();
                         }
                     }
                 }
