@@ -204,5 +204,8 @@
   <ItemGroup>
     <None Include="Resources\letra-x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar-sesion.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

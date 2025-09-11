@@ -32,11 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuEstudiantes));
             this.tmrTransicionMenu = new System.Windows.Forms.Timer(this.components);
             this.panelCabecera = new System.Windows.Forms.Panel();
-            this.btnRestaurar = new System.Windows.Forms.PictureBox();
-            this.btnMinim = new System.Windows.Forms.PictureBox();
-            this.btnDesliz = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.flpMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlEnvioDoc = new System.Windows.Forms.Panel();
             this.btnEnvioDoc = new System.Windows.Forms.Button();
@@ -47,17 +42,24 @@
             this.pnlEstadoProceso = new System.Windows.Forms.Panel();
             this.btnEstadoProceso = new System.Windows.Forms.Button();
             this.panelContenedorEstud = new System.Windows.Forms.Panel();
+            this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.btnMinim = new System.Windows.Forms.PictureBox();
+            this.btnDesliz = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.panelCabecera.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDesliz)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             this.flpMenu.SuspendLayout();
             this.pnlEnvioDoc.SuspendLayout();
             this.pnlReunion.SuspendLayout();
             this.pnlAutoridades.SuspendLayout();
             this.pnlEstadoProceso.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDesliz)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCabecera
@@ -67,6 +69,7 @@
             this.panelCabecera.Controls.Add(this.btnMinim);
             this.panelCabecera.Controls.Add(this.btnDesliz);
             this.panelCabecera.Controls.Add(this.btnCerrar);
+            this.panelCabecera.Controls.Add(this.pictureBox1);
             this.panelCabecera.Controls.Add(this.btnMaximizar);
             this.panelCabecera.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCabecera.Location = new System.Drawing.Point(0, 0);
@@ -75,75 +78,6 @@
             this.panelCabecera.Size = new System.Drawing.Size(959, 50);
             this.panelCabecera.TabIndex = 11;
             this.panelCabecera.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelCabecera_MouseDown_1);
-            // 
-            // btnRestaurar
-            // 
-            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
-            this.btnRestaurar.Location = new System.Drawing.Point(910, 1);
-            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(22, 24);
-            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnRestaurar.TabIndex = 5;
-            this.btnRestaurar.TabStop = false;
-            this.btnRestaurar.Visible = false;
-            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click_1);
-            // 
-            // btnMinim
-            // 
-            this.btnMinim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinim.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinim.Image = ((System.Drawing.Image)(resources.GetObject("btnMinim.Image")));
-            this.btnMinim.Location = new System.Drawing.Point(883, 1);
-            this.btnMinim.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMinim.Name = "btnMinim";
-            this.btnMinim.Size = new System.Drawing.Size(22, 24);
-            this.btnMinim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMinim.TabIndex = 4;
-            this.btnMinim.TabStop = false;
-            this.btnMinim.Click += new System.EventHandler(this.btnMinim_Click_1);
-            // 
-            // btnDesliz
-            // 
-            this.btnDesliz.Image = ((System.Drawing.Image)(resources.GetObject("btnDesliz.Image")));
-            this.btnDesliz.Location = new System.Drawing.Point(2, 2);
-            this.btnDesliz.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDesliz.Name = "btnDesliz";
-            this.btnDesliz.Size = new System.Drawing.Size(26, 28);
-            this.btnDesliz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnDesliz.TabIndex = 0;
-            this.btnDesliz.TabStop = false;
-            this.btnDesliz.Click += new System.EventHandler(this.btnDesliz_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = global::SistemAutomProcesoTitulacion.Properties.Resources.letra_x;
-            this.btnCerrar.Location = new System.Drawing.Point(935, 2);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(22, 24);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 3;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
-            // 
-            // btnMaximizar
-            // 
-            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
-            this.btnMaximizar.Location = new System.Drawing.Point(908, 2);
-            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(22, 24);
-            this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMaximizar.TabIndex = 1;
-            this.btnMaximizar.TabStop = false;
-            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click_1);
             // 
             // flpMenu
             // 
@@ -275,6 +209,87 @@
             this.panelContenedorEstud.TabIndex = 14;
             this.panelContenedorEstud.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorEstud_Paint_1);
             // 
+            // btnRestaurar
+            // 
+            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
+            this.btnRestaurar.Location = new System.Drawing.Point(910, 1);
+            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRestaurar.Name = "btnRestaurar";
+            this.btnRestaurar.Size = new System.Drawing.Size(22, 24);
+            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnRestaurar.TabIndex = 5;
+            this.btnRestaurar.TabStop = false;
+            this.btnRestaurar.Visible = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click_1);
+            // 
+            // btnMinim
+            // 
+            this.btnMinim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinim.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinim.Image = ((System.Drawing.Image)(resources.GetObject("btnMinim.Image")));
+            this.btnMinim.Location = new System.Drawing.Point(883, 1);
+            this.btnMinim.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinim.Name = "btnMinim";
+            this.btnMinim.Size = new System.Drawing.Size(22, 24);
+            this.btnMinim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMinim.TabIndex = 4;
+            this.btnMinim.TabStop = false;
+            this.btnMinim.Click += new System.EventHandler(this.btnMinim_Click_1);
+            // 
+            // btnDesliz
+            // 
+            this.btnDesliz.Image = ((System.Drawing.Image)(resources.GetObject("btnDesliz.Image")));
+            this.btnDesliz.Location = new System.Drawing.Point(2, 2);
+            this.btnDesliz.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDesliz.Name = "btnDesliz";
+            this.btnDesliz.Size = new System.Drawing.Size(26, 28);
+            this.btnDesliz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDesliz.TabIndex = 0;
+            this.btnDesliz.TabStop = false;
+            this.btnDesliz.Click += new System.EventHandler(this.btnDesliz_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = global::SistemAutomProcesoTitulacion.Properties.Resources.letra_x;
+            this.btnCerrar.Location = new System.Drawing.Point(935, 2);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(22, 24);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 3;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = global::SistemAutomProcesoTitulacion.Properties.Resources.cerrar_sesion;
+            this.pictureBox1.Location = new System.Drawing.Point(838, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_2);
+            // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
+            this.btnMaximizar.Location = new System.Drawing.Point(908, 2);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(22, 24);
+            this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMaximizar.TabIndex = 1;
+            this.btnMaximizar.TabStop = false;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click_1);
+            // 
             // FrmMenuEstudiantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,16 +303,17 @@
             this.Name = "FrmMenuEstudiantes";
             this.Text = "Menu Estudiantes";
             this.panelCabecera.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDesliz)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             this.flpMenu.ResumeLayout(false);
             this.pnlEnvioDoc.ResumeLayout(false);
             this.pnlReunion.ResumeLayout(false);
             this.pnlAutoridades.ResumeLayout(false);
             this.pnlEstadoProceso.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDesliz)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -320,5 +336,6 @@
         private System.Windows.Forms.Button btnEstadoProceso;
         private System.Windows.Forms.Panel pnlAutoridades;
         private System.Windows.Forms.Button btnAutoridades;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

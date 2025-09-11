@@ -45,6 +45,7 @@
             this.pnlAutoridades = new System.Windows.Forms.Panel();
             this.btnAutoridades = new System.Windows.Forms.Button();
             this.panelContenedorEstud = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelCabecera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).BeginInit();
@@ -56,11 +57,13 @@
             this.pnlReunion.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlAutoridades.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCabecera
             // 
             this.panelCabecera.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panelCabecera.Controls.Add(this.pictureBox1);
             this.panelCabecera.Controls.Add(this.btnRestaurar);
             this.panelCabecera.Controls.Add(this.btnMinim);
             this.panelCabecera.Controls.Add(this.btnDesliz);
@@ -269,6 +272,18 @@
             this.panelContenedorEstud.Size = new System.Drawing.Size(714, 439);
             this.panelContenedorEstud.TabIndex = 17;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = global::SistemAutomProcesoTitulacion.Properties.Resources.cerrar_sesion;
+            this.pictureBox1.Location = new System.Drawing.Point(839, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // frmDirector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,6 +306,7 @@
             this.pnlReunion.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.pnlAutoridades.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -313,5 +329,6 @@
         private System.Windows.Forms.Panel pnlAutoridades;
         private System.Windows.Forms.Button btnAutoridades;
         private System.Windows.Forms.Panel panelContenedorEstud;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
