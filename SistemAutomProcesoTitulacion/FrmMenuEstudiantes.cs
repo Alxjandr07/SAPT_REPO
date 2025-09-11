@@ -40,8 +40,11 @@ namespace SistemAutomProcesoTitulacion
             if (this.panelContenedorEstud.Controls.Count > 0)
                 this.panelContenedorEstud.Controls.RemoveAt(0);
 
-            formHijo.TopLevel = false;       
-            formHijo.FormBorderStyle = FormBorderStyle.None; 
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill; // Esta línea es clave
+            formHijo.Size = panelContenedorEstud.ClientSize; // Opcional, asegura el tamaño inicial
+
             this.panelContenedorEstud.Controls.Add(formHijo);
             this.panelContenedorEstud.Tag = formHijo;
             formHijo.Show();
@@ -120,27 +123,16 @@ namespace SistemAutomProcesoTitulacion
 
         private void btnDesliz_Click(object sender, EventArgs e)
         {
-            if (flpMenu.Width == 185)
+            if (flpMenu.Width == 245)
             {
                 flpMenu.Width = 20;
             }
             else
             {
-                flpMenu.Width = 185;
+                flpMenu.Width = 245;
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            if (flpMenu.Width == 185)
-            {
-                flpMenu.Width = 20;
-            }
-            else
-            {
-                flpMenu.Width = 185;
-            }
-        }
 
         private void btnCerrar_Click_1(object sender, EventArgs e)
         {
