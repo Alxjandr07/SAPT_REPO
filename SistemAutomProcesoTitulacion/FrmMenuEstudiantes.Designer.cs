@@ -148,13 +148,13 @@
             // 
             this.flpMenu.BackColor = System.Drawing.Color.Green;
             this.flpMenu.Controls.Add(this.pnlEnvioDoc);
-            this.flpMenu.Controls.Add(this.pnlEstadoProceso);
             this.flpMenu.Controls.Add(this.pnlReunion);
             this.flpMenu.Controls.Add(this.pnlAutoridades);
+            this.flpMenu.Controls.Add(this.pnlEstadoProceso);
             this.flpMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.flpMenu.Location = new System.Drawing.Point(0, 50);
             this.flpMenu.Name = "flpMenu";
-            this.flpMenu.Size = new System.Drawing.Size(185, 478);
+            this.flpMenu.Size = new System.Drawing.Size(245, 478);
             this.flpMenu.TabIndex = 13;
             // 
             // pnlEnvioDoc
@@ -165,7 +165,7 @@
             this.pnlEnvioDoc.Location = new System.Drawing.Point(0, 0);
             this.pnlEnvioDoc.Margin = new System.Windows.Forms.Padding(0);
             this.pnlEnvioDoc.Name = "pnlEnvioDoc";
-            this.pnlEnvioDoc.Size = new System.Drawing.Size(185, 45);
+            this.pnlEnvioDoc.Size = new System.Drawing.Size(245, 45);
             this.pnlEnvioDoc.TabIndex = 7;
             // 
             // btnEnvioDoc
@@ -178,7 +178,7 @@
             this.btnEnvioDoc.Margin = new System.Windows.Forms.Padding(0);
             this.btnEnvioDoc.Name = "btnEnvioDoc";
             this.btnEnvioDoc.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnEnvioDoc.Size = new System.Drawing.Size(193, 53);
+            this.btnEnvioDoc.Size = new System.Drawing.Size(253, 53);
             this.btnEnvioDoc.TabIndex = 1;
             this.btnEnvioDoc.Text = "Envio de Documentos";
             this.btnEnvioDoc.UseVisualStyleBackColor = false;
@@ -189,10 +189,10 @@
             this.pnlEstadoProceso.BackColor = System.Drawing.SystemColors.Control;
             this.pnlEstadoProceso.Controls.Add(this.btnEstadoProceso);
             this.pnlEstadoProceso.Font = new System.Drawing.Font("Script MT Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlEstadoProceso.Location = new System.Drawing.Point(0, 45);
+            this.pnlEstadoProceso.Location = new System.Drawing.Point(0, 135);
             this.pnlEstadoProceso.Margin = new System.Windows.Forms.Padding(0);
             this.pnlEstadoProceso.Name = "pnlEstadoProceso";
-            this.pnlEstadoProceso.Size = new System.Drawing.Size(185, 45);
+            this.pnlEstadoProceso.Size = new System.Drawing.Size(245, 45);
             this.pnlEstadoProceso.TabIndex = 8;
             // 
             // btnEstadoProceso
@@ -205,7 +205,7 @@
             this.btnEstadoProceso.Margin = new System.Windows.Forms.Padding(0);
             this.btnEstadoProceso.Name = "btnEstadoProceso";
             this.btnEstadoProceso.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnEstadoProceso.Size = new System.Drawing.Size(193, 53);
+            this.btnEstadoProceso.Size = new System.Drawing.Size(253, 53);
             this.btnEstadoProceso.TabIndex = 1;
             this.btnEstadoProceso.Text = "Estado del Proceso";
             this.btnEstadoProceso.UseVisualStyleBackColor = false;
@@ -215,10 +215,10 @@
             this.pnlReunion.BackColor = System.Drawing.SystemColors.Control;
             this.pnlReunion.Controls.Add(this.btnReunion);
             this.pnlReunion.Font = new System.Drawing.Font("Script MT Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlReunion.Location = new System.Drawing.Point(0, 90);
+            this.pnlReunion.Location = new System.Drawing.Point(0, 45);
             this.pnlReunion.Margin = new System.Windows.Forms.Padding(0);
             this.pnlReunion.Name = "pnlReunion";
-            this.pnlReunion.Size = new System.Drawing.Size(185, 45);
+            this.pnlReunion.Size = new System.Drawing.Size(245, 45);
             this.pnlReunion.TabIndex = 9;
             // 
             // btnReunion
@@ -231,7 +231,7 @@
             this.btnReunion.Margin = new System.Windows.Forms.Padding(0);
             this.btnReunion.Name = "btnReunion";
             this.btnReunion.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnReunion.Size = new System.Drawing.Size(193, 53);
+            this.btnReunion.Size = new System.Drawing.Size(253, 53);
             this.btnReunion.TabIndex = 1;
             this.btnReunion.Text = "Reuniones";
             this.btnReunion.UseVisualStyleBackColor = false;
@@ -241,10 +241,10 @@
             this.pnlAutoridades.BackColor = System.Drawing.SystemColors.Control;
             this.pnlAutoridades.Controls.Add(this.btnAutoridades);
             this.pnlAutoridades.Font = new System.Drawing.Font("Script MT Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlAutoridades.Location = new System.Drawing.Point(0, 135);
+            this.pnlAutoridades.Location = new System.Drawing.Point(0, 90);
             this.pnlAutoridades.Margin = new System.Windows.Forms.Padding(0);
             this.pnlAutoridades.Name = "pnlAutoridades";
-            this.pnlAutoridades.Size = new System.Drawing.Size(185, 45);
+            this.pnlAutoridades.Size = new System.Drawing.Size(245, 45);
             this.pnlAutoridades.TabIndex = 6;
             // 
             // btnAutoridades
@@ -257,7 +257,7 @@
             this.btnAutoridades.Margin = new System.Windows.Forms.Padding(0);
             this.btnAutoridades.Name = "btnAutoridades";
             this.btnAutoridades.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnAutoridades.Size = new System.Drawing.Size(193, 53);
+            this.btnAutoridades.Size = new System.Drawing.Size(253, 53);
             this.btnAutoridades.TabIndex = 1;
             this.btnAutoridades.Text = "Autoridades";
             this.btnAutoridades.UseVisualStyleBackColor = false;
@@ -266,10 +266,10 @@
             // 
             this.panelContenedorEstud.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelContenedorEstud.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedorEstud.Location = new System.Drawing.Point(185, 50);
+            this.panelContenedorEstud.Location = new System.Drawing.Point(245, 50);
             this.panelContenedorEstud.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenedorEstud.Name = "panelContenedorEstud";
-            this.panelContenedorEstud.Size = new System.Drawing.Size(790, 478);
+            this.panelContenedorEstud.Size = new System.Drawing.Size(730, 478);
             this.panelContenedorEstud.TabIndex = 14;
             this.panelContenedorEstud.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorEstud_Paint_1);
             // 
