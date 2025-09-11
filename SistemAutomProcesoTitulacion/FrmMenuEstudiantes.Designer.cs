@@ -76,8 +76,7 @@
             this.panelCabecera.Name = "panelCabecera";
             this.panelCabecera.Size = new System.Drawing.Size(1300, 62);
             this.panelCabecera.TabIndex = 11;
-            this.panelCabecera.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCabecera_Paint);
-            // 
+          
             // btnRestaurar
             // 
             this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
