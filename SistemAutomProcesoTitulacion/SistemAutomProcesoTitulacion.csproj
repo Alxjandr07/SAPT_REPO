@@ -59,6 +59,12 @@
     <Compile Include="frmAprobacionDoc.Designer.cs">
       <DependentUpon>frmAprobacionDoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDirector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDirector.Designer.cs">
+      <DependentUpon>frmDirector.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEntregarDocumentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,12 @@
     <Compile Include="frmModDocumentosEstud.Designer.cs">
       <DependentUpon>frmModDocumentosEstud.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTutor.Designer.cs">
+      <DependentUpon>frmTutor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -96,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAprobacionDoc.resx">
       <DependentUpon>frmAprobacionDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDirector.resx">
+      <DependentUpon>frmDirector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEntregarDocumentos.resx">
       <DependentUpon>frmEntregarDocumentos.cs</DependentUpon>
@@ -111,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmModDocumentosEstud.resx">
       <DependentUpon>frmModDocumentosEstud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTutor.resx">
+      <DependentUpon>frmTutor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

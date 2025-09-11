@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SistemAutomProcesoTitulacion
 {
-    public partial class frmMenuCoordinador : Form
+    public partial class frmDirector : Form
     {
-        public frmMenuCoordinador()
+        public frmDirector()
         {
             InitializeComponent();
-        }
-
-        private void panelContenedorEstud_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
