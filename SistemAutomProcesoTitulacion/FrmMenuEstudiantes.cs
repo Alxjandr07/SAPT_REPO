@@ -24,13 +24,13 @@ namespace SistemAutomProcesoTitulacion
         private extern static void SendMessage(System.IntPtr hwnd, int wasg, int wparam, int lparam);
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (MenuVertical.Width == 250)
+            if (panelCabecera.Width == 250)
             {
-             MenuVertical.Width = 70;
+             panelCabecera.Width = 70;
             }
             else
             {
-                MenuVertical.Width = 250;
+                panelCabecera.Width = 250;
             }
         }
         private void AbrirFormularioEnPanel(Form formHijo)
@@ -112,6 +112,11 @@ namespace SistemAutomProcesoTitulacion
         private void panelContenedorEstud_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void panelCabecera_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }
