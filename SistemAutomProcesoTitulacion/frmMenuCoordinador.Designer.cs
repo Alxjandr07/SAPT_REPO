@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuCoordinador));
             this.panelCabecera = new System.Windows.Forms.Panel();
+            this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.btnMinim = new System.Windows.Forms.PictureBox();
             this.btnDesliz = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
@@ -46,8 +47,9 @@
             this.pnlEstadoProceso = new System.Windows.Forms.Panel();
             this.btnEstadoProceso = new System.Windows.Forms.Button();
             this.panelContenedorEstud = new System.Windows.Forms.Panel();
-            this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelCabecera.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDesliz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -58,12 +60,13 @@
             this.panel1.SuspendLayout();
             this.pnlAutoridades.SuspendLayout();
             this.pnlEstadoProceso.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCabecera
             // 
             this.panelCabecera.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panelCabecera.Controls.Add(this.pictureBox1);
             this.panelCabecera.Controls.Add(this.btnRestaurar);
             this.panelCabecera.Controls.Add(this.btnMinim);
             this.panelCabecera.Controls.Add(this.btnDesliz);
@@ -75,6 +78,21 @@
             this.panelCabecera.Name = "panelCabecera";
             this.panelCabecera.Size = new System.Drawing.Size(959, 50);
             this.panelCabecera.TabIndex = 12;
+            // 
+            // btnRestaurar
+            // 
+            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
+            this.btnRestaurar.Location = new System.Drawing.Point(908, 2);
+            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRestaurar.Name = "btnRestaurar";
+            this.btnRestaurar.Size = new System.Drawing.Size(22, 24);
+            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnRestaurar.TabIndex = 6;
+            this.btnRestaurar.TabStop = false;
+            this.btnRestaurar.Visible = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
             // 
             // btnMinim
             // 
@@ -285,20 +303,17 @@
             this.panelContenedorEstud.TabIndex = 15;
             this.panelContenedorEstud.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorEstud_Paint);
             // 
-            // btnRestaurar
+            // pictureBox1
             // 
-            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
-            this.btnRestaurar.Location = new System.Drawing.Point(908, 2);
-            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(22, 24);
-            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnRestaurar.TabIndex = 6;
-            this.btnRestaurar.TabStop = false;
-            this.btnRestaurar.Visible = false;
-            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = global::SistemAutomProcesoTitulacion.Properties.Resources.cerrar_sesion;
+            this.pictureBox1.Location = new System.Drawing.Point(836, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmMenuCoordinador
             // 
@@ -312,6 +327,7 @@
             this.Name = "frmMenuCoordinador";
             this.Text = "frmMenuCoordinador";
             this.panelCabecera.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDesliz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
@@ -322,7 +338,7 @@
             this.panel1.ResumeLayout(false);
             this.pnlAutoridades.ResumeLayout(false);
             this.pnlEstadoProceso.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -347,5 +363,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox btnRestaurar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

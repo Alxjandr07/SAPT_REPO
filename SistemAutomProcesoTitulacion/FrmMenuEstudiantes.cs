@@ -169,5 +169,24 @@ namespace SistemAutomProcesoTitulacion
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void pictureBox1_Click_2(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "¿Deseas cerrar sesión?",
+                "Cerrar Sesión",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                this.Hide(); // Ocultamos el formulario principal
+
+                // Volvemos a mostrar el Form1 (que es tu Login)
+                frmLogin login = new frmLogin();
+                login.Show();
+            }
+        }
     }
 }
