@@ -24,6 +24,7 @@ namespace SistemAutomProcesoTitulacion
         private extern static void SendMessage(System.IntPtr hwnd, int wasg, int wparam, int lparam);
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+
             if (flpMenu.Width == 250)
             {
              flpMenu.Width = 70;
@@ -31,6 +32,7 @@ namespace SistemAutomProcesoTitulacion
             else
             {
                 flpMenu.Width = 250;
+
             }
         }
         private void AbrirFormularioEnPanel(Form formHijo)
@@ -110,6 +112,7 @@ namespace SistemAutomProcesoTitulacion
 
         }
 
+
         private void panelContenedorEstud_Paint_1(object sender, PaintEventArgs e)
         {
 
@@ -161,6 +164,7 @@ namespace SistemAutomProcesoTitulacion
             this.WindowState = FormWindowState.Maximized;
             btnRestaurar.Visible = true;
             btnMaximizar.Visible = false;
+
         }
     }
 }
