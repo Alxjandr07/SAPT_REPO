@@ -71,6 +71,18 @@
     <Compile Include="frmEntregarDocumentos.Designer.cs">
       <DependentUpon>frmEntregarDocumentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGestionReunion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionReunion.Designer.cs">
+      <DependentUpon>frmGestionReunion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionUsuario.Designer.cs">
+      <DependentUpon>frmGestionUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +107,12 @@
     <Compile Include="frmModDocumentosEstud.Designer.cs">
       <DependentUpon>frmModDocumentosEstud.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTribunal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTribunal.Designer.cs">
+      <DependentUpon>frmTribunal.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTutor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +133,12 @@
     <EmbeddedResource Include="frmEntregarDocumentos.resx">
       <DependentUpon>frmEntregarDocumentos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionReunion.resx">
+      <DependentUpon>frmGestionReunion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionUsuario.resx">
+      <DependentUpon>frmGestionUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmModDocumentosEstud.resx">
       <DependentUpon>frmModDocumentosEstud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTribunal.resx">
+      <DependentUpon>frmTribunal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTutor.resx">
       <DependentUpon>frmTutor.cs</DependentUpon>
