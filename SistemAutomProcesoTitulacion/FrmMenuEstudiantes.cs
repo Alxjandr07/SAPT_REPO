@@ -24,13 +24,13 @@ namespace SistemAutomProcesoTitulacion
         private extern static void SendMessage(System.IntPtr hwnd, int wasg, int wparam, int lparam);
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (MenuVertical.Width == 250)
+            if (flpMenu.Width == 250)
             {
-             MenuVertical.Width = 70;
+             flpMenu.Width = 70;
             }
             else
             {
-                MenuVertical.Width = 250;
+                flpMenu.Width = 250;
             }
         }
         private void AbrirFormularioEnPanel(Form formHijo)
@@ -53,14 +53,12 @@ namespace SistemAutomProcesoTitulacion
 
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            btnRestaurar.Visible = true;
-            btnMaximizar.Visible = false;
+            
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
@@ -75,14 +73,12 @@ namespace SistemAutomProcesoTitulacion
 
         private void btnRestaurar_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
-            btnRestaurar.Visible = false;
-            btnMaximizar.Visible = true;   
+             
         }
 
         private void btnMinim_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            
         }
 
         private void panelCabecera_MouseDown(object sender, MouseEventArgs e)
@@ -112,6 +108,59 @@ namespace SistemAutomProcesoTitulacion
         private void panelContenedorEstud_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void panelContenedorEstud_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnDesliz_Click(object sender, EventArgs e)
+        {
+            if (flpMenu.Width == 185)
+            {
+                flpMenu.Width = 20;
+            }
+            else
+            {
+                flpMenu.Width = 185;
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (flpMenu.Width == 185)
+            {
+                flpMenu.Width = 20;
+            }
+            else
+            {
+                flpMenu.Width = 185;
+            }
+        }
+
+        private void btnCerrar_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnRestaurar_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            btnRestaurar.Visible = false;
+            btnMaximizar.Visible = true;
+        }
+
+        private void btnMinim_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnMaximizar_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            btnRestaurar.Visible = true;
+            btnMaximizar.Visible = false;
         }
     }
 }
