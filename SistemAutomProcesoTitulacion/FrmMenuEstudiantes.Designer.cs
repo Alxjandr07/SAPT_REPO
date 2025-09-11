@@ -199,6 +199,7 @@
             this.btnEnvioDoc.TabIndex = 1;
             this.btnEnvioDoc.Text = "Envio de Documentos";
             this.btnEnvioDoc.UseVisualStyleBackColor = false;
+            this.btnEnvioDoc.Click += new System.EventHandler(this.btnEnvioDoc_Click);
             // 
             // pnlEstadoProceso
             // 
