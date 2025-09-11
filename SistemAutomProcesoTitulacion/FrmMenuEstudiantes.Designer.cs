@@ -48,6 +48,7 @@
             this.pnlAutoridades = new System.Windows.Forms.Panel();
             this.btnAutoridades = new System.Windows.Forms.Button();
             this.panelContenedorEstud = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelCabecera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).BeginInit();
@@ -69,6 +70,7 @@
             this.panelCabecera.Controls.Add(this.btnMinim);
             this.panelCabecera.Controls.Add(this.btnDesliz);
             this.panelCabecera.Controls.Add(this.btnCerrar);
+            this.panelCabecera.Controls.Add(this.label1);
             this.panelCabecera.Controls.Add(this.btnMaximizar);
             this.panelCabecera.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCabecera.Location = new System.Drawing.Point(0, 0);
@@ -298,6 +300,15 @@
             this.panelContenedorEstud.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorEstud_Paint_1);
 
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(220, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "label1";
+            // 
             // FrmMenuEstudiantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -314,6 +325,7 @@
             this.Name = "FrmMenuEstudiantes";
             this.Text = "Menu Estudiantes";
             this.panelCabecera.ResumeLayout(false);
+            this.panelCabecera.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDesliz)).EndInit();
@@ -348,5 +360,6 @@
         private System.Windows.Forms.Button btnEstadoProceso;
         private System.Windows.Forms.Panel pnlAutoridades;
         private System.Windows.Forms.Button btnAutoridades;
+        private System.Windows.Forms.Label label1;
     }
 }
