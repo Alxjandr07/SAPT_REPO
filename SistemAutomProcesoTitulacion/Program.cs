@@ -16,7 +16,7 @@ namespace SistemAutomProcesoTitulacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMenuEstudiantes());
+            Application.Run(new frmLogin());
         }
     }
 }

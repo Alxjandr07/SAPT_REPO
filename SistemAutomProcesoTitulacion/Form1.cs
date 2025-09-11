@@ -44,21 +44,62 @@ namespace SistemAutomProcesoTitulacion
             if (rol == null)
             {
                 MessageBox.Show("⚠️ Correo o contraseña incorrectos.");
-            }
-            else if (rol == "Docente")
-            {
-                MessageBox.Show("✅ Bienvenido Docente.");
-            }
-            else if (rol == "Estudiante")
-            {
-                MessageBox.Show("✅ Bienvenido Estudiante.");
-                FrmMenuEstudiantes fEstudiante = new FrmMenuEstudiantes();
-                fEstudiante.Show();
-                this.Hide();
+                return;
             }
 
+            // 🔎 Ahora según el rol abrimos cada menú/formulario
+            switch (rol)
+            {
+                case "Estudiante":
+                    MessageBox.Show("✅ Bienvenido Estudiante.");
+                    FrmMenuEstudiantes fEstudiante = new FrmMenuEstudiantes();
+                    fEstudiante.Show();
+                    this.Hide();
+                    break;
 
-        }
+                case "Tutor":
+                    MessageBox.Show("✅ Bienvenido Tutor.");
+                    frmTutor fTutor = new frmTutor();
+                    fTutor.Show();
+                    this.Hide();
+                    break;
+
+                case "Director":
+                    MessageBox.Show("✅ Bienvenido Director de Tesis.");
+                    frmDirector fDirector = new frmDirector();
+                    fDirector.Show();
+                    this.Hide();
+                    break;
+
+                case "Tribunal":
+                    MessageBox.Show("✅ Bienvenido Tribunal.");
+                    frmTribunal fTribunal = new frmTribunal();
+                    fTribunal.Show();
+                    this.Hide();
+                    break;
+
+                case "Coordinador":
+                    MessageBox.Show("✅ Bienvenido Coordinador de Carrera.");
+                    frmMenuCoordinador fCoordinador = new frmMenuCoordinador();
+                    fCoordinador.Show();
+                    this.Hide();
+                    break;
+
+                case "Comité":
+                    MessageBox.Show("✅ Bienvenido Comité de Investigación.");
+                    break;
+
+                case "Secretaria":
+                    MessageBox.Show("✅ Bienvenida Secretaria Académica.");
+                    break;
+
+                default:
+                    MessageBox.Show("⚠️ Rol no reconocido. Contacte al administrador.");
+                    break;
+                }
+
+
+            }
 
         private void panelLogin_Paint(object sender, PaintEventArgs e)
         {
