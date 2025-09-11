@@ -78,7 +78,7 @@
             this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
-            this.btnRestaurar.Location = new System.Drawing.Point(910, 1);
+            this.btnRestaurar.Location = new System.Drawing.Point(908, 2);
             this.btnRestaurar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRestaurar.Name = "btnRestaurar";
             this.btnRestaurar.Size = new System.Drawing.Size(22, 24);
@@ -86,6 +86,7 @@
             this.btnRestaurar.TabIndex = 5;
             this.btnRestaurar.TabStop = false;
             this.btnRestaurar.Visible = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
             // 
             // btnMinim
             // 
@@ -99,6 +100,7 @@
             this.btnMinim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinim.TabIndex = 4;
             this.btnMinim.TabStop = false;
+            this.btnMinim.Click += new System.EventHandler(this.btnMinim_Click);
             // 
             // btnDesliz
             // 
@@ -110,6 +112,7 @@
             this.btnDesliz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnDesliz.TabIndex = 0;
             this.btnDesliz.TabStop = false;
+            this.btnDesliz.Click += new System.EventHandler(this.btnDesliz_Click);
             // 
             // btnCerrar
             // 
@@ -123,6 +126,7 @@
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 3;
             this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnMaximizar
             // 
@@ -136,6 +140,7 @@
             this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMaximizar.TabIndex = 1;
             this.btnMaximizar.TabStop = false;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click_2);
             // 
             // flpMenu
             // 
@@ -154,7 +159,7 @@
             // 
             this.pnlEnvioDoc.BackColor = System.Drawing.SystemColors.Control;
             this.pnlEnvioDoc.Controls.Add(this.btnEnvioDoc);
-            this.pnlEnvioDoc.Font = new System.Drawing.Font("Script MT Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlEnvioDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlEnvioDoc.Location = new System.Drawing.Point(0, 0);
             this.pnlEnvioDoc.Margin = new System.Windows.Forms.Padding(0);
             this.pnlEnvioDoc.Name = "pnlEnvioDoc";
@@ -180,7 +185,7 @@
             // 
             this.pnlReunion.BackColor = System.Drawing.SystemColors.Control;
             this.pnlReunion.Controls.Add(this.btnReunion);
-            this.pnlReunion.Font = new System.Drawing.Font("Script MT Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlReunion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlReunion.Location = new System.Drawing.Point(0, 45);
             this.pnlReunion.Margin = new System.Windows.Forms.Padding(0);
             this.pnlReunion.Name = "pnlReunion";
@@ -206,7 +211,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Font = new System.Drawing.Font("Script MT Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 90);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
@@ -232,7 +237,7 @@
             // 
             this.pnlAutoridades.BackColor = System.Drawing.SystemColors.Control;
             this.pnlAutoridades.Controls.Add(this.btnAutoridades);
-            this.pnlAutoridades.Font = new System.Drawing.Font("Script MT Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlAutoridades.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlAutoridades.Location = new System.Drawing.Point(0, 135);
             this.pnlAutoridades.Margin = new System.Windows.Forms.Padding(0);
             this.pnlAutoridades.Name = "pnlAutoridades";

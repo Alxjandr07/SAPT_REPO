@@ -21,5 +21,41 @@ namespace SistemAutomProcesoTitulacion
         {
 
         }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            btnRestaurar.Visible = true;
+            btnMaximizar.Visible = false;
+        }
+
+        private void btnRestaurar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            btnRestaurar.Visible = false;
+            btnMaximizar.Visible = true;
+        }
+
+        private void btnMinim_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnDesliz_Click(object sender, EventArgs e)
+        {
+            if (flpMenu.Width == 245)
+            {
+                flpMenu.Width = 20;
+            }
+            else
+            {
+                flpMenu.Width = 245;
+            }
+        }
     }
 }
