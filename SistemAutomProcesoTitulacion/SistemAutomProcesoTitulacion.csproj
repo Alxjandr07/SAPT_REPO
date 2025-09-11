@@ -53,6 +53,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAggModUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAggModUsuario.Designer.cs">
+      <DependentUpon>frmAggModUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAprobacionDoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAggModUsuario.resx">
+      <DependentUpon>frmAggModUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAprobacionDoc.resx">
       <DependentUpon>frmAprobacionDoc.cs</DependentUpon>
@@ -203,6 +212,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\letra-x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gire-a-la-izquierda.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
