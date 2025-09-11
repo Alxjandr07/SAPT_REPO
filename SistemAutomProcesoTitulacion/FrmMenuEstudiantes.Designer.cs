@@ -91,6 +91,7 @@
             this.btnRestaurar.TabIndex = 5;
             this.btnRestaurar.TabStop = false;
             this.btnRestaurar.Visible = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click_1);
             // 
             // btnMinim
             // 
@@ -104,17 +105,21 @@
             this.btnMinim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinim.TabIndex = 4;
             this.btnMinim.TabStop = false;
+            this.btnMinim.Click += new System.EventHandler(this.btnMinim_Click_1);
             // 
             // btnDesliz
             // 
             this.btnDesliz.Image = ((System.Drawing.Image)(resources.GetObject("btnDesliz.Image")));
-            this.btnDesliz.Location = new System.Drawing.Point(260, 2);
-            this.btnDesliz.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
+            this.btnDesliz.Location = new System.Drawing.Point(2, 2);
+            this.btnDesliz.Margin = new System.Windows.Forms.Padding(2);
+
             this.btnDesliz.Name = "btnDesliz";
             this.btnDesliz.Size = new System.Drawing.Size(35, 34);
             this.btnDesliz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnDesliz.TabIndex = 0;
             this.btnDesliz.TabStop = false;
+            this.btnDesliz.Click += new System.EventHandler(this.btnDesliz_Click);
             // 
             // btnCerrar
             // 
@@ -128,6 +133,7 @@
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 3;
             this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 
             // btnMaximizar
             // 
@@ -141,6 +147,7 @@
             this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMaximizar.TabIndex = 1;
             this.btnMaximizar.TabStop = false;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click_1);
             // 
             // flpMenu
             // 
@@ -165,6 +172,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(61, 62);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pnlEnvioDoc
             // 
@@ -223,10 +231,13 @@
             this.pnlReunion.BackColor = System.Drawing.SystemColors.Control;
             this.pnlReunion.Controls.Add(this.btnReunion);
             this.pnlReunion.Font = new System.Drawing.Font("Script MT Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlReunion.Location = new System.Drawing.Point(0, 176);
+
+            this.pnlReunion.Location = new System.Drawing.Point(0, 144);
             this.pnlReunion.Margin = new System.Windows.Forms.Padding(0);
             this.pnlReunion.Name = "pnlReunion";
-            this.pnlReunion.Size = new System.Drawing.Size(247, 55);
+            this.pnlReunion.Size = new System.Drawing.Size(185, 45);
+
+
             this.pnlReunion.TabIndex = 9;
             // 
             // btnReunion
@@ -235,11 +246,14 @@
             this.btnReunion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReunion.ForeColor = System.Drawing.Color.White;
             this.btnReunion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReunion.Location = new System.Drawing.Point(-5, -5);
+
+            this.btnReunion.Location = new System.Drawing.Point(-4, -4);
             this.btnReunion.Margin = new System.Windows.Forms.Padding(0);
             this.btnReunion.Name = "btnReunion";
-            this.btnReunion.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.btnReunion.Size = new System.Drawing.Size(257, 65);
+            this.btnReunion.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnReunion.Size = new System.Drawing.Size(193, 53);
+
+
             this.btnReunion.TabIndex = 1;
             this.btnReunion.Text = "Reuniones";
             this.btnReunion.UseVisualStyleBackColor = false;
@@ -274,11 +288,14 @@
             // 
             this.panelContenedorEstud.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelContenedorEstud.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedorEstud.Location = new System.Drawing.Point(247, 62);
-            this.panelContenedorEstud.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
+            this.panelContenedorEstud.Location = new System.Drawing.Point(185, 50);
+            this.panelContenedorEstud.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenedorEstud.Name = "panelContenedorEstud";
-            this.panelContenedorEstud.Size = new System.Drawing.Size(1053, 588);
+            this.panelContenedorEstud.Size = new System.Drawing.Size(790, 478);
             this.panelContenedorEstud.TabIndex = 14;
+            this.panelContenedorEstud.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorEstud_Paint_1);
+
             // 
             // FrmMenuEstudiantes
             // 
@@ -289,7 +306,10 @@
             this.Controls.Add(this.flpMenu);
             this.Controls.Add(this.panelCabecera);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+
+            this.Margin = new System.Windows.Forms.Padding(2);
+
+
             this.Name = "FrmMenuEstudiantes";
             this.Text = "Menu Estudiantes";
             this.panelCabecera.ResumeLayout(false);
