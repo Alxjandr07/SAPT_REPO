@@ -32,6 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuEstudiantes));
             this.tmrTransicionMenu = new System.Windows.Forms.Timer(this.components);
             this.panelCabecera = new System.Windows.Forms.Panel();
+            this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.btnMinim = new System.Windows.Forms.PictureBox();
+            this.btnDesliz = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.flpMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlEnvioDoc = new System.Windows.Forms.Panel();
             this.btnEnvioDoc = new System.Windows.Forms.Button();
@@ -42,22 +47,17 @@
             this.pnlEstadoProceso = new System.Windows.Forms.Panel();
             this.btnEstadoProceso = new System.Windows.Forms.Button();
             this.panelContenedorEstud = new System.Windows.Forms.Panel();
-            this.btnRestaurar = new System.Windows.Forms.PictureBox();
-            this.btnMinim = new System.Windows.Forms.PictureBox();
-            this.btnDesliz = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.panelCabecera.SuspendLayout();
-            this.flpMenu.SuspendLayout();
-            this.pnlEnvioDoc.SuspendLayout();
-            this.pnlReunion.SuspendLayout();
-            this.pnlAutoridades.SuspendLayout();
-            this.pnlEstadoProceso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDesliz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
+            this.flpMenu.SuspendLayout();
+            this.pnlEnvioDoc.SuspendLayout();
+            this.pnlReunion.SuspendLayout();
+            this.pnlAutoridades.SuspendLayout();
+            this.pnlEstadoProceso.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelCabecera
@@ -75,136 +75,6 @@
             this.panelCabecera.Size = new System.Drawing.Size(959, 50);
             this.panelCabecera.TabIndex = 11;
             this.panelCabecera.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelCabecera_MouseDown_1);
-            // 
-            // flpMenu
-            // 
-            this.flpMenu.BackColor = System.Drawing.Color.Green;
-            this.flpMenu.Controls.Add(this.pnlEnvioDoc);
-            this.flpMenu.Controls.Add(this.pnlReunion);
-            this.flpMenu.Controls.Add(this.pnlAutoridades);
-            this.flpMenu.Controls.Add(this.pnlEstadoProceso);
-            this.flpMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flpMenu.Location = new System.Drawing.Point(0, 50);
-            this.flpMenu.Name = "flpMenu";
-            this.flpMenu.Size = new System.Drawing.Size(245, 439);
-            this.flpMenu.TabIndex = 13;
-            // 
-            // pnlEnvioDoc
-            // 
-            this.pnlEnvioDoc.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlEnvioDoc.Controls.Add(this.btnEnvioDoc);
-            this.pnlEnvioDoc.Font = new System.Drawing.Font("Script MT Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlEnvioDoc.Location = new System.Drawing.Point(0, 0);
-            this.pnlEnvioDoc.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlEnvioDoc.Name = "pnlEnvioDoc";
-            this.pnlEnvioDoc.Size = new System.Drawing.Size(245, 45);
-            this.pnlEnvioDoc.TabIndex = 7;
-            // 
-            // btnEnvioDoc
-            // 
-            this.btnEnvioDoc.BackColor = System.Drawing.Color.Green;
-            this.btnEnvioDoc.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSpringGreen;
-            this.btnEnvioDoc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnvioDoc.ForeColor = System.Drawing.Color.White;
-            this.btnEnvioDoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEnvioDoc.Location = new System.Drawing.Point(-4, -4);
-            this.btnEnvioDoc.Margin = new System.Windows.Forms.Padding(0);
-            this.btnEnvioDoc.Name = "btnEnvioDoc";
-            this.btnEnvioDoc.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnEnvioDoc.Size = new System.Drawing.Size(253, 53);
-            this.btnEnvioDoc.TabIndex = 1;
-            this.btnEnvioDoc.Text = "Envio de Documentos";
-            this.btnEnvioDoc.UseVisualStyleBackColor = false;
-            this.btnEnvioDoc.Click += new System.EventHandler(this.btnEnvioDoc_Click);
-            // 
-            // pnlReunion
-            // 
-            this.pnlReunion.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlReunion.Controls.Add(this.btnReunion);
-            this.pnlReunion.Font = new System.Drawing.Font("Script MT Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlReunion.Location = new System.Drawing.Point(0, 45);
-            this.pnlReunion.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlReunion.Name = "pnlReunion";
-            this.pnlReunion.Size = new System.Drawing.Size(245, 45);
-            this.pnlReunion.TabIndex = 9;
-            // 
-            // btnReunion
-            // 
-            this.btnReunion.BackColor = System.Drawing.Color.Green;
-            this.btnReunion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReunion.ForeColor = System.Drawing.Color.White;
-            this.btnReunion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReunion.Location = new System.Drawing.Point(-4, -4);
-            this.btnReunion.Margin = new System.Windows.Forms.Padding(0);
-            this.btnReunion.Name = "btnReunion";
-            this.btnReunion.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnReunion.Size = new System.Drawing.Size(253, 53);
-            this.btnReunion.TabIndex = 1;
-            this.btnReunion.Text = "Reuniones";
-            this.btnReunion.UseVisualStyleBackColor = false;
-            // 
-            // pnlAutoridades
-            // 
-            this.pnlAutoridades.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlAutoridades.Controls.Add(this.btnAutoridades);
-            this.pnlAutoridades.Font = new System.Drawing.Font("Script MT Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlAutoridades.Location = new System.Drawing.Point(0, 90);
-            this.pnlAutoridades.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlAutoridades.Name = "pnlAutoridades";
-            this.pnlAutoridades.Size = new System.Drawing.Size(245, 45);
-            this.pnlAutoridades.TabIndex = 6;
-            // 
-            // btnAutoridades
-            // 
-            this.btnAutoridades.BackColor = System.Drawing.Color.Green;
-            this.btnAutoridades.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAutoridades.ForeColor = System.Drawing.Color.White;
-            this.btnAutoridades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAutoridades.Location = new System.Drawing.Point(-4, -4);
-            this.btnAutoridades.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAutoridades.Name = "btnAutoridades";
-            this.btnAutoridades.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnAutoridades.Size = new System.Drawing.Size(253, 53);
-            this.btnAutoridades.TabIndex = 1;
-            this.btnAutoridades.Text = "Autoridades";
-            this.btnAutoridades.UseVisualStyleBackColor = false;
-            // 
-            // pnlEstadoProceso
-            // 
-            this.pnlEstadoProceso.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlEstadoProceso.Controls.Add(this.btnEstadoProceso);
-            this.pnlEstadoProceso.Font = new System.Drawing.Font("Script MT Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlEstadoProceso.Location = new System.Drawing.Point(0, 135);
-            this.pnlEstadoProceso.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlEstadoProceso.Name = "pnlEstadoProceso";
-            this.pnlEstadoProceso.Size = new System.Drawing.Size(245, 45);
-            this.pnlEstadoProceso.TabIndex = 8;
-            // 
-            // btnEstadoProceso
-            // 
-            this.btnEstadoProceso.BackColor = System.Drawing.Color.Green;
-            this.btnEstadoProceso.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstadoProceso.ForeColor = System.Drawing.Color.White;
-            this.btnEstadoProceso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEstadoProceso.Location = new System.Drawing.Point(-4, -4);
-            this.btnEstadoProceso.Margin = new System.Windows.Forms.Padding(0);
-            this.btnEstadoProceso.Name = "btnEstadoProceso";
-            this.btnEstadoProceso.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnEstadoProceso.Size = new System.Drawing.Size(253, 53);
-            this.btnEstadoProceso.TabIndex = 1;
-            this.btnEstadoProceso.Text = "Estado del Proceso";
-            this.btnEstadoProceso.UseVisualStyleBackColor = false;
-            // 
-            // panelContenedorEstud
-            // 
-            this.panelContenedorEstud.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panelContenedorEstud.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedorEstud.Location = new System.Drawing.Point(245, 50);
-            this.panelContenedorEstud.Margin = new System.Windows.Forms.Padding(2);
-            this.panelContenedorEstud.Name = "panelContenedorEstud";
-            this.panelContenedorEstud.Size = new System.Drawing.Size(714, 439);
-            this.panelContenedorEstud.TabIndex = 14;
-            this.panelContenedorEstud.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorEstud_Paint_1);
             // 
             // btnRestaurar
             // 
@@ -275,6 +145,136 @@
             this.btnMaximizar.TabStop = false;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click_1);
             // 
+            // flpMenu
+            // 
+            this.flpMenu.BackColor = System.Drawing.Color.Green;
+            this.flpMenu.Controls.Add(this.pnlEnvioDoc);
+            this.flpMenu.Controls.Add(this.pnlReunion);
+            this.flpMenu.Controls.Add(this.pnlAutoridades);
+            this.flpMenu.Controls.Add(this.pnlEstadoProceso);
+            this.flpMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flpMenu.Location = new System.Drawing.Point(0, 50);
+            this.flpMenu.Name = "flpMenu";
+            this.flpMenu.Size = new System.Drawing.Size(245, 439);
+            this.flpMenu.TabIndex = 13;
+            // 
+            // pnlEnvioDoc
+            // 
+            this.pnlEnvioDoc.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlEnvioDoc.Controls.Add(this.btnEnvioDoc);
+            this.pnlEnvioDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlEnvioDoc.Location = new System.Drawing.Point(0, 0);
+            this.pnlEnvioDoc.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlEnvioDoc.Name = "pnlEnvioDoc";
+            this.pnlEnvioDoc.Size = new System.Drawing.Size(245, 45);
+            this.pnlEnvioDoc.TabIndex = 7;
+            // 
+            // btnEnvioDoc
+            // 
+            this.btnEnvioDoc.BackColor = System.Drawing.Color.Green;
+            this.btnEnvioDoc.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnEnvioDoc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnvioDoc.ForeColor = System.Drawing.Color.White;
+            this.btnEnvioDoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEnvioDoc.Location = new System.Drawing.Point(-4, -4);
+            this.btnEnvioDoc.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEnvioDoc.Name = "btnEnvioDoc";
+            this.btnEnvioDoc.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEnvioDoc.Size = new System.Drawing.Size(253, 53);
+            this.btnEnvioDoc.TabIndex = 1;
+            this.btnEnvioDoc.Text = "Envio de Documentos";
+            this.btnEnvioDoc.UseVisualStyleBackColor = false;
+            this.btnEnvioDoc.Click += new System.EventHandler(this.btnEnvioDoc_Click);
+            // 
+            // pnlReunion
+            // 
+            this.pnlReunion.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlReunion.Controls.Add(this.btnReunion);
+            this.pnlReunion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlReunion.Location = new System.Drawing.Point(0, 45);
+            this.pnlReunion.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlReunion.Name = "pnlReunion";
+            this.pnlReunion.Size = new System.Drawing.Size(245, 45);
+            this.pnlReunion.TabIndex = 9;
+            // 
+            // btnReunion
+            // 
+            this.btnReunion.BackColor = System.Drawing.Color.Green;
+            this.btnReunion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReunion.ForeColor = System.Drawing.Color.White;
+            this.btnReunion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReunion.Location = new System.Drawing.Point(-4, -4);
+            this.btnReunion.Margin = new System.Windows.Forms.Padding(0);
+            this.btnReunion.Name = "btnReunion";
+            this.btnReunion.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnReunion.Size = new System.Drawing.Size(253, 53);
+            this.btnReunion.TabIndex = 1;
+            this.btnReunion.Text = "Reuniones";
+            this.btnReunion.UseVisualStyleBackColor = false;
+            // 
+            // pnlAutoridades
+            // 
+            this.pnlAutoridades.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlAutoridades.Controls.Add(this.btnAutoridades);
+            this.pnlAutoridades.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlAutoridades.Location = new System.Drawing.Point(0, 90);
+            this.pnlAutoridades.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlAutoridades.Name = "pnlAutoridades";
+            this.pnlAutoridades.Size = new System.Drawing.Size(245, 45);
+            this.pnlAutoridades.TabIndex = 6;
+            // 
+            // btnAutoridades
+            // 
+            this.btnAutoridades.BackColor = System.Drawing.Color.Green;
+            this.btnAutoridades.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAutoridades.ForeColor = System.Drawing.Color.White;
+            this.btnAutoridades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAutoridades.Location = new System.Drawing.Point(-4, -4);
+            this.btnAutoridades.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAutoridades.Name = "btnAutoridades";
+            this.btnAutoridades.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnAutoridades.Size = new System.Drawing.Size(253, 53);
+            this.btnAutoridades.TabIndex = 1;
+            this.btnAutoridades.Text = "Autoridades";
+            this.btnAutoridades.UseVisualStyleBackColor = false;
+            // 
+            // pnlEstadoProceso
+            // 
+            this.pnlEstadoProceso.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlEstadoProceso.Controls.Add(this.btnEstadoProceso);
+            this.pnlEstadoProceso.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlEstadoProceso.Location = new System.Drawing.Point(0, 135);
+            this.pnlEstadoProceso.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlEstadoProceso.Name = "pnlEstadoProceso";
+            this.pnlEstadoProceso.Size = new System.Drawing.Size(245, 45);
+            this.pnlEstadoProceso.TabIndex = 8;
+            // 
+            // btnEstadoProceso
+            // 
+            this.btnEstadoProceso.BackColor = System.Drawing.Color.Green;
+            this.btnEstadoProceso.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstadoProceso.ForeColor = System.Drawing.Color.White;
+            this.btnEstadoProceso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEstadoProceso.Location = new System.Drawing.Point(-4, -4);
+            this.btnEstadoProceso.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEstadoProceso.Name = "btnEstadoProceso";
+            this.btnEstadoProceso.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEstadoProceso.Size = new System.Drawing.Size(253, 53);
+            this.btnEstadoProceso.TabIndex = 1;
+            this.btnEstadoProceso.Text = "Estado del Proceso";
+            this.btnEstadoProceso.UseVisualStyleBackColor = false;
+            // 
+            // panelContenedorEstud
+            // 
+            this.panelContenedorEstud.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panelContenedorEstud.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedorEstud.Location = new System.Drawing.Point(245, 50);
+            this.panelContenedorEstud.Margin = new System.Windows.Forms.Padding(2);
+            this.panelContenedorEstud.Name = "panelContenedorEstud";
+            this.panelContenedorEstud.Size = new System.Drawing.Size(714, 439);
+            this.panelContenedorEstud.TabIndex = 14;
+            this.panelContenedorEstud.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorEstud_Paint_1);
+            // 
             // FrmMenuEstudiantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,16 +288,16 @@
             this.Name = "FrmMenuEstudiantes";
             this.Text = "Menu Estudiantes";
             this.panelCabecera.ResumeLayout(false);
-            this.flpMenu.ResumeLayout(false);
-            this.pnlEnvioDoc.ResumeLayout(false);
-            this.pnlReunion.ResumeLayout(false);
-            this.pnlAutoridades.ResumeLayout(false);
-            this.pnlEstadoProceso.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDesliz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
+            this.flpMenu.ResumeLayout(false);
+            this.pnlEnvioDoc.ResumeLayout(false);
+            this.pnlReunion.ResumeLayout(false);
+            this.pnlAutoridades.ResumeLayout(false);
+            this.pnlEstadoProceso.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
