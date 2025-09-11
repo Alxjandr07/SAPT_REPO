@@ -104,7 +104,7 @@ namespace SistemAutomProcesoTitulacion
 
         private void btnAnteproyecto_Click(object sender, EventArgs e)
         {
-            AbrirFormularioEnPanel(new frmEntregarDocumentos());
+            
         }
 
         private void panelContenedorEstud_Paint(object sender, PaintEventArgs e)
@@ -165,6 +165,11 @@ namespace SistemAutomProcesoTitulacion
             btnRestaurar.Visible = true;
             btnMaximizar.Visible = false;
 
+        }
+
+        private void btnEnvioDoc_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioEnPanel(new frmEntregarDocumentos());
         }
     }
 }
