@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace SistemAutomProcesoTitulacion
+{
+    public partial class frmMenuCoordinador : Form
+    {
+        public frmMenuCoordinador()
+        {
+            InitializeComponent();
+        }
+
+        private void panelContenedorEstud_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
+}

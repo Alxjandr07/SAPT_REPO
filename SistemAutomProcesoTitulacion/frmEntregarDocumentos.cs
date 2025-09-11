@@ -24,6 +24,9 @@ namespace SistemAutomProcesoTitulacion
 
             formHijo.TopLevel = false;
             formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill; // Ajusta el formulario hijo al tamaño del panel
+            formHijo.Size = panelContenedorDocEst.ClientSize; // Opcional, asegura el tamaño inicial
+
             this.panelContenedorDocEst.Controls.Add(formHijo);
             this.panelContenedorDocEst.Tag = formHijo;
             formHijo.Show();
@@ -52,6 +55,11 @@ namespace SistemAutomProcesoTitulacion
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             
+        }
+
+        private void panelContenedorDocEst_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

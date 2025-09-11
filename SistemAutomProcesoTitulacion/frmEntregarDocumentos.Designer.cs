@@ -99,10 +99,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContenedorDocEst.Location = new System.Drawing.Point(112, 58);
-            this.panelContenedorDocEst.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelContenedorDocEst.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenedorDocEst.Name = "panelContenedorDocEst";
             this.panelContenedorDocEst.Size = new System.Drawing.Size(576, 251);
             this.panelContenedorDocEst.TabIndex = 16;
+            this.panelContenedorDocEst.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorDocEst_Paint);
             // 
             // label2
             // 
