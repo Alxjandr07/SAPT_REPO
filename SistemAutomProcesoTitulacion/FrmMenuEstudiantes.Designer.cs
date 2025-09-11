@@ -46,6 +46,7 @@
             this.btnMinim = new System.Windows.Forms.PictureBox();
             this.btnDesliz = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.panelCabecera.SuspendLayout();
             this.flpMenu.SuspendLayout();
@@ -57,6 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDesliz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,6 +69,7 @@
             this.panelCabecera.Controls.Add(this.btnMinim);
             this.panelCabecera.Controls.Add(this.btnDesliz);
             this.panelCabecera.Controls.Add(this.btnCerrar);
+            this.panelCabecera.Controls.Add(this.pictureBox1);
             this.panelCabecera.Controls.Add(this.btnMaximizar);
             this.panelCabecera.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCabecera.Location = new System.Drawing.Point(0, 0);
@@ -93,7 +96,7 @@
             // 
             this.pnlEnvioDoc.BackColor = System.Drawing.SystemColors.Control;
             this.pnlEnvioDoc.Controls.Add(this.btnEnvioDoc);
-            this.pnlEnvioDoc.Font = new System.Drawing.Font("Script MT Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlEnvioDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlEnvioDoc.Location = new System.Drawing.Point(0, 0);
             this.pnlEnvioDoc.Margin = new System.Windows.Forms.Padding(0);
             this.pnlEnvioDoc.Name = "pnlEnvioDoc";
@@ -121,7 +124,7 @@
             // 
             this.pnlReunion.BackColor = System.Drawing.SystemColors.Control;
             this.pnlReunion.Controls.Add(this.btnReunion);
-            this.pnlReunion.Font = new System.Drawing.Font("Script MT Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlReunion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlReunion.Location = new System.Drawing.Point(0, 45);
             this.pnlReunion.Margin = new System.Windows.Forms.Padding(0);
             this.pnlReunion.Name = "pnlReunion";
@@ -147,7 +150,7 @@
             // 
             this.pnlAutoridades.BackColor = System.Drawing.SystemColors.Control;
             this.pnlAutoridades.Controls.Add(this.btnAutoridades);
-            this.pnlAutoridades.Font = new System.Drawing.Font("Script MT Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlAutoridades.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlAutoridades.Location = new System.Drawing.Point(0, 90);
             this.pnlAutoridades.Margin = new System.Windows.Forms.Padding(0);
             this.pnlAutoridades.Name = "pnlAutoridades";
@@ -173,7 +176,7 @@
             // 
             this.pnlEstadoProceso.BackColor = System.Drawing.SystemColors.Control;
             this.pnlEstadoProceso.Controls.Add(this.btnEstadoProceso);
-            this.pnlEstadoProceso.Font = new System.Drawing.Font("Script MT Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlEstadoProceso.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlEstadoProceso.Location = new System.Drawing.Point(0, 135);
             this.pnlEstadoProceso.Margin = new System.Windows.Forms.Padding(0);
             this.pnlEstadoProceso.Name = "pnlEstadoProceso";
@@ -261,6 +264,18 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = global::SistemAutomProcesoTitulacion.Properties.Resources.cerrar_sesion;
+            this.pictureBox1.Location = new System.Drawing.Point(838, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_2);
+            // 
             // btnMaximizar
             // 
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -297,6 +312,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDesliz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             this.ResumeLayout(false);
 
@@ -320,5 +336,6 @@
         private System.Windows.Forms.Button btnEstadoProceso;
         private System.Windows.Forms.Panel pnlAutoridades;
         private System.Windows.Forms.Button btnAutoridades;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
