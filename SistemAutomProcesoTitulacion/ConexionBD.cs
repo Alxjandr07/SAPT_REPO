@@ -11,7 +11,7 @@ namespace SistemAutomProcesoTitulacion
 {
     public class ConexionBD
     {
-        private static string cadena = "Server=DESKTOP-V9JOQAR; Database=SistemaTitulacionUTEQ; Integrated Security=true";
+        private static string cadena = "Server=.; Database=SistemaTitulacionUTEQ; Integrated Security=true";
         private static SqlConnection conexion = new SqlConnection(cadena);
 
         public static SqlConnection ObtenerConexion()
