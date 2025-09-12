@@ -111,6 +111,7 @@
             this.tsbFiltro.Name = "tsbFiltro";
             this.tsbFiltro.Size = new System.Drawing.Size(23, 23);
             this.tsbFiltro.Text = "Filtrar";
+            this.tsbFiltro.Click += new System.EventHandler(this.tsbFiltro_Click);
             // 
             // toolStripSeparator1
             // 

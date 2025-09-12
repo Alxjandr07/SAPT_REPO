@@ -45,5 +45,11 @@ namespace SistemAutomProcesoTitulacion
         {
             dgvGestion.DataSource = ConexionBD.ObtenerUsuarios();
         }
+
+        private void tsbFiltro_Click(object sender, EventArgs e)
+        {
+            string filtro = tstFiltro.Text.Trim();
+            dgvGestion.DataSource = ConexionBD.FiltrarUsuarios(filtro);
+        }
     }
 }
