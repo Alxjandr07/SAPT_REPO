@@ -54,20 +54,13 @@ namespace SistemAutomProcesoTitulacion
 
             try
             {
-                using (SqlConnection con = new SqlConnection(cadena)) // 🔑 se cierra solo al terminar
+                using (SqlConnection con = new SqlConnection(cadena))
                 {
                     con.Open();
 
-                    // 🔎 Consulta con JOIN para obtener el nombre del rol desde la tabla Roles
-                    string query = @"SELECT r.NombreRol 
-                             FROM Usuarios u
-                             INNER JOIN Roles r ON u.IdRol = r.IdRol
-                             WHERE u.CorreoInstitucional = @correo 
-                               AND u.Contrasena = @contrasena
-                               AND u.Estado = 1";  // opcional si manejas estado activo/inactivo
-
-                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    using (SqlCommand cmd = new SqlCommand("LoginUsuario", con))
                     {
+                        cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@correo", correo);
                         cmd.Parameters.AddWithValue("@contrasena", contrasena);
 
@@ -75,7 +68,7 @@ namespace SistemAutomProcesoTitulacion
 
                         if (reader.Read())
                         {
-                            rol = reader["NombreRol"].ToString();
+                            rol = reader["Rol"].ToString(); // 👌 directo desde SP
                         }
                     }
                 }
@@ -110,6 +103,31 @@ namespace SistemAutomProcesoTitulacion
             catch (Exception ex)
             {
                 MessageBox.Show("❌ Error al obtener usuarios: " + ex.Message);
+            }
+            return dt;
+        }
+
+        public static DataTable FiltrarUsuarios(string filtro)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection con = new SqlConnection(cadena))
+                using (SqlCommand cmd = new SqlCommand("FiltrarUsuarios", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Filtro", filtro);
+
+                    con.Open();
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Error al filtrar usuarios: " + ex.Message);
             }
             return dt;
         }
