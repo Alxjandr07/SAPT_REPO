@@ -125,6 +125,7 @@
     <Compile Include="frmTutor.Designer.cs">
       <DependentUpon>frmTutor.cs</DependentUpon>
     </Compile>
+    <Compile Include="funciones.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -214,10 +215,7 @@
     <None Include="Resources\letra-x.png" />
   </ItemGroup>
   <ItemGroup>
-
     <None Include="Resources\gire-a-la-izquierda.png" />
-
-
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
