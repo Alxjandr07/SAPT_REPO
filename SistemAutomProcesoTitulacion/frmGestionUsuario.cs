@@ -29,7 +29,9 @@ namespace SistemAutomProcesoTitulacion
             if (menuCoord != null)
             {
                 // Reemplaza el formulario actual por frmAggModUsuario en el panel contenedor
-                funciones.AbrirFormularioEnPanel(new frmAggModUsuario(), menuCoord.panelContenedor);
+                frmAggModUsuario aggModUsuario = new frmAggModUsuario();
+                aggModUsuario.Owner = menuCoord;
+                funciones.AbrirFormularioEnPanel(aggModUsuario, menuCoord.panelContenedor);
             }
         }
     }
