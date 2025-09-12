@@ -16,5 +16,10 @@ namespace SistemAutomProcesoTitulacion
         {
             InitializeComponent();
         }
+
+        private void tsbModificar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

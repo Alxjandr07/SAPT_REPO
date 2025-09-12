@@ -72,7 +72,7 @@
             this.toolStripSeparator6});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1067, 30);
+            this.toolStrip1.Size = new System.Drawing.Size(800, 26);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -80,26 +80,26 @@
             // 
             this.toolStripLabel3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(152, 27);
+            this.toolStripLabel3.Size = new System.Drawing.Size(121, 23);
             this.toolStripLabel3.Text = "Gestion de Reuniones";
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 30);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 26);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(50, 27);
+            this.toolStripLabel1.Size = new System.Drawing.Size(40, 23);
             this.toolStripLabel1.Text = "Filtrar:";
             // 
             // tstFiltro
             // 
             this.tstFiltro.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tstFiltro.Name = "tstFiltro";
-            this.tstFiltro.Size = new System.Drawing.Size(223, 30);
+            this.tstFiltro.Size = new System.Drawing.Size(168, 26);
             // 
             // tsbFiltro
             // 
@@ -107,25 +107,25 @@
             this.tsbFiltro.Image = ((System.Drawing.Image)(resources.GetObject("tsbFiltro.Image")));
             this.tsbFiltro.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbFiltro.Name = "tsbFiltro";
-            this.tsbFiltro.Size = new System.Drawing.Size(28, 27);
+            this.tsbFiltro.Size = new System.Drawing.Size(23, 23);
             this.tsbFiltro.Text = "Filtrar";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 30);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 26);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(75, 27);
+            this.toolStripLabel2.Size = new System.Drawing.Size(61, 23);
             this.toolStripLabel2.Text = "Acciones: ";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 30);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 26);
             // 
             // tsbNuevo
             // 
@@ -133,14 +133,14 @@
             this.tsbNuevo.Image = ((System.Drawing.Image)(resources.GetObject("tsbNuevo.Image")));
             this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNuevo.Name = "tsbNuevo";
-            this.tsbNuevo.Size = new System.Drawing.Size(75, 27);
+            this.tsbNuevo.Size = new System.Drawing.Size(65, 23);
             this.tsbNuevo.Text = "Nuevo";
             this.tsbNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 30);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 26);
             // 
             // tsbModificar
             // 
@@ -148,14 +148,15 @@
             this.tsbModificar.Image = ((System.Drawing.Image)(resources.GetObject("tsbModificar.Image")));
             this.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbModificar.Name = "tsbModificar";
-            this.tsbModificar.Size = new System.Drawing.Size(96, 27);
+            this.tsbModificar.Size = new System.Drawing.Size(81, 23);
             this.tsbModificar.Text = "Modificar";
             this.tsbModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 30);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 26);
             // 
             // tsbEliminar
             // 
@@ -163,14 +164,14 @@
             this.tsbEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsbEliminar.Image")));
             this.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEliminar.Name = "tsbEliminar";
-            this.tsbEliminar.Size = new System.Drawing.Size(86, 27);
+            this.tsbEliminar.Size = new System.Drawing.Size(73, 23);
             this.tsbEliminar.Text = "Eliminar";
             this.tsbEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 30);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 26);
             // 
             // tsbVolver
             // 
@@ -178,23 +179,22 @@
             this.tsbVolver.Image = ((System.Drawing.Image)(resources.GetObject("tsbVolver.Image")));
             this.tsbVolver.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbVolver.Name = "tsbVolver";
-            this.tsbVolver.Size = new System.Drawing.Size(73, 27);
+            this.tsbVolver.Size = new System.Drawing.Size(62, 23);
             this.tsbVolver.Text = "Volver";
             this.tsbVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 30);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 26);
             // 
             // frmGestionReunion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmGestionReunion";
             this.Text = "frmGestionReunion";
             this.toolStrip1.ResumeLayout(false);
