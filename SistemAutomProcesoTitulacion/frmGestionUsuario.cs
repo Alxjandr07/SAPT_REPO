@@ -51,5 +51,29 @@ namespace SistemAutomProcesoTitulacion
             string filtro = tstFiltro.Text.Trim();
             dgvGestion.DataSource = ConexionBD.FiltrarUsuarios(filtro);
         }
+
+        private void tsbModificar_Click(object sender, EventArgs e)
+        {
+            if (dgvGestion.CurrentRow != null)
+            {
+                int idUsuario = Convert.ToInt32(dgvGestion.CurrentRow.Cells["IdUsuario"].Value);
+                string nombre = dgvGestion.CurrentRow.Cells["NombreCompleto"].Value.ToString();
+                string cedula = dgvGestion.CurrentRow.Cells["Cedula"].Value.ToString();
+                string correo = dgvGestion.CurrentRow.Cells["CorreoInstitucional"].Value.ToString();
+                string rol = dgvGestion.CurrentRow.Cells["Rol"].Value.ToString();
+
+                frmMenuCoordinador menuCoord = this.Owner as frmMenuCoordinador;
+                if (menuCoord != null)
+                {
+                    frmAggModUsuario aggModUsuario = new frmAggModUsuario(idUsuario, nombre, cedula, correo, rol, "Modificar");
+                    aggModUsuario.Owner = menuCoord;
+                    funciones.AbrirFormularioEnPanel(aggModUsuario, menuCoord.panelContenedor);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un usuario para modificar.");
+            }
+        }
     }
 }

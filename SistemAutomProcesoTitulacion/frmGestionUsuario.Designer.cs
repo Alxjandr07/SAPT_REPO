@@ -155,6 +155,7 @@
             this.tsbModificar.Size = new System.Drawing.Size(81, 23);
             this.tsbModificar.Text = "Modificar";
             this.tsbModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click);
             // 
             // toolStripSeparator4
             // 

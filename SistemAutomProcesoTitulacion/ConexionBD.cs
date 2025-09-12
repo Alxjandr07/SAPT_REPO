@@ -131,5 +131,96 @@ namespace SistemAutomProcesoTitulacion
             }
             return dt;
         }
+
+        public static bool RegistrarUsuario(string nombre, string cedula, string correo, string contrasena, string rol)
+        {
+            bool exito = false;
+            try
+            {
+                if (ConexionBD.UsuarioDuplicado(correo, cedula, contrasena))
+                {
+                    MessageBox.Show("⚠️ Ya existe un usuario con ese correo, cédula o la misma combinación de correo y contraseña.");
+                    return exito;
+                }
+
+                using (SqlConnection con = new SqlConnection(cadena))
+                {
+                    using (SqlCommand cmd = new SqlCommand("RegistrarUsuario", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@NombreCompleto", nombre);
+                        cmd.Parameters.AddWithValue("@Cedula", cedula);
+                        cmd.Parameters.AddWithValue("@CorreoInstitucional", correo);
+                        cmd.Parameters.AddWithValue("@Contrasena", contrasena); // el SP ya encripta
+                        cmd.Parameters.AddWithValue("@Rol", rol);
+
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        exito = true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Error al registrar usuario: " + ex.Message);
+            }
+            return exito;
+        }
+
+        public static bool UsuarioDuplicado(string correo, string cedula, string contrasena)
+        {
+            bool existe = false;
+            try
+            {
+                using (SqlConnection con = new SqlConnection(cadena))
+                using (SqlCommand cmd = new SqlCommand("ValidarUsuarioDuplicado", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@CorreoInstitucional", correo);
+                    cmd.Parameters.AddWithValue("@Cedula", cedula);
+                    cmd.Parameters.AddWithValue("@Contrasena", contrasena);
+
+                    con.Open();
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && Convert.ToInt32(result) == 1)
+                        existe = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Error al validar duplicados: " + ex.Message);
+            }
+            return existe;
+        }
+
+        public static bool ActualizarUsuario(int idUsuario, string nombre, string cedula, string correo, string contrasena, string rol)
+        {
+            bool exito = false;
+            try
+            {
+                using (SqlConnection con = new SqlConnection(cadena))
+                {
+                    using (SqlCommand cmd = new SqlCommand("ActualizarUsuario", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                        cmd.Parameters.AddWithValue("@NombreCompleto", nombre);
+                        cmd.Parameters.AddWithValue("@Cedula", cedula);
+                        cmd.Parameters.AddWithValue("@CorreoInstitucional", correo);
+                        cmd.Parameters.AddWithValue("@Contrasena", contrasena);
+                        cmd.Parameters.AddWithValue("@Rol", rol);
+
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        exito = true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Error al modificar usuario: " + ex.Message);
+            }
+            return exito;
+        }
     }
 }
