@@ -16,5 +16,16 @@ namespace SistemAutomProcesoTitulacion
         {
             InitializeComponent();
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            frmMenuCoordinador menuCoord = this.Owner as frmMenuCoordinador;
+            if (menuCoord != null)
+            {
+                frmGestionUsuario gestionUsuario = new frmGestionUsuario();
+                gestionUsuario.Owner = menuCoord;
+                funciones.AbrirFormularioEnPanel(gestionUsuario, menuCoord.panelContenedor);
+            }
+        }
     }
 }
