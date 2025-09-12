@@ -128,6 +128,16 @@
     <Compile Include="funciones.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SistemaTitulacionUTEQDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaTitulacionUTEQDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaTitulacionUTEQDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaTitulacionUTEQDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +196,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SistemaTitulacionUTEQDataSet.xsc">
+      <DependentUpon>SistemaTitulacionUTEQDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaTitulacionUTEQDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaTitulacionUTEQDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaTitulacionUTEQDataSet.xss">
+      <DependentUpon>SistemaTitulacionUTEQDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaTitulacionUTEQDataSet1.xsc">
+      <DependentUpon>SistemaTitulacionUTEQDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaTitulacionUTEQDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaTitulacionUTEQDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaTitulacionUTEQDataSet1.xss">
+      <DependentUpon>SistemaTitulacionUTEQDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
