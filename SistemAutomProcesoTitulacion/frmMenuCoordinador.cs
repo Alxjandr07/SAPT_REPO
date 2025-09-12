@@ -78,5 +78,30 @@ namespace SistemAutomProcesoTitulacion
                 }
             }
         }
+
+        private void AbrirFormularioEnPanel(Form formHijo)
+        {
+            if (this.panelContenedor.Controls.Count > 0)
+                this.panelContenedor.Controls.RemoveAt(0);
+
+            formHijo.TopLevel = false;
+            formHijo.FormBorderStyle = FormBorderStyle.None;
+            formHijo.Dock = DockStyle.Fill; // Esta línea es clave
+            formHijo.Size = panelContenedor.ClientSize; // Opcional, asegura el tamaño inicial
+
+            this.panelContenedor.Controls.Add(formHijo);
+            this.panelContenedor.Tag = formHijo;
+            formHijo.Show();
+        }
+
+        private void btnEnvioDoc_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioEnPanel(new frmGestionUsuario());
+        }
+
+        private void btnReunion_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioEnPanel(new frmGestionReunion());
+        }
     }
 }
