@@ -46,9 +46,9 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbVolver = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvGestion = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGestion)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -191,33 +191,38 @@
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 26);
             // 
-            // dataGridView1
+            // dgvGestion
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 26);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 49;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 424);
-            this.dataGridView1.TabIndex = 3;
+            this.dgvGestion.AllowUserToAddRows = false;
+            this.dgvGestion.AllowUserToDeleteRows = false;
+            this.dgvGestion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvGestion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvGestion.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvGestion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGestion.Location = new System.Drawing.Point(0, 26);
+            this.dgvGestion.Name = "dgvGestion";
+            this.dgvGestion.ReadOnly = true;
+            this.dgvGestion.RowHeadersWidth = 49;
+            this.dgvGestion.Size = new System.Drawing.Size(800, 424);
+            this.dgvGestion.TabIndex = 3;
+            this.dgvGestion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGestion_CellContentClick);
             // 
             // frmGestionUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvGestion);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGestionUsuario";
             this.Text = "frmGestionUsuario";
+            this.Load += new System.EventHandler(this.frmGestionUsuario_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGestion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,7 +245,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton tsbVolver;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvGestion;
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
     }

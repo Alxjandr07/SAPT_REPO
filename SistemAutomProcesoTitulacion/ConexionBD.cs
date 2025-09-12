@@ -88,5 +88,30 @@ namespace SistemAutomProcesoTitulacion
             return rol;
         }
 
+        public static DataTable ObtenerUsuarios()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection con = new SqlConnection(cadena))
+                {
+                    using (SqlCommand cmd = new SqlCommand("ListarUsuarios", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        con.Open();
+
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        {
+                            da.Fill(dt);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Error al obtener usuarios: " + ex.Message);
+            }
+            return dt;
+        }
     }
 }

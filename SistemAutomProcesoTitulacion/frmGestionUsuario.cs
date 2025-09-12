@@ -15,6 +15,7 @@ namespace SistemAutomProcesoTitulacion
         public frmGestionUsuario()
         {
             InitializeComponent();
+            this.Load += frmGestionUsuario_Load;
         }
 
         private void tsbVolver_Click(object sender, EventArgs e)
@@ -33,6 +34,16 @@ namespace SistemAutomProcesoTitulacion
                 aggModUsuario.Owner = menuCoord;
                 funciones.AbrirFormularioEnPanel(aggModUsuario, menuCoord.panelContenedor);
             }
+        }
+
+        private void dgvGestion_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void frmGestionUsuario_Load(object sender, EventArgs e)
+        {
+            dgvGestion.DataSource = ConexionBD.ObtenerUsuarios();
         }
     }
 }
