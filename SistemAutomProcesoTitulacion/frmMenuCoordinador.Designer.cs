@@ -74,7 +74,7 @@
             this.panelCabecera.Controls.Add(this.btnMaximizar);
             this.panelCabecera.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCabecera.Location = new System.Drawing.Point(0, 0);
-            this.panelCabecera.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelCabecera.Margin = new System.Windows.Forms.Padding(2);
             this.panelCabecera.Name = "panelCabecera";
             this.panelCabecera.Size = new System.Drawing.Size(959, 50);
             this.panelCabecera.TabIndex = 12;
@@ -97,7 +97,7 @@
             this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
             this.btnRestaurar.Location = new System.Drawing.Point(908, 2);
-            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRestaurar.Name = "btnRestaurar";
             this.btnRestaurar.Size = new System.Drawing.Size(22, 24);
             this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -112,7 +112,7 @@
             this.btnMinim.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinim.Image = ((System.Drawing.Image)(resources.GetObject("btnMinim.Image")));
             this.btnMinim.Location = new System.Drawing.Point(883, 1);
-            this.btnMinim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMinim.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinim.Name = "btnMinim";
             this.btnMinim.Size = new System.Drawing.Size(22, 24);
             this.btnMinim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -124,7 +124,7 @@
             // 
             this.btnDesliz.Image = ((System.Drawing.Image)(resources.GetObject("btnDesliz.Image")));
             this.btnDesliz.Location = new System.Drawing.Point(2, 2);
-            this.btnDesliz.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDesliz.Margin = new System.Windows.Forms.Padding(2);
             this.btnDesliz.Name = "btnDesliz";
             this.btnDesliz.Size = new System.Drawing.Size(26, 28);
             this.btnDesliz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -138,7 +138,7 @@
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = global::SistemAutomProcesoTitulacion.Properties.Resources.letra_x;
             this.btnCerrar.Location = new System.Drawing.Point(935, 2);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(22, 24);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -152,7 +152,7 @@
             this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
             this.btnMaximizar.Location = new System.Drawing.Point(908, 2);
-            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(22, 24);
             this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -321,7 +321,7 @@
             this.panelContenedor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(245, 50);
-            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(714, 439);
             this.panelContenedor.TabIndex = 15;
@@ -371,10 +371,10 @@
         private System.Windows.Forms.Button btnAutoridades;
         private System.Windows.Forms.Panel pnlEstadoProceso;
         private System.Windows.Forms.Button btnEstadoProceso;
-        private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox btnRestaurar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Panel panelContenedor;
     }
 }

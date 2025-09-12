@@ -96,7 +96,9 @@ namespace SistemAutomProcesoTitulacion
 
         private void btnEnvioDoc_Click(object sender, EventArgs e)
         {
-            AbrirFormularioEnPanel(new frmGestionUsuario());
+            frmGestionUsuario gestionUsuario = new frmGestionUsuario();
+            gestionUsuario.Owner = this; // 'this' es la instancia de frmMenuCoordinador
+            AbrirFormularioEnPanel(gestionUsuario);
         }
 
         private void btnReunion_Click(object sender, EventArgs e)

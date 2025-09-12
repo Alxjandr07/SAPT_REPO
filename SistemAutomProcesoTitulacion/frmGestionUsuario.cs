@@ -21,5 +21,16 @@ namespace SistemAutomProcesoTitulacion
         {
             
         }
+
+        private void tsbNuevo_Click(object sender, EventArgs e)
+        {
+            // Obtén la instancia del formulario padre (frmMenuCoordinador)
+            frmMenuCoordinador menuCoord = this.Owner as frmMenuCoordinador;
+            if (menuCoord != null)
+            {
+                // Reemplaza el formulario actual por frmAggModUsuario en el panel contenedor
+                funciones.AbrirFormularioEnPanel(new frmAggModUsuario(), menuCoord.panelContenedor);
+            }
+        }
     }
 }
