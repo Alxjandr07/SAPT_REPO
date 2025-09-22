@@ -111,7 +111,7 @@
             // 
             this.button4.BackgroundImage = global::SistemAutomProcesoTitulacion.Properties.Resources.proceso;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Location = new System.Drawing.Point(373, 189);
+            this.button4.Location = new System.Drawing.Point(357, 189);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 120);
             this.button4.TabIndex = 8;
