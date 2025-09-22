@@ -35,12 +35,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblAprobacionDoc = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnEntregaDoc = new System.Windows.Forms.Button();
+            this.lblAprobacionDoc = new System.Windows.Forms.Label();
             this.btnAprobacionDoc = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -111,7 +111,7 @@
             // 
             this.button4.BackgroundImage = global::SistemAutomProcesoTitulacion.Properties.Resources.proceso;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Location = new System.Drawing.Point(357, 189);
+            this.button4.Location = new System.Drawing.Point(373, 189);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 120);
             this.button4.TabIndex = 8;
@@ -128,6 +128,16 @@
             this.label3.Text = "Panel de \r\nNotificaciones";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::SistemAutomProcesoTitulacion.Properties.Resources.panelNotificacion;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(77, 189);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 120);
+            this.button3.TabIndex = 6;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -138,6 +148,16 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Cronograma de \r\nReuniones";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::SistemAutomProcesoTitulacion.Properties.Resources.cronogramaReunion;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(616, 15);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 120);
+            this.button2.TabIndex = 4;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -150,6 +170,16 @@
             this.label1.Text = "Entrega de \r\nDocumentos";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnEntregaDoc
+            // 
+            this.btnEntregaDoc.BackgroundImage = global::SistemAutomProcesoTitulacion.Properties.Resources.entregaDocumento;
+            this.btnEntregaDoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEntregaDoc.Location = new System.Drawing.Point(357, 15);
+            this.btnEntregaDoc.Name = "btnEntregaDoc";
+            this.btnEntregaDoc.Size = new System.Drawing.Size(100, 120);
+            this.btnEntregaDoc.TabIndex = 2;
+            this.btnEntregaDoc.UseVisualStyleBackColor = true;
+            // 
             // lblAprobacionDoc
             // 
             this.lblAprobacionDoc.AutoSize = true;
@@ -160,36 +190,6 @@
             this.lblAprobacionDoc.TabIndex = 1;
             this.lblAprobacionDoc.Text = "Aprobación de \r\nDocumentos";
             this.lblAprobacionDoc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::SistemAutomProcesoTitulacion.Properties.Resources.panelNotificacion;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(77, 189);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 120);
-            this.button3.TabIndex = 6;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::SistemAutomProcesoTitulacion.Properties.Resources.cronogramaReunion;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(616, 15);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 120);
-            this.button2.TabIndex = 4;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // btnEntregaDoc
-            // 
-            this.btnEntregaDoc.BackgroundImage = global::SistemAutomProcesoTitulacion.Properties.Resources.entregaDocumento;
-            this.btnEntregaDoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEntregaDoc.Location = new System.Drawing.Point(357, 15);
-            this.btnEntregaDoc.Name = "btnEntregaDoc";
-            this.btnEntregaDoc.Size = new System.Drawing.Size(100, 120);
-            this.btnEntregaDoc.TabIndex = 2;
-            this.btnEntregaDoc.UseVisualStyleBackColor = true;
             // 
             // btnAprobacionDoc
             // 
