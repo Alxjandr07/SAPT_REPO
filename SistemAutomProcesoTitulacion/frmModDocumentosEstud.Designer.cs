@@ -45,12 +45,17 @@
             this.sbrDocumentoTableAdapter1 = new SistemAutomProcesoTitulacion.SistemaTitulacionUTEQDataSet1TableAdapters.SbrDocumentoTableAdapter();
             this.btnExaminar = new System.Windows.Forms.Button();
             this.txtRutaArchivo = new System.Windows.Forms.TextBox();
+            this.sistemaTitulacionUTEQDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sbrDocumentoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnVer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaTitulacionUTEQDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbrDocumentoBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocumentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbrDocumentoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaTitulacionUTEQDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sistemaTitulacionUTEQDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sbrDocumentoBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSubir
@@ -61,7 +66,7 @@
             this.btnSubir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubir.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubir.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnSubir.Location = new System.Drawing.Point(254, 267);
+            this.btnSubir.Location = new System.Drawing.Point(274, 267);
             this.btnSubir.Name = "btnSubir";
             this.btnSubir.Size = new System.Drawing.Size(104, 43);
             this.btnSubir.TabIndex = 13;
@@ -120,10 +125,11 @@
             this.nombreDataGridViewTextBoxColumn,
             this.tipoDataGridViewTextBoxColumn,
             this.fechaSubidaDataGridViewTextBoxColumn});
-            this.dgvDocumentos.DataSource = this.sbrDocumentoBindingSource1;
+            this.dgvDocumentos.DataSource = this.sbrDocumentoBindingSource2;
             this.dgvDocumentos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDocumentos.Location = new System.Drawing.Point(0, 0);
             this.dgvDocumentos.Name = "dgvDocumentos";
+            this.dgvDocumentos.ReadOnly = true;
             this.dgvDocumentos.Size = new System.Drawing.Size(477, 106);
             this.dgvDocumentos.TabIndex = 0;
             this.dgvDocumentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDocumentos_CellContentClick);
@@ -140,18 +146,21 @@
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
             this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tipoDataGridViewTextBoxColumn
             // 
             this.tipoDataGridViewTextBoxColumn.DataPropertyName = "Tipo";
             this.tipoDataGridViewTextBoxColumn.HeaderText = "Tipo";
             this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
+            this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // fechaSubidaDataGridViewTextBoxColumn
             // 
             this.fechaSubidaDataGridViewTextBoxColumn.DataPropertyName = "FechaSubida";
             this.fechaSubidaDataGridViewTextBoxColumn.HeaderText = "FechaSubida";
             this.fechaSubidaDataGridViewTextBoxColumn.Name = "fechaSubidaDataGridViewTextBoxColumn";
+            this.fechaSubidaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // sbrDocumentoBindingSource1
             // 
@@ -192,12 +201,39 @@
             this.txtRutaArchivo.TabIndex = 19;
             this.txtRutaArchivo.TextChanged += new System.EventHandler(this.txtRutaArchivo_TextChanged);
             // 
+            // sistemaTitulacionUTEQDataSetBindingSource
+            // 
+            this.sistemaTitulacionUTEQDataSetBindingSource.DataSource = this.sistemaTitulacionUTEQDataSet;
+            this.sistemaTitulacionUTEQDataSetBindingSource.Position = 0;
+            // 
+            // sbrDocumentoBindingSource2
+            // 
+            this.sbrDocumentoBindingSource2.DataMember = "SbrDocumento";
+            this.sbrDocumentoBindingSource2.DataSource = this.sistemaTitulacionUTEQDataSetBindingSource;
+            // 
+            // btnVer
+            // 
+            this.btnVer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnVer.FlatAppearance.BorderColor = System.Drawing.Color.Aqua;
+            this.btnVer.FlatAppearance.BorderSize = 2;
+            this.btnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVer.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVer.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnVer.Location = new System.Drawing.Point(170, 267);
+            this.btnVer.Name = "btnVer";
+            this.btnVer.Size = new System.Drawing.Size(88, 43);
+            this.btnVer.TabIndex = 20;
+            this.btnVer.Text = "Visualizar";
+            this.btnVer.UseVisualStyleBackColor = true;
+            this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
+            // 
             // frmModDocumentosEstud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(513, 333);
+            this.Controls.Add(this.btnVer);
             this.Controls.Add(this.txtRutaArchivo);
             this.Controls.Add(this.btnExaminar);
             this.Controls.Add(this.panel1);
@@ -214,6 +250,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocumentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbrDocumentoBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaTitulacionUTEQDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sistemaTitulacionUTEQDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sbrDocumentoBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,11 +268,14 @@
         private SistemaTitulacionUTEQDataSet1 sistemaTitulacionUTEQDataSet1;
         private System.Windows.Forms.BindingSource sbrDocumentoBindingSource1;
         private SistemaTitulacionUTEQDataSet1TableAdapters.SbrDocumentoTableAdapter sbrDocumentoTableAdapter1;
+        private System.Windows.Forms.Button btnExaminar;
+        private System.Windows.Forms.TextBox txtRutaArchivo;
+        private System.Windows.Forms.BindingSource sistemaTitulacionUTEQDataSetBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDocumentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaSubidaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btnExaminar;
-        private System.Windows.Forms.TextBox txtRutaArchivo;
+        private System.Windows.Forms.BindingSource sbrDocumentoBindingSource2;
+        private System.Windows.Forms.Button btnVer;
     }
 }

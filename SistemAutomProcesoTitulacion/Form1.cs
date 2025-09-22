@@ -131,5 +131,10 @@ namespace SistemAutomProcesoTitulacion
         {
 
         }
+
+        private void pboxImagenLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
