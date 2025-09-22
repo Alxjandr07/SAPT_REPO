@@ -58,7 +58,7 @@
             this.panelEncabezLogin.Controls.Add(this.button2);
             this.panelEncabezLogin.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEncabezLogin.Location = new System.Drawing.Point(0, 0);
-            this.panelEncabezLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelEncabezLogin.Margin = new System.Windows.Forms.Padding(2);
             this.panelEncabezLogin.Name = "panelEncabezLogin";
             this.panelEncabezLogin.Size = new System.Drawing.Size(666, 24);
             this.panelEncabezLogin.TabIndex = 0;
@@ -87,7 +87,7 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(640, 1);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(24, 21);
             this.button2.TabIndex = 0;
@@ -100,7 +100,7 @@
             this.panelImagenLogin.Controls.Add(this.pboxImagenLogin);
             this.panelImagenLogin.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelImagenLogin.Location = new System.Drawing.Point(276, 24);
-            this.panelImagenLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelImagenLogin.Margin = new System.Windows.Forms.Padding(2);
             this.panelImagenLogin.Name = "panelImagenLogin";
             this.panelImagenLogin.Size = new System.Drawing.Size(390, 225);
             this.panelImagenLogin.TabIndex = 1;
@@ -110,12 +110,13 @@
             this.pboxImagenLogin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pboxImagenLogin.Image = global::SistemAutomProcesoTitulacion.Properties.Resources.portada_sist_tit;
             this.pboxImagenLogin.Location = new System.Drawing.Point(0, 0);
-            this.pboxImagenLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pboxImagenLogin.Margin = new System.Windows.Forms.Padding(2);
             this.pboxImagenLogin.Name = "pboxImagenLogin";
             this.pboxImagenLogin.Size = new System.Drawing.Size(390, 225);
             this.pboxImagenLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pboxImagenLogin.TabIndex = 0;
             this.pboxImagenLogin.TabStop = false;
+            this.pboxImagenLogin.Click += new System.EventHandler(this.pboxImagenLogin_Click);
             // 
             // panelLogin
             // 
@@ -130,7 +131,7 @@
             this.panelLogin.Controls.Add(this.pictureBox1);
             this.panelLogin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLogin.Location = new System.Drawing.Point(0, 24);
-            this.panelLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLogin.Margin = new System.Windows.Forms.Padding(2);
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(276, 225);
             this.panelLogin.TabIndex = 2;
@@ -157,7 +158,7 @@
             this.btnMostrarContra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.btnMostrarContra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMostrarContra.Location = new System.Drawing.Point(236, 140);
-            this.btnMostrarContra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMostrarContra.Margin = new System.Windows.Forms.Padding(2);
             this.btnMostrarContra.Name = "btnMostrarContra";
             this.btnMostrarContra.Size = new System.Drawing.Size(26, 18);
             this.btnMostrarContra.TabIndex = 7;
@@ -174,7 +175,7 @@
             this.btnAcceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.01739F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcceder.ForeColor = System.Drawing.Color.Green;
             this.btnAcceder.Location = new System.Drawing.Point(27, 167);
-            this.btnAcceder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAcceder.Margin = new System.Windows.Forms.Padding(2);
             this.btnAcceder.Name = "btnAcceder";
             this.btnAcceder.Size = new System.Drawing.Size(223, 35);
             this.btnAcceder.TabIndex = 6;
@@ -185,24 +186,24 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Britannic Bold", 13.77391F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.77391F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Green;
             this.label3.Location = new System.Drawing.Point(6, 115);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 21);
+            this.label3.Size = new System.Drawing.Size(106, 24);
             this.label3.TabIndex = 5;
             this.label3.Text = "Contraseña";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Britannic Bold", 13.77391F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.77391F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Green;
             this.label2.Location = new System.Drawing.Point(6, 69);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 21);
+            this.label2.Size = new System.Drawing.Size(74, 24);
             this.label2.TabIndex = 4;
             this.label2.Text = "Usuario";
             // 
@@ -210,7 +211,7 @@
             // 
             this.txtContrasenia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtContrasenia.Location = new System.Drawing.Point(9, 140);
-            this.txtContrasenia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContrasenia.Margin = new System.Windows.Forms.Padding(2);
             this.txtContrasenia.MaxLength = 20;
             this.txtContrasenia.Name = "txtContrasenia";
             this.txtContrasenia.Size = new System.Drawing.Size(228, 20);
@@ -221,7 +222,7 @@
             // 
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsuario.Location = new System.Drawing.Point(10, 95);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(252, 20);
             this.txtUsuario.TabIndex = 2;
@@ -230,12 +231,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 13.77391F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.77391F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Green;
             this.label1.Location = new System.Drawing.Point(71, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 23);
+            this.label1.Size = new System.Drawing.Size(186, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "INICIO DE SESIÓN";
             // 
@@ -243,7 +244,7 @@
             // 
             this.pictureBox1.Image = global::SistemAutomProcesoTitulacion.Properties.Resources.usuario__1_;
             this.pictureBox1.Location = new System.Drawing.Point(9, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(47, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -259,7 +260,7 @@
             this.Controls.Add(this.panelImagenLogin);
             this.Controls.Add(this.panelEncabezLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLogin";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmLogin_Load);

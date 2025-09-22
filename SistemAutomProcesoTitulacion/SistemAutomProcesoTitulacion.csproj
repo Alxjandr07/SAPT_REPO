@@ -138,6 +138,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SistemaTitulacionUTEQDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SistemaTitulacionUTEQDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaTitulacionUTEQDataSet2.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +222,17 @@
     </None>
     <None Include="SistemaTitulacionUTEQDataSet1.xss">
       <DependentUpon>SistemaTitulacionUTEQDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaTitulacionUTEQDataSet2.xsc">
+      <DependentUpon>SistemaTitulacionUTEQDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaTitulacionUTEQDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaTitulacionUTEQDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaTitulacionUTEQDataSet2.xss">
+      <DependentUpon>SistemaTitulacionUTEQDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
