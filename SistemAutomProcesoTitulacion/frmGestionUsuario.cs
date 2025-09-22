@@ -43,7 +43,7 @@ namespace SistemAutomProcesoTitulacion
 
         private void frmGestionUsuario_Load(object sender, EventArgs e)
         {
-            dgvGestion.DataSource = ConexionBD.ObtenerUsuarios();
+            dgvGestion.DataSource = ConexionBD.ObtenerUsuarios("Activos");
         }
 
         private void tsbFiltro_Click(object sender, EventArgs e)
@@ -61,11 +61,12 @@ namespace SistemAutomProcesoTitulacion
                 string cedula = dgvGestion.CurrentRow.Cells["Cedula"].Value.ToString();
                 string correo = dgvGestion.CurrentRow.Cells["CorreoInstitucional"].Value.ToString();
                 string rol = dgvGestion.CurrentRow.Cells["Rol"].Value.ToString();
+                int estado = Convert.ToInt32(dgvGestion.CurrentRow.Cells["Estado"].Value);
 
                 frmMenuCoordinador menuCoord = this.Owner as frmMenuCoordinador;
                 if (menuCoord != null)
                 {
-                    frmAggModUsuario aggModUsuario = new frmAggModUsuario(idUsuario, nombre, cedula, correo, rol, "Modificar");
+                    frmAggModUsuario aggModUsuario = new frmAggModUsuario(idUsuario, nombre, cedula, correo, rol, estado, "Modificar");
                     aggModUsuario.Owner = menuCoord;
                     funciones.AbrirFormularioEnPanel(aggModUsuario, menuCoord.panelContenedor);
                 }
@@ -74,6 +75,16 @@ namespace SistemAutomProcesoTitulacion
             {
                 MessageBox.Show("Selecciona un usuario para modificar.");
             }
+        }
+
+        private void tsbInactivo_Click(object sender, EventArgs e)
+        {
+            dgvGestion.DataSource = ConexionBD.ObtenerUsuarios("Inactivos");
+        }
+
+        private void tsbRefrescar_Click(object sender, EventArgs e)
+        {
+            dgvGestion.DataSource = ConexionBD.ObtenerUsuarios("Activos");
         }
     }
 }

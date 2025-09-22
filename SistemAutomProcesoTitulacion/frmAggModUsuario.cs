@@ -19,6 +19,7 @@ namespace SistemAutomProcesoTitulacion
         private string originalCorreo;
         private string originalRol;
         private string originalContrasena = ""; // Contraseña original (vacía por seguridad)
+        private int originalEstado = 1; // Estado original (1=activo, 0=inactivo)
 
         public frmAggModUsuario()
         {
@@ -43,6 +44,27 @@ namespace SistemAutomProcesoTitulacion
             originalContrasena = ""; // Nunca mostramos la contraseña original
         }
 
+        // Nuevo constructor con estado
+        public frmAggModUsuario(int idUsuario, string nombre, string cedula, string correo, string rol, int estado, string modo)
+            : this()
+        {
+            this.idUsuario = idUsuario;
+            txtNombre.Text = nombre;
+            txtCedula.Text = cedula;
+            txtCorreo.Text = correo;
+            cmbRol.Text = rol;
+            chkEstado.Checked = estado == 1;
+            this.modo = modo;
+
+            // Guarda los valores originales para comparar
+            originalNombre = nombre.Trim();
+            originalCedula = cedula.Trim();
+            originalCorreo = correo.Trim();
+            originalRol = rol.Trim();
+            originalContrasena = ""; // Nunca mostramos la contraseña original
+            originalEstado = estado;
+        }
+
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             frmMenuCoordinador menuCoord = this.Owner as frmMenuCoordinador;
@@ -61,23 +83,97 @@ namespace SistemAutomProcesoTitulacion
             string correo = txtCorreo.Text.Trim();
             string contrasena = txtContrasena.Text.Trim();
             string rol = cmbRol.Text.Trim();
+            int estado = chkEstado.Checked ? 1 : 0;
 
-            if (modo == "Modificar")
+            if (modo == "Nuevo")
             {
-                // Validación de contraseña mínima solo si se va a cambiar
-                if (contrasena.Length > 0 && contrasena.Length < 3)
+                // Validación de campos obligatorios
+                if (string.IsNullOrWhiteSpace(nombre))
+                {
+                    MessageBox.Show("El nombre es obligatorio.");
+                    txtNombre.Focus();
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(cedula))
+                {
+                    MessageBox.Show("La cédula es obligatoria.");
+                    txtCedula.Focus();
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(correo))
+                {
+                    MessageBox.Show("El correo es obligatorio.");
+                    txtCorreo.Focus();
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(rol))
+                {
+                    MessageBox.Show("El rol es obligatorio.");
+                    cmbRol.Focus();
+                    return;
+                }
+                if (!chkEstado.Checked)
+                {
+                    MessageBox.Show("El usuario nuevo debe estar registrado como activo.");
+                    chkEstado.Focus();
+                    return;
+                }
+                if (contrasena.Length < 3)
                 {
                     MessageBox.Show("La contraseña debe tener al menos 3 caracteres.");
+                    txtContrasena.Focus();
                     return;
                 }
 
-                // Validación de cambios (incluye contraseña)
+                if (ConexionBD.RegistrarUsuario(nombre, cedula, correo, contrasena, rol, estado))
+                    MessageBox.Show("✅ Usuario registrado correctamente.");
+                else
+                    MessageBox.Show("⚠️ No se pudo registrar el usuario.");
+            }
+            else if (modo == "Modificar")
+            {
+                // Validación de campos obligatorios (excepto contraseña)
+                if (string.IsNullOrWhiteSpace(nombre))
+                {
+                    MessageBox.Show("El nombre es obligatorio.");
+                    txtNombre.Focus();
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(cedula))
+                {
+                    MessageBox.Show("La cédula es obligatoria.");
+                    txtCedula.Focus();
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(correo))
+                {
+                    MessageBox.Show("El correo es obligatorio.");
+                    txtCorreo.Focus();
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(rol))
+                {
+                    MessageBox.Show("El rol es obligatorio.");
+                    cmbRol.Focus();
+                    return;
+                }
+
+                // Validación de contraseña solo si se va a cambiar
+                if (contrasena.Length > 0 && contrasena.Length < 3)
+                {
+                    MessageBox.Show("La contraseña debe tener al menos 3 caracteres.");
+                    txtContrasena.Focus();
+                    return;
+                }
+
+                // Detecta cambios (si la contraseña está vacía, no se actualiza)
                 bool hayCambios =
                     nombre != originalNombre ||
                     cedula != originalCedula ||
                     correo != originalCorreo ||
                     rol != originalRol ||
-                    contrasena != originalContrasena; // Solo cuenta si se va a cambiar
+                    estado != originalEstado ||
+                    (contrasena.Length >= 3 && contrasena != originalContrasena);
 
                 if (!hayCambios)
                 {
@@ -85,7 +181,10 @@ namespace SistemAutomProcesoTitulacion
                     return;
                 }
 
-                if (ConexionBD.ActualizarUsuario(idUsuario, nombre, cedula, correo, contrasena, rol))
+                // Si la contraseña está vacía, no la actualices
+                string contrasenaParaActualizar = contrasena.Length >= 3 ? contrasena : originalContrasena;
+
+                if (ConexionBD.ActualizarUsuario(idUsuario, nombre, cedula, correo, contrasenaParaActualizar, rol, estado))
                 {
                     MessageBox.Show("✅ Usuario modificado correctamente.");
 
@@ -94,26 +193,14 @@ namespace SistemAutomProcesoTitulacion
                     originalCedula = cedula;
                     originalCorreo = correo;
                     originalRol = rol;
-                    originalContrasena = contrasena;
-                    //txtContrasena.Text = ""; // Limpia el campo contraseña tras actualizar
+                    if (contrasena.Length >= 3)
+                        originalContrasena = contrasena;
+                    originalEstado = estado;
                 }
                 else
                 {
                     MessageBox.Show("⚠️ No se pudo modificar el usuario.");
                 }
-            }
-            else if (modo == "Nuevo")
-            {
-                if (contrasena.Length < 3)
-                {
-                    MessageBox.Show("La contraseña debe tener al menos 3 caracteres.");
-                    return;
-                }
-
-                if (ConexionBD.RegistrarUsuario(nombre, cedula, correo, contrasena, rol))
-                    MessageBox.Show("✅ Usuario registrado correctamente.");
-                else
-                    MessageBox.Show("⚠️ No se pudo registrar el usuario.");
             }
         }
 

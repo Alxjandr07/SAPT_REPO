@@ -63,9 +63,9 @@ namespace SistemAutomProcesoTitulacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap aprobacionDoc {
+        internal static System.Drawing.Bitmap actualizar {
             get {
-                object obj = ResourceManager.GetObject("aprobacionDoc", resourceCulture);
+                object obj = ResourceManager.GetObject("actualizar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace SistemAutomProcesoTitulacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cerrar_sesion {
+        internal static System.Drawing.Bitmap aprobacionDoc {
             get {
-                object obj = ResourceManager.GetObject("cerrar-sesion", resourceCulture);
+                object obj = ResourceManager.GetObject("aprobacionDoc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -81,22 +81,25 @@ namespace SistemAutomProcesoTitulacion
             return rol;
         }
 
-        public static DataTable ObtenerUsuarios()
+        public static DataTable ObtenerUsuarios(string estado)
         {
             DataTable dt = new DataTable();
             try
             {
-                using (SqlConnection con = new SqlConnection(cadena))
-                {
-                    using (SqlCommand cmd = new SqlCommand("ListarUsuarios", con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        con.Open();
+                string procedimiento = estado == "Activos"
+                    ? "ListarUsuarios"
+                    : estado == "Inactivos"
+                        ? "ListarUsuariosInactivos"
+                        : "ListarUsuarios"; // Por defecto activos
 
-                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-                        {
-                            da.Fill(dt);
-                        }
+                using (SqlConnection con = new SqlConnection(cadena))
+                using (SqlCommand cmd = new SqlCommand(procedimiento, con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    con.Open();
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
                     }
                 }
             }
@@ -167,6 +170,42 @@ namespace SistemAutomProcesoTitulacion
             return exito;
         }
 
+        public static bool RegistrarUsuario(string nombre, string cedula, string correo, string contrasena, string rol, int estado)
+        {
+            bool exito = false;
+            try
+            {
+                if (ConexionBD.UsuarioDuplicado(correo, cedula, contrasena))
+                {
+                    MessageBox.Show("⚠️ Ya existe un usuario con ese correo, cédula o la misma combinación de correo y contraseña.");
+                    return exito;
+                }
+
+                using (SqlConnection con = new SqlConnection(cadena))
+                {
+                    using (SqlCommand cmd = new SqlCommand("RegistrarUsuario", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@NombreCompleto", nombre);
+                        cmd.Parameters.AddWithValue("@Cedula", cedula);
+                        cmd.Parameters.AddWithValue("@CorreoInstitucional", correo);
+                        cmd.Parameters.AddWithValue("@Contrasena", contrasena);
+                        cmd.Parameters.AddWithValue("@Rol", rol);
+                        cmd.Parameters.AddWithValue("@Estado", estado);
+
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        exito = true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Error al registrar usuario: " + ex.Message);
+            }
+            return exito;
+        }
+
         public static bool UsuarioDuplicado(string correo, string cedula, string contrasena)
         {
             bool existe = false;
@@ -209,6 +248,37 @@ namespace SistemAutomProcesoTitulacion
                         cmd.Parameters.AddWithValue("@CorreoInstitucional", correo);
                         cmd.Parameters.AddWithValue("@Contrasena", contrasena);
                         cmd.Parameters.AddWithValue("@Rol", rol);
+
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        exito = true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Error al modificar usuario: " + ex.Message);
+            }
+            return exito;
+        }
+
+        public static bool ActualizarUsuario(int idUsuario, string nombre, string cedula, string correo, string contrasena, string rol, int estado)
+        {
+            bool exito = false;
+            try
+            {
+                using (SqlConnection con = new SqlConnection(cadena))
+                {
+                    using (SqlCommand cmd = new SqlCommand("ActualizarUsuario", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                        cmd.Parameters.AddWithValue("@NombreCompleto", nombre);
+                        cmd.Parameters.AddWithValue("@Cedula", cedula);
+                        cmd.Parameters.AddWithValue("@CorreoInstitucional", correo);
+                        cmd.Parameters.AddWithValue("@Contrasena", contrasena);
+                        cmd.Parameters.AddWithValue("@Rol", rol);
+                        cmd.Parameters.AddWithValue("@Estado", estado);
 
                         con.Open();
                         cmd.ExecuteNonQuery();
