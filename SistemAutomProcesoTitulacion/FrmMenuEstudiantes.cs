@@ -214,5 +214,10 @@ namespace SistemAutomProcesoTitulacion
 
         
         }
+
+        private void btnReunion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
