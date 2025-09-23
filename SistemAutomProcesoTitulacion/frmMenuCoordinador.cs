@@ -15,6 +15,13 @@ namespace SistemAutomProcesoTitulacion
 
         private Coordinador coordinador;
 
+        public frmMenuCoordinador(string nombre, string rol)
+        {
+            InitializeComponent();
+            lblNombre.Text = nombre;
+            lblRol.Text = rol;
+        }
+
         // Constructor que recibe Coordinador
         public frmMenuCoordinador(Coordinador coordinador)
 
