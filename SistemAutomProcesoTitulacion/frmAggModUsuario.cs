@@ -12,57 +12,35 @@ namespace SistemAutomProcesoTitulacion
 {
     public partial class frmAggModUsuario : Form
     {
-        private int idUsuario;
-        private string modo = "Nuevo"; // Por defecto
-        private string originalNombre;
-        private string originalCedula;
-        private string originalCorreo;
-        private string originalRol;
-        private string originalContrasena = ""; // Contraseña original (vacía por seguridad)
-        private int originalEstado = 1; // Estado original (1=activo, 0=inactivo)
+        // Solo las variables necesarias
+        private Coordinador coordinador;
+        private Usuario usuario;
+        private string modo = "Nuevo"; // "Nuevo" o "Modificar"
 
-        public frmAggModUsuario()
+        // Constructor para agregar usuario
+        public frmAggModUsuario(Coordinador coord)
         {
             InitializeComponent();
+            this.coordinador = coord;
+            this.modo = "Nuevo";
         }
 
-        public frmAggModUsuario(int idUsuario, string nombre, string cedula, string correo, string rol, string modo)
-            : this()
+        // Constructor para modificar usuario
+        public frmAggModUsuario(Coordinador coord, Usuario usuario, string modo)
         {
-            this.idUsuario = idUsuario;
-            txtNombre.Text = nombre;
-            txtCedula.Text = cedula;
-            txtCorreo.Text = correo;
-            cmbRol.Text = rol;
+            InitializeComponent();
+            this.coordinador = coord;
+            this.usuario = usuario;
             this.modo = modo;
 
-            // Guarda los valores originales para comparar
-            originalNombre = nombre.Trim();
-            originalCedula = cedula.Trim();
-            originalCorreo = correo.Trim();
-            originalRol = rol.Trim();
-            originalContrasena = ""; // Nunca mostramos la contraseña original
-        }
-
-        // Nuevo constructor con estado
-        public frmAggModUsuario(int idUsuario, string nombre, string cedula, string correo, string rol, int estado, string modo)
-            : this()
-        {
-            this.idUsuario = idUsuario;
-            txtNombre.Text = nombre;
-            txtCedula.Text = cedula;
-            txtCorreo.Text = correo;
-            cmbRol.Text = rol;
-            chkEstado.Checked = estado == 1;
-            this.modo = modo;
-
-            // Guarda los valores originales para comparar
-            originalNombre = nombre.Trim();
-            originalCedula = cedula.Trim();
-            originalCorreo = correo.Trim();
-            originalRol = rol.Trim();
-            originalContrasena = ""; // Nunca mostramos la contraseña original
-            originalEstado = estado;
+            if (usuario != null)
+            {
+                txtNombre.Text = usuario.NombreCompleto;
+                txtCedula.Text = usuario.Cedula;
+                txtCorreo.Text = usuario.CorreoInstitucional;
+                cmbRol.Text = usuario.Rol;
+                chkEstado.Checked = usuario.Estado == 1;
+            }
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -70,7 +48,7 @@ namespace SistemAutomProcesoTitulacion
             frmMenuCoordinador menuCoord = this.Owner as frmMenuCoordinador;
             if (menuCoord != null)
             {
-                frmGestionUsuario gestionUsuario = new frmGestionUsuario();
+                frmGestionUsuario gestionUsuario = new frmGestionUsuario(coordinador);
                 gestionUsuario.Owner = menuCoord;
                 funciones.AbrirFormularioEnPanel(gestionUsuario, menuCoord.panelContenedor);
             }
@@ -125,7 +103,17 @@ namespace SistemAutomProcesoTitulacion
                     return;
                 }
 
-                if (ConexionBD.RegistrarUsuario(nombre, cedula, correo, contrasena, rol, estado))
+                Usuario nuevoUsuario = new Usuario
+                {
+                    NombreCompleto = nombre,
+                    Cedula = cedula,
+                    CorreoInstitucional = correo,
+                    Contrasena = contrasena,
+                    Rol = rol,
+                    Estado = estado
+                };
+
+                if (coordinador.AgregarUsuario(nuevoUsuario))
                     MessageBox.Show("✅ Usuario registrado correctamente.");
                 else
                     MessageBox.Show("⚠️ No se pudo registrar el usuario.");
@@ -166,14 +154,28 @@ namespace SistemAutomProcesoTitulacion
                     return;
                 }
 
-                // Detecta cambios (si la contraseña está vacía, no se actualiza)
+                // Si la contraseña está vacía o menor a 3, pasa una cadena especial para que el SP la ignore
+                string contrasenaParaActualizar = contrasena.Length >= 3 ? contrasena : "NO_CAMBIAR";
+
+                Usuario usuarioModificado = new Usuario
+                {
+                    IdUsuario = usuario.IdUsuario,
+                    NombreCompleto = nombre,
+                    Cedula = cedula,
+                    CorreoInstitucional = correo,
+                    Contrasena = contrasenaParaActualizar,
+                    Rol = rol,
+                    Estado = estado
+                };
+
+                // Detecta cambios
                 bool hayCambios =
-                    nombre != originalNombre ||
-                    cedula != originalCedula ||
-                    correo != originalCorreo ||
-                    rol != originalRol ||
-                    estado != originalEstado ||
-                    (contrasena.Length >= 3 && contrasena != originalContrasena);
+                    usuarioModificado.NombreCompleto != usuario.NombreCompleto ||
+                    usuarioModificado.Cedula != usuario.Cedula ||
+                    usuarioModificado.CorreoInstitucional != usuario.CorreoInstitucional ||
+                    usuarioModificado.Rol != usuario.Rol ||
+                    usuarioModificado.Estado != usuario.Estado ||
+                    (contrasena.Length >= 3 && contrasena != usuario.Contrasena);
 
                 if (!hayCambios)
                 {
@@ -181,21 +183,10 @@ namespace SistemAutomProcesoTitulacion
                     return;
                 }
 
-                // Si la contraseña está vacía, no la actualices
-                string contrasenaParaActualizar = contrasena.Length >= 3 ? contrasena : originalContrasena;
-
-                if (ConexionBD.ActualizarUsuario(idUsuario, nombre, cedula, correo, contrasenaParaActualizar, rol, estado))
+                if (coordinador.ModificarUsuario(usuarioModificado))
                 {
                     MessageBox.Show("✅ Usuario modificado correctamente.");
-
-                    // Actualiza los valores originales para futuras comparaciones
-                    originalNombre = nombre;
-                    originalCedula = cedula;
-                    originalCorreo = correo;
-                    originalRol = rol;
-                    if (contrasena.Length >= 3)
-                        originalContrasena = contrasena;
-                    originalEstado = estado;
+                    usuario = usuarioModificado;
                 }
                 else
                 {
@@ -209,10 +200,15 @@ namespace SistemAutomProcesoTitulacion
             frmMenuCoordinador menuCoord = this.Owner as frmMenuCoordinador;
             if (menuCoord != null)
             {
-                frmGestionUsuario gestionUsuario = new frmGestionUsuario();
+                frmGestionUsuario gestionUsuario = new frmGestionUsuario(coordinador);
                 gestionUsuario.Owner = menuCoord;
                 funciones.AbrirFormularioEnPanel(gestionUsuario, menuCoord.panelContenedor);
             }
+        }
+
+        private void panelCab_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
