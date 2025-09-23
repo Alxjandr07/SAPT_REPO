@@ -71,10 +71,10 @@ namespace SistemAutomProcesoTitulacion
                     var coordinador = new Coordinador
                     {
                         Nombre = nombre,
-                        Correo = correo // o el correo que corresponda
-                        // Asigna otros datos si es necesario
+                        Correo = correo
+                        // Si tienes IdCoordinador, asígnalo también
                     };
-                    destino = new frmMenuCoordinador(coordinador);
+                    destino = new frmMenuCoordinador(coordinador, nombre, rol);
                     break;
                 default:
                     MessageBox.Show("⚠️ Rol no reconocido. Contacte al administrador.");
