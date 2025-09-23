@@ -12,10 +12,17 @@ namespace SistemAutomProcesoTitulacion
 {
     public partial class frmMenuCoordinador : Form
     {
-        public frmMenuCoordinador()
+        private Coordinador coordinador;
+
+        // Constructor que recibe Coordinador
+        public frmMenuCoordinador(Coordinador coordinador)
         {
             InitializeComponent();
+            this.coordinador = coordinador;
         }
+
+        // Si necesitas un constructor vacío para compatibilidad
+        public frmMenuCoordinador() : this(new Coordinador()) { }
 
         private void panelContenedorEstud_Paint(object sender, PaintEventArgs e)
         {
@@ -96,7 +103,7 @@ namespace SistemAutomProcesoTitulacion
 
         private void btnEnvioDoc_Click(object sender, EventArgs e)
         {
-            frmGestionUsuario gestionUsuario = new frmGestionUsuario();
+            frmGestionUsuario gestionUsuario = new frmGestionUsuario(coordinador);
             gestionUsuario.Owner = this; // 'this' es frmMenuCoordinador
             funciones.AbrirFormularioEnPanel(gestionUsuario, panelContenedor);
         }

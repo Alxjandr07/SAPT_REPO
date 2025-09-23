@@ -12,15 +12,18 @@ namespace SistemAutomProcesoTitulacion
 {
     public partial class frmGestionUsuario : Form
     {
-        public frmGestionUsuario()
+        private Coordinador coordinador;
+
+        public frmGestionUsuario(Coordinador coord)
         {
             InitializeComponent();
+            this.coordinador = coord;
             this.Load += frmGestionUsuario_Load;
         }
 
         private void tsbVolver_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void tsbNuevo_Click(object sender, EventArgs e)
@@ -29,8 +32,7 @@ namespace SistemAutomProcesoTitulacion
             frmMenuCoordinador menuCoord = this.Owner as frmMenuCoordinador;
             if (menuCoord != null)
             {
-                // Reemplaza el formulario actual por frmAggModUsuario en el panel contenedor
-                frmAggModUsuario aggModUsuario = new frmAggModUsuario();
+                frmAggModUsuario aggModUsuario = new frmAggModUsuario(coordinador);
                 aggModUsuario.Owner = menuCoord;
                 funciones.AbrirFormularioEnPanel(aggModUsuario, menuCoord.panelContenedor);
             }
@@ -43,13 +45,13 @@ namespace SistemAutomProcesoTitulacion
 
         private void frmGestionUsuario_Load(object sender, EventArgs e)
         {
-            dgvGestion.DataSource = ConexionBD.ObtenerUsuarios("Activos");
+            dgvGestion.DataSource = coordinador.ObtenerUsuarios("Activos");
         }
 
         private void tsbFiltro_Click(object sender, EventArgs e)
         {
             string filtro = tstFiltro.Text.Trim();
-            dgvGestion.DataSource = ConexionBD.FiltrarUsuarios(filtro);
+            dgvGestion.DataSource = coordinador.FiltrarUsuarios(filtro);
         }
 
         private void tsbModificar_Click(object sender, EventArgs e)
@@ -66,7 +68,16 @@ namespace SistemAutomProcesoTitulacion
                 frmMenuCoordinador menuCoord = this.Owner as frmMenuCoordinador;
                 if (menuCoord != null)
                 {
-                    frmAggModUsuario aggModUsuario = new frmAggModUsuario(idUsuario, nombre, cedula, correo, rol, estado, "Modificar");
+                    Usuario usuario = new Usuario
+                    {
+                        IdUsuario = idUsuario,
+                        NombreCompleto = nombre,
+                        Cedula = cedula,
+                        CorreoInstitucional = correo,
+                        Rol = rol,
+                        Estado = estado
+                    };
+                    frmAggModUsuario aggModUsuario = new frmAggModUsuario(coordinador, usuario, "Modificar");
                     aggModUsuario.Owner = menuCoord;
                     funciones.AbrirFormularioEnPanel(aggModUsuario, menuCoord.panelContenedor);
                 }
@@ -79,12 +90,12 @@ namespace SistemAutomProcesoTitulacion
 
         private void tsbInactivo_Click(object sender, EventArgs e)
         {
-            dgvGestion.DataSource = ConexionBD.ObtenerUsuarios("Inactivos");
+            dgvGestion.DataSource = coordinador.ObtenerUsuarios("Inactivos");
         }
 
         private void tsbRefrescar_Click(object sender, EventArgs e)
         {
-            dgvGestion.DataSource = ConexionBD.ObtenerUsuarios("Activos");
+            dgvGestion.DataSource = coordinador.ObtenerUsuarios("Activos");
         }
     }
 }

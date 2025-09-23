@@ -60,6 +60,7 @@
             this.panelCab.Name = "panelCab";
             this.panelCab.Size = new System.Drawing.Size(747, 45);
             this.panelCab.TabIndex = 0;
+            this.panelCab.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCab_Paint);
             // 
             // btnRegresar
             // 
