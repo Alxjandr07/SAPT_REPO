@@ -12,6 +12,12 @@ namespace SistemAutomProcesoTitulacion
 {
     public partial class frmDirector : Form
     {
+        public frmDirector(string nombre, string rol)
+        {
+            InitializeComponent();
+            lblNombre.Text = nombre;
+            lblRol.Text = rol;
+        }
         public frmDirector()
         {
             InitializeComponent();
@@ -86,6 +92,11 @@ namespace SistemAutomProcesoTitulacion
                     login.Show();
                 }
             }
+        }
+
+        private void frmDirector_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -12,10 +12,12 @@ namespace SistemAutomProcesoTitulacion
 {
     public partial class frmMenuCoordinador : Form
     {
+
         private Coordinador coordinador;
 
         // Constructor que recibe Coordinador
         public frmMenuCoordinador(Coordinador coordinador)
+
         {
             InitializeComponent();
             this.coordinador = coordinador;
@@ -111,6 +113,11 @@ namespace SistemAutomProcesoTitulacion
         private void btnReunion_Click(object sender, EventArgs e)
         {
             AbrirFormularioEnPanel(new frmGestionReunion());
+        }
+
+        private void panelCabecera_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

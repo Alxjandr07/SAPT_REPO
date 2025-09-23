@@ -12,6 +12,12 @@ namespace SistemAutomProcesoTitulacion
 {
     public partial class frmTribunal : Form
     {
+        public frmTribunal(string nombre, string rol)
+        {
+            InitializeComponent();
+            lblNombre.Text = nombre;
+            lblRol.Text = rol;
+        }
         public frmTribunal()
         {
             InitializeComponent();
@@ -79,6 +85,11 @@ namespace SistemAutomProcesoTitulacion
                     login.Show();
                 }
             }
+        }
+
+        private void panelCabecera_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
