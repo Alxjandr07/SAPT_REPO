@@ -84,7 +84,7 @@
             this.lblPreguntaa.AutoSize = true;
             this.lblPreguntaa.BackColor = System.Drawing.SystemColors.Control;
             this.lblPreguntaa.Font = new System.Drawing.Font("Century Gothic", 10.01739F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreguntaa.Location = new System.Drawing.Point(63, 175);
+            this.lblPreguntaa.Location = new System.Drawing.Point(55, 176);
             this.lblPreguntaa.Name = "lblPreguntaa";
             this.lblPreguntaa.Size = new System.Drawing.Size(142, 19);
             this.lblPreguntaa.TabIndex = 3;
@@ -92,7 +92,7 @@
             // 
             // btnBuscarPregunta
             // 
-            this.btnBuscarPregunta.Location = new System.Drawing.Point(537, 160);
+            this.btnBuscarPregunta.Location = new System.Drawing.Point(536, 161);
             this.btnBuscarPregunta.Name = "btnBuscarPregunta";
             this.btnBuscarPregunta.Size = new System.Drawing.Size(125, 52);
             this.btnBuscarPregunta.TabIndex = 4;

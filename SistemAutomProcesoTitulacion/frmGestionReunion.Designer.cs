@@ -78,7 +78,7 @@
             this.toolStripSeparator6});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 26);
+            this.toolStrip1.Size = new System.Drawing.Size(1067, 30);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -86,26 +86,26 @@
             // 
             this.toolStripLabel3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(121, 23);
+            this.toolStripLabel3.Size = new System.Drawing.Size(152, 27);
             this.toolStripLabel3.Text = "Gestion de Reuniones";
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 26);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 30);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(40, 23);
+            this.toolStripLabel1.Size = new System.Drawing.Size(50, 27);
             this.toolStripLabel1.Text = "Filtrar:";
             // 
             // tstFiltro
             // 
             this.tstFiltro.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tstFiltro.Name = "tstFiltro";
-            this.tstFiltro.Size = new System.Drawing.Size(168, 26);
+            this.tstFiltro.Size = new System.Drawing.Size(223, 30);
             // 
             // tsbFiltro
             // 
@@ -113,25 +113,25 @@
             this.tsbFiltro.Image = ((System.Drawing.Image)(resources.GetObject("tsbFiltro.Image")));
             this.tsbFiltro.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbFiltro.Name = "tsbFiltro";
-            this.tsbFiltro.Size = new System.Drawing.Size(23, 23);
+            this.tsbFiltro.Size = new System.Drawing.Size(28, 27);
             this.tsbFiltro.Text = "Filtrar";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 26);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 30);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(61, 23);
+            this.toolStripLabel2.Size = new System.Drawing.Size(75, 27);
             this.toolStripLabel2.Text = "Acciones: ";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 26);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 30);
             // 
             // tsbNuevo
             // 
@@ -139,14 +139,14 @@
             this.tsbNuevo.Image = ((System.Drawing.Image)(resources.GetObject("tsbNuevo.Image")));
             this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNuevo.Name = "tsbNuevo";
-            this.tsbNuevo.Size = new System.Drawing.Size(65, 23);
+            this.tsbNuevo.Size = new System.Drawing.Size(75, 27);
             this.tsbNuevo.Text = "Nuevo";
             this.tsbNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 26);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 30);
             // 
             // tsbModificar
             // 
@@ -154,7 +154,7 @@
             this.tsbModificar.Image = ((System.Drawing.Image)(resources.GetObject("tsbModificar.Image")));
             this.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbModificar.Name = "tsbModificar";
-            this.tsbModificar.Size = new System.Drawing.Size(81, 23);
+            this.tsbModificar.Size = new System.Drawing.Size(96, 27);
             this.tsbModificar.Text = "Modificar";
             this.tsbModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click);
@@ -162,7 +162,7 @@
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 26);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 30);
             // 
             // tsbEliminar
             // 
@@ -170,14 +170,14 @@
             this.tsbEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsbEliminar.Image")));
             this.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEliminar.Name = "tsbEliminar";
-            this.tsbEliminar.Size = new System.Drawing.Size(73, 23);
+            this.tsbEliminar.Size = new System.Drawing.Size(86, 27);
             this.tsbEliminar.Text = "Eliminar";
             this.tsbEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 26);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 30);
             // 
             // tsbVolver
             // 
@@ -185,36 +185,39 @@
             this.tsbVolver.Image = ((System.Drawing.Image)(resources.GetObject("tsbVolver.Image")));
             this.tsbVolver.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbVolver.Name = "tsbVolver";
-            this.tsbVolver.Size = new System.Drawing.Size(62, 23);
+            this.tsbVolver.Size = new System.Drawing.Size(73, 27);
             this.tsbVolver.Text = "Volver";
             this.tsbVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 26);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 30);
             // 
             // monthCalendar1
             // 
             this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(2, 1);
-            this.monthCalendar1.Location = new System.Drawing.Point(-12, -8);
+            this.monthCalendar1.Location = new System.Drawing.Point(-16, -10);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 4;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.monthCalendar1);
-            this.panel1.Location = new System.Drawing.Point(12, 39);
+            this.panel1.Location = new System.Drawing.Point(16, 48);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(437, 150);
+            this.panel1.Size = new System.Drawing.Size(583, 185);
             this.panel1.TabIndex = 5;
             // 
             // btnMarcar
             // 
             this.btnMarcar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMarcar.Location = new System.Drawing.Point(12, 217);
+            this.btnMarcar.Location = new System.Drawing.Point(16, 267);
+            this.btnMarcar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMarcar.Name = "btnMarcar";
-            this.btnMarcar.Size = new System.Drawing.Size(117, 23);
+            this.btnMarcar.Size = new System.Drawing.Size(156, 28);
             this.btnMarcar.TabIndex = 6;
             this.btnMarcar.Text = "AsignarReunion";
             this.btnMarcar.UseVisualStyleBackColor = true;
@@ -223,9 +226,10 @@
             // btnDesmarcar
             // 
             this.btnDesmarcar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDesmarcar.Location = new System.Drawing.Point(145, 217);
+            this.btnDesmarcar.Location = new System.Drawing.Point(193, 267);
+            this.btnDesmarcar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDesmarcar.Name = "btnDesmarcar";
-            this.btnDesmarcar.Size = new System.Drawing.Size(133, 23);
+            this.btnDesmarcar.Size = new System.Drawing.Size(177, 28);
             this.btnDesmarcar.TabIndex = 7;
             this.btnDesmarcar.Text = "Desmarcar";
             this.btnDesmarcar.UseVisualStyleBackColor = true;
@@ -235,23 +239,25 @@
             // 
             this.lblMensaje.AutoSize = true;
             this.lblMensaje.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblMensaje.Location = new System.Drawing.Point(455, 39);
+            this.lblMensaje.Location = new System.Drawing.Point(607, 48);
+            this.lblMensaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(108, 13);
+            this.lblMensaje.Size = new System.Drawing.Size(135, 16);
             this.lblMensaje.TabIndex = 8;
             this.lblMensaje.Text = "SinReunionesActivas";
             // 
             // frmGestionReunion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnDesmarcar);
             this.Controls.Add(this.btnMarcar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmGestionReunion";
             this.Text = "frmGestionReunion";
             this.toolStrip1.ResumeLayout(false);
