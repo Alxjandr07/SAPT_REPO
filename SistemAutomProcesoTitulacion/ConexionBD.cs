@@ -317,5 +317,75 @@ namespace SistemAutomProcesoTitulacion
                 }
             }
         }
+
+        public static void AgregarInformacionReunion(string texto)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(cadena))
+                {
+                    con.Open();
+                    string query = "INSERT INTO InformacionReuniones (TextoInformacion) VALUES (@Texto)";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@Texto", texto);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Error al guardar la información de reuniones: " + ex.Message);
+            }
+        }
+
+        public static string ObtenerTodasLasInformacionesReuniones()
+        {
+            StringBuilder sb = new StringBuilder();
+            try
+            {
+                using (SqlConnection con = new SqlConnection(cadena))
+                {
+                    con.Open();
+                    string query = "SELECT TextoInformacion FROM InformacionReuniones ORDER BY Id";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        int contador = 1;
+                        while (reader.Read())
+                        {
+                            sb.AppendLine($"{contador}. {reader["TextoInformacion"]}");
+                            contador++;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Error al obtener la información de reuniones: " + ex.Message);
+            }
+            return sb.ToString();
+        }
+
+        public static void EliminarInformacionReunion(string texto)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(cadena))
+                {
+                    con.Open();
+                    string query = "DELETE FROM InformacionReuniones WHERE TextoInformacion = @Texto";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@Texto", texto);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Error al eliminar la información de reuniones: " + ex.Message);
+            }
+        }
     }
 }

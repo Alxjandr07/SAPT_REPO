@@ -46,7 +46,13 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbVolver = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMarcar = new System.Windows.Forms.Button();
+            this.btnDesmarcar = new System.Windows.Forms.Button();
+            this.lblMensaje = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -188,17 +194,69 @@
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 26);
             // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(2, 1);
+            this.monthCalendar1.Location = new System.Drawing.Point(-12, -8);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.monthCalendar1);
+            this.panel1.Location = new System.Drawing.Point(12, 39);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(437, 150);
+            this.panel1.TabIndex = 5;
+            // 
+            // btnMarcar
+            // 
+            this.btnMarcar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMarcar.Location = new System.Drawing.Point(12, 217);
+            this.btnMarcar.Name = "btnMarcar";
+            this.btnMarcar.Size = new System.Drawing.Size(117, 23);
+            this.btnMarcar.TabIndex = 6;
+            this.btnMarcar.Text = "AsignarReunion";
+            this.btnMarcar.UseVisualStyleBackColor = true;
+            this.btnMarcar.Click += new System.EventHandler(this.btnMarcar_Click);
+            // 
+            // btnDesmarcar
+            // 
+            this.btnDesmarcar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDesmarcar.Location = new System.Drawing.Point(145, 217);
+            this.btnDesmarcar.Name = "btnDesmarcar";
+            this.btnDesmarcar.Size = new System.Drawing.Size(133, 23);
+            this.btnDesmarcar.TabIndex = 7;
+            this.btnDesmarcar.Text = "Desmarcar";
+            this.btnDesmarcar.UseVisualStyleBackColor = true;
+            this.btnDesmarcar.Click += new System.EventHandler(this.btnDesmarcar_Click);
+            // 
+            // lblMensaje
+            // 
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblMensaje.Location = new System.Drawing.Point(455, 39);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(108, 13);
+            this.lblMensaje.TabIndex = 8;
+            this.lblMensaje.Text = "SinReunionesActivas";
+            // 
             // frmGestionReunion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblMensaje);
+            this.Controls.Add(this.btnDesmarcar);
+            this.Controls.Add(this.btnMarcar);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGestionReunion";
             this.Text = "frmGestionReunion";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,5 +281,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton tsbVolver;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnMarcar;
+        private System.Windows.Forms.Button btnDesmarcar;
+        private System.Windows.Forms.Label lblMensaje;
     }
 }
