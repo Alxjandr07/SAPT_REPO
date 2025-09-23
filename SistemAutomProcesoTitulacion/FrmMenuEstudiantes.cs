@@ -191,6 +191,7 @@ namespace SistemAutomProcesoTitulacion
 
         }
 
+
         private void lblLogOut_Click(object sender, EventArgs e)
         {
             {
@@ -210,6 +211,8 @@ namespace SistemAutomProcesoTitulacion
                     login.Show();
                 }
             }
+
+        
         }
     }
 }
