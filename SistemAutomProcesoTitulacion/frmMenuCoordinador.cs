@@ -15,23 +15,14 @@ namespace SistemAutomProcesoTitulacion
 
         private Coordinador coordinador;
 
-        public frmMenuCoordinador(string nombre, string rol)
-        {
-            InitializeComponent();
-            lblNombre.Text = nombre;
-            lblRol.Text = rol;
-        }
-
-        // Constructor que recibe Coordinador
-        public frmMenuCoordinador(Coordinador coordinador)
-
+        // Constructor que recibe Coordinador, nombre y rol
+        public frmMenuCoordinador(Coordinador coordinador, string nombre, string rol)
         {
             InitializeComponent();
             this.coordinador = coordinador;
+            lblNombre.Text = nombre;
+            lblRol.Text = rol;
         }
-
-        // Si necesitas un constructor vacío para compatibilidad
-        public frmMenuCoordinador() : this(new Coordinador()) { }
 
         private void panelContenedorEstud_Paint(object sender, PaintEventArgs e)
         {
