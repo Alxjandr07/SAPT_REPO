@@ -68,7 +68,13 @@ namespace SistemAutomProcesoTitulacion
                     destino = new frmTribunal(nombre, rol);
                     break;
                 case "Coordinador":
-                    destino = new frmMenuCoordinador(nombre, rol);
+                    var coordinador = new Coordinador
+                    {
+                        Nombre = nombre,
+                        Correo = correo // o el correo que corresponda
+                        // Asigna otros datos si es necesario
+                    };
+                    destino = new frmMenuCoordinador(coordinador);
                     break;
                 default:
                     MessageBox.Show("⚠️ Rol no reconocido. Contacte al administrador.");
