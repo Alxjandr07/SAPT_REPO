@@ -39,7 +39,10 @@ namespace SistemAutomProcesoTitulacion
             string correo = txtUsuario.Text.Trim();
             string contrasena = txtContrasenia.Text.Trim();
 
-            string rol = ConexionBD.ValidarLogin(correo, contrasena);
+            // Validar credenciales y obtener nombre + rol
+            var resultado = ConexionBD.ValidarLoginDatos(correo, contrasena);
+            string nombre = resultado.Nombre;
+            string rol = resultado.Rol;
 
             if (rol == null)
             {
@@ -47,59 +50,36 @@ namespace SistemAutomProcesoTitulacion
                 return;
             }
 
-            // 🔎 Ahora según el rol abrimos cada menú/formulario
+            // Abrir el formulario correspondiente
+            Form destino = null;
+
             switch (rol)
             {
                 case "Estudiante":
-                    MessageBox.Show("✅ Bienvenido Estudiante.");
-                    FrmMenuEstudiantes fEstudiante = new FrmMenuEstudiantes();
-                    fEstudiante.Show();
-                    this.Hide();
+                    destino = new FrmMenuEstudiantes(nombre, rol);
                     break;
-
                 case "Tutor":
-                    MessageBox.Show("✅ Bienvenido Tutor.");
-                    frmTutor fTutor = new frmTutor();
-                    fTutor.Show();
-                    this.Hide();
+                    destino = new frmTutor(nombre, rol);
                     break;
-
                 case "Director":
-                    MessageBox.Show("✅ Bienvenido Director de Tesis.");
-                    frmDirector fDirector = new frmDirector();
-                    fDirector.Show();
-                    this.Hide();
+                    destino = new frmDirector(nombre, rol);
                     break;
-
                 case "Tribunal":
-                    MessageBox.Show("✅ Bienvenido Tribunal.");
-                    frmTribunal fTribunal = new frmTribunal();
-                    fTribunal.Show();
-                    this.Hide();
+                    destino = new frmTribunal(nombre, rol);
                     break;
-
                 case "Coordinador":
-                    MessageBox.Show("✅ Bienvenido Coordinador de Carrera.");
-                    frmMenuCoordinador fCoordinador = new frmMenuCoordinador();
-                    fCoordinador.Show();
-                    this.Hide();
+                    destino = new frmMenuCoordinador(nombre, rol);
                     break;
-
-                case "Comité":
-                    MessageBox.Show("✅ Bienvenido Comité de Investigación.");
-                    break;
-
-                case "Secretaria":
-                    MessageBox.Show("✅ Bienvenida Secretaria Académica.");
-                    break;
-
                 default:
                     MessageBox.Show("⚠️ Rol no reconocido. Contacte al administrador.");
-                    break;
-                }
-
-
+                    return;
             }
+
+            destino.Show();
+            this.Hide();
+
+
+        }
 
         private void panelLogin_Paint(object sender, PaintEventArgs e)
         {

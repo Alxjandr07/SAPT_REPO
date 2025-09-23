@@ -46,7 +46,7 @@ namespace SistemAutomProcesoTitulacion
             string tipo = Path.GetExtension(ruta).Replace(".", "").ToUpper();
             byte[] datos = File.ReadAllBytes(ruta);
             // Conexión A BASE DE DATOS y comando para insertar el documento
-            using (SqlConnection conn = new SqlConnection(@"Server=DESKTOP-7RHHSIA;Database=SistemaTitulacionUTEQ;Trusted_Connection=True;"))
+            using (SqlConnection conn = new SqlConnection(@"Server=ALXJANDR07PC\SQLEXPRESS;Database=SistemaTitulacionUTEQ;Trusted_Connection=True;"))
             using (SqlCommand cmd = new SqlCommand("sp_InsertarDocumento", conn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -95,7 +95,7 @@ namespace SistemAutomProcesoTitulacion
             try
             {
                 // Limpia la tabla antes de recargar Y tambien se conecta a la base de datos
-                using (SqlConnection conn = new SqlConnection(@"Server=DESKTOP-7RHHSIA;Database=SistemaTitulacionUTEQ;Trusted_Connection=True;"))
+                using (SqlConnection conn = new SqlConnection(@"Server=ALXJANDR07PC\SQLEXPRESS;Database=SistemaTitulacionUTEQ;Trusted_Connection=True;"))
                 using (SqlCommand cmd = new SqlCommand("SELECT IdDocumento, Nombre, Tipo, FechaSubida FROM SbrDocumento", conn))
                 {
                     conn.Open();
@@ -138,7 +138,7 @@ namespace SistemAutomProcesoTitulacion
                 return;
 
             // Ejecuta el DELETE en la base de datos También se conecta a la base de datos
-            using (SqlConnection conn = new SqlConnection(@"Server=DESKTOP-7RHHSIA;Database=SistemaTitulacionUTEQ;Trusted_Connection=True;"))
+            using (SqlConnection conn = new SqlConnection(@"Server=ALXJANDR07PC\SQLEXPRESS;Database=SistemaTitulacionUTEQ;Trusted_Connection=True;"))
             using (SqlCommand cmd = new SqlCommand("DELETE FROM SbrDocumento WHERE IdDocumento = @id", conn))
             {
                 cmd.Parameters.AddWithValue("@id", id);
@@ -202,7 +202,7 @@ namespace SistemAutomProcesoTitulacion
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(@"Server=DESKTOP-7RHHSIA;Database=SistemaTitulacionUTEQ;Trusted_Connection=True;"))
+                using (SqlConnection conn = new SqlConnection(@"Server=ALXJANDR07PC\SQLEXPRESS;Database=SistemaTitulacionUTEQ;Trusted_Connection=True;"))
                 {
                     conn.Open();
                     // Intentamos obtener el archivo como BLOB de la base de datos
@@ -260,7 +260,7 @@ namespace SistemAutomProcesoTitulacion
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(@"Server=DESKTOP-7RHHSIA;Database=SistemaTitulacionUTEQ;Trusted_Connection=True;"))
+                using (SqlConnection conn = new SqlConnection(@"Server=ALXJANDR07PC\SQLEXPRESS;Database=SistemaTitulacionUTEQ;Trusted_Connection=True;"))
                 using (SqlCommand cmd = new SqlCommand("SELECT Nombre, Tipo, Datos FROM SbrDocumento WHERE IdDocumento=@id", conn))
                 {
                     cmd.Parameters.AddWithValue("@id", idDocumento);

@@ -11,7 +11,7 @@ namespace SistemAutomProcesoTitulacion
 {
     public class ConexionBD
     {
-        private static string cadena = "Server=.; Database=SistemaTitulacionUTEQ; Integrated Security=true";
+        private static string cadena = "Server=ALXJANDR07PC\\SQLEXPRESS; Database=SistemaTitulacionUTEQ; Integrated Security=true";
         private static SqlConnection conexion = new SqlConnection(cadena);
 
         public static SqlConnection ObtenerConexion()
@@ -291,6 +291,31 @@ namespace SistemAutomProcesoTitulacion
                 MessageBox.Show("❌ Error al modificar usuario: " + ex.Message);
             }
             return exito;
+        }
+
+        public static (string Nombre, string Rol) ValidarLoginDatos(string correo, string contrasena)
+        {
+            using (SqlConnection conn = new SqlConnection(cadena))
+            {
+                SqlCommand cmd = new SqlCommand("sp_ValidarLogin", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Correo", correo);
+                cmd.Parameters.AddWithValue("@Contrasena", contrasena);
+
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    string nombre = reader["NombreCompleto"].ToString();
+                    string rol = reader["Rol"].ToString();
+                    return (nombre, rol);
+                }
+                else
+                {
+                    return (null, null);
+                }
+            }
         }
     }
 }

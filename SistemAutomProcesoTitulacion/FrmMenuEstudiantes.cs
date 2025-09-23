@@ -14,6 +14,12 @@ namespace SistemAutomProcesoTitulacion
 {
     public partial class FrmMenuEstudiantes : Form
     {
+        public FrmMenuEstudiantes(string nombre, string rol)
+        {
+            InitializeComponent();
+            lblNombre.Text = nombre;
+            lblRol.Text = rol;
+        }
         public FrmMenuEstudiantes()
         {
             InitializeComponent();
@@ -25,15 +31,6 @@ namespace SistemAutomProcesoTitulacion
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
-            if (flpMenu.Width == 250)
-            {
-             flpMenu.Width = 70;
-            }
-            else
-            {
-                flpMenu.Width = 250;
-
-            }
         }
         private void AbrirFormularioEnPanel(Form formHijo)
         {
@@ -187,6 +184,11 @@ namespace SistemAutomProcesoTitulacion
                 frmLogin login = new frmLogin();
                 login.Show();
             }
+        }
+
+        private void panelContenedorEstud_Paint_2(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
