@@ -60,6 +60,13 @@ namespace SistemAutomProcesoTitulacion
                     break;
                 case "Tutor":
                     destino = new frmTutor(nombre, rol);
+                    var tutor = new Tutor
+                    {
+                        Nombre = nombre,
+                        Correo = correo
+                    };
+
+                    destino = new frmTutor(tutor, nombre, rol);
                     break;
                 case "Director":
                     destino = new frmDirector(nombre, rol);

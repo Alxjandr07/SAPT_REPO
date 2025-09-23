@@ -78,6 +78,12 @@
     <Compile Include="frmEntregarDocumentos.Designer.cs">
       <DependentUpon>frmEntregarDocumentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGestionDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionDoc.Designer.cs">
+      <DependentUpon>frmGestionDoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGestionReunion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SistemaTitulacionUTEQDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Tutor.cs" />
     <Compile Include="Usuario.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -165,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEntregarDocumentos.resx">
       <DependentUpon>frmEntregarDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionDoc.resx">
+      <DependentUpon>frmGestionDoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionReunion.resx">
       <DependentUpon>frmGestionReunion.cs</DependentUpon>

@@ -6,12 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
+using System.IO;
 
 namespace SistemAutomProcesoTitulacion
 {
     public class ConexionBD
     {
-        private static string cadena = "Server=ALXJANDR07PC\\SQLEXPRESS; Database=SistemaTitulacionUTEQ; Integrated Security=true";
+        private static string cadena = "Server=.; Database=SistemaTitulacionUTEQ; Integrated Security=true";
         private static SqlConnection conexion = new SqlConnection(cadena);
 
         public static SqlConnection ObtenerConexion()
@@ -386,6 +387,158 @@ namespace SistemAutomProcesoTitulacion
             {
                 MessageBox.Show("❌ Error al eliminar la información de reuniones: " + ex.Message);
             }
+        }
+
+        public static int InsertarDocumento(string nombre, string tipo, byte[] datos)
+        {
+            int nuevoId = 0;
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(cadena))
+                using (SqlCommand cmd = new SqlCommand("sp_InsertarDocumento", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Nombre", nombre);
+                    cmd.Parameters.AddWithValue("@Tipo", tipo);
+                    cmd.Parameters.AddWithValue("@Datos", datos);
+
+                    SqlParameter outputId = new SqlParameter("@NuevoId", SqlDbType.Int)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+                    cmd.Parameters.Add(outputId);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    nuevoId = Convert.ToInt32(outputId.Value);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Error al subir el documento: " + ex.Message);
+            }
+            return nuevoId;
+        }
+
+        public static DataTable ObtenerDocumentos()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(cadena))
+                using (SqlCommand cmd = new SqlCommand("SELECT IdDocumento, Nombre, Tipo, FechaSubida FROM SbrDocumento", conn))
+                {
+                    conn.Open();
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Error al cargar documentos: " + ex.Message);
+            }
+            return dt;
+        }
+
+        public static bool EliminarDocumento(int id)
+        {
+            bool exito = false;
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(cadena))
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM SbrDocumento WHERE IdDocumento = @id", conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    conn.Open();
+                    int filas = cmd.ExecuteNonQuery();
+                    exito = filas > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Error al eliminar el documento: " + ex.Message);
+            }
+            return exito;
+        }
+
+        public static bool DescargarDocumento(int idDocumento, string destino, string rutaArchivo)
+        {
+            bool exito = false;
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(cadena))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand("SELECT DatosArchivo FROM SbrDocumento WHERE IdDocumento=@id", conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", idDocumento);
+                        object resultado = cmd.ExecuteScalar();
+
+                        if (resultado != null && resultado != DBNull.Value)
+                        {
+                            byte[] archivoBytes = (byte[])resultado;
+                            File.WriteAllBytes(destino, archivoBytes);
+                            exito = true;
+                        }
+                        else
+                        {
+                            if (File.Exists(rutaArchivo))
+                            {
+                                File.Copy(rutaArchivo, destino, true);
+                                exito = true;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Error al descargar el archivo: " + ex.Message);
+            }
+            return exito;
+        }
+
+        public static bool VisualizarDocumento(int idDocumento)
+        {
+            bool exito = false;
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(cadena))
+                using (SqlCommand cmd = new SqlCommand("SELECT Nombre, Tipo, Datos FROM SbrDocumento WHERE IdDocumento=@id", conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", idDocumento);
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            string nombre = reader["Nombre"].ToString();
+                            string tipo = reader["Tipo"].ToString().ToLower();
+                            byte[] datos = (byte[])reader["Datos"];
+
+                            if (tipo != "pdf" && tipo != "doc" && tipo != "docx")
+                                return false;
+
+                            string tempPath = Path.Combine(Path.GetTempPath(), nombre);
+                            File.WriteAllBytes(tempPath, datos);
+
+                            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                            {
+                                FileName = tempPath,
+                                UseShellExecute = true
+                            });
+                            exito = true;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Error al visualizar el documento: " + ex.Message);
+            }
+            return exito;
         }
     }
 }
