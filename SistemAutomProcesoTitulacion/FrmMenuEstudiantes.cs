@@ -191,18 +191,28 @@ namespace SistemAutomProcesoTitulacion
 
         }
 
-        private void btnReunion_Click(object sender, EventArgs e)
+
+        private void lblLogOut_Click(object sender, EventArgs e)
         {
-            panelContenedorEstud.Controls.Clear();
+            {
+                DialogResult result = MessageBox.Show(
+                    "¿Deseas cerrar sesión?",
+                    "Cerrar Sesión",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
 
-            var frm = new frmGestionReunion();
-            frm.TopLevel = false;
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.Dock = DockStyle.Fill;
-            frm.ConfigurarModo(false); // Solo visualización para el estudiante
+                if (result == DialogResult.Yes)
+                {
+                    this.Hide(); // Ocultamos el formulario principal
 
-            panelContenedorEstud.Controls.Add(frm);
-            frm.Show();
+                    // Volvemos a mostrar el Form1 (que es tu Login)
+                    frmLogin login = new frmLogin();
+                    login.Show();
+                }
+            }
+
+        
         }
     }
 }

@@ -51,8 +51,8 @@
             this.lblRol = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelContenedorEstud = new System.Windows.Forms.Panel();
+            this.lblLogOut = new System.Windows.Forms.Label();
             this.panelCabecera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).BeginInit();
@@ -67,7 +67,6 @@
             this.pnlEstadoProceso.SuspendLayout();
             this.panelInformacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCabecera
@@ -77,7 +76,6 @@
             this.panelCabecera.Controls.Add(this.btnMinim);
             this.panelCabecera.Controls.Add(this.btnDesliz);
             this.panelCabecera.Controls.Add(this.btnCerrar);
-            this.panelCabecera.Controls.Add(this.pictureBox1);
             this.panelCabecera.Controls.Add(this.btnMaximizar);
             this.panelCabecera.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCabecera.Location = new System.Drawing.Point(0, 0);
@@ -145,10 +143,13 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = global::SistemAutomProcesoTitulacion.Properties.Resources.gire_a_la_izquierda;
-            this.pictureBox1.Location = new System.Drawing.Point(838, 0);
+
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(907, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 26);
+            this.pictureBox1.Size = new System.Drawing.Size(41, 34);
+
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -290,10 +291,11 @@
             // 
             // panelInformacion
             // 
+            this.panelInformacion.Controls.Add(this.lblLogOut);
             this.panelInformacion.Controls.Add(this.lblRol);
             this.panelInformacion.Controls.Add(this.lblNombre);
             this.panelInformacion.Controls.Add(this.pictureBox2);
-            this.panelInformacion.Controls.Add(this.pictureBox3);
+            this.panelInformacion.Controls.Add(this.pictureBox1);
             this.panelInformacion.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelInformacion.Location = new System.Drawing.Point(245, 33);
             this.panelInformacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -304,8 +306,9 @@
             // lblRol
             // 
             this.lblRol.AutoSize = true;
-            this.lblRol.Location = new System.Drawing.Point(593, 21);
-            this.lblRol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+
+            this.lblRol.Location = new System.Drawing.Point(58, 26);
+
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(35, 13);
             this.lblRol.TabIndex = 9;
@@ -314,8 +317,9 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(587, 5);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+
+            this.lblNombre.Location = new System.Drawing.Point(50, 6);
+
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(35, 13);
             this.lblNombre.TabIndex = 8;
@@ -325,24 +329,20 @@
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(553, 2);
+
+            this.pictureBox2.Location = new System.Drawing.Point(4, 3);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(29, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
+
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(686, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(26, 23);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
+           
             // panelContenedorEstud
             // 
             this.panelContenedorEstud.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -352,6 +352,19 @@
             this.panelContenedorEstud.Size = new System.Drawing.Size(714, 418);
             this.panelContenedorEstud.TabIndex = 19;
             this.panelContenedorEstud.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorEstud_Paint_2);
+            // 
+            // lblLogOut
+            // 
+            this.lblLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLogOut.AutoSize = true;
+            this.lblLogOut.Font = new System.Drawing.Font("Century Gothic", 8.139131F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogOut.ForeColor = System.Drawing.Color.Green;
+            this.lblLogOut.Location = new System.Drawing.Point(851, 6);
+            this.lblLogOut.Name = "lblLogOut";
+            this.lblLogOut.Size = new System.Drawing.Size(53, 32);
+            this.lblLogOut.TabIndex = 11;
+            this.lblLogOut.Text = "Cerrar \r\nsesión";
+            this.lblLogOut.Click += new System.EventHandler(this.lblLogOut_Click);
             // 
             // FrmMenuEstudiantes
             // 
@@ -381,7 +394,6 @@
             this.panelInformacion.ResumeLayout(false);
             this.panelInformacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -408,7 +420,7 @@
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panelContenedorEstud;
+        private System.Windows.Forms.Label lblLogOut;
     }
 }

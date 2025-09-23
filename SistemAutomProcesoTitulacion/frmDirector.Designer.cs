@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDirector));
             this.panelCabecera = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.btnMinim = new System.Windows.Forms.PictureBox();
             this.btnDesliz = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flpMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlEnvioDoc = new System.Windows.Forms.Panel();
             this.btnEnvioDoc = new System.Windows.Forms.Button();
@@ -46,17 +46,18 @@
             this.pnlAutoridades = new System.Windows.Forms.Panel();
             this.btnAutoridades = new System.Windows.Forms.Button();
             this.panelInformacion = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblNombre = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelContenedorDirector = new System.Windows.Forms.Panel();
+            this.lblLogOut = new System.Windows.Forms.Label();
             this.panelCabecera.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDesliz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flpMenu.SuspendLayout();
             this.pnlEnvioDoc.SuspendLayout();
             this.pnlReunion.SuspendLayout();
@@ -80,19 +81,6 @@
             this.panelCabecera.Name = "panelCabecera";
             this.panelCabecera.Size = new System.Drawing.Size(1279, 41);
             this.panelCabecera.TabIndex = 14;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(915, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnRestaurar
             // 
@@ -162,6 +150,19 @@
             this.btnMaximizar.TabIndex = 1;
             this.btnMaximizar.TabStop = false;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click_2);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(907, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(41, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // flpMenu
             // 
@@ -283,6 +284,7 @@
             // 
             // panelInformacion
             // 
+            this.panelInformacion.Controls.Add(this.lblLogOut);
             this.panelInformacion.Controls.Add(this.lblRol);
             this.panelInformacion.Controls.Add(this.lblNombre);
             this.panelInformacion.Controls.Add(this.pictureBox2);
@@ -293,35 +295,35 @@
             this.panelInformacion.Size = new System.Drawing.Size(952, 47);
             this.panelInformacion.TabIndex = 17;
             // 
+            // lblRol
+            // 
+            this.lblRol.AutoSize = true;
+            this.lblRol.Location = new System.Drawing.Point(63, 26);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(44, 16);
+            this.lblRol.TabIndex = 9;
+            this.lblRol.Text = "label2";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(55, 6);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(44, 16);
+            this.lblNombre.TabIndex = 8;
+            this.lblNombre.Text = "label1";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(737, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(9, 3);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(39, 40);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(783, 6);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 16);
-            this.lblNombre.TabIndex = 8;
-            this.lblNombre.Text = "label1";
-            // 
-            // lblRol
-            // 
-            this.lblRol.AutoSize = true;
-            this.lblRol.Location = new System.Drawing.Point(791, 26);
-            this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(44, 16);
-            this.lblRol.TabIndex = 9;
-            this.lblRol.Text = "label2";
             // 
             // panelContenedorDirector
             // 
@@ -330,6 +332,18 @@
             this.panelContenedorDirector.Name = "panelContenedorDirector";
             this.panelContenedorDirector.Size = new System.Drawing.Size(952, 514);
             this.panelContenedorDirector.TabIndex = 18;
+            // 
+            // lblLogOut
+            // 
+            this.lblLogOut.AutoSize = true;
+            this.lblLogOut.Font = new System.Drawing.Font("Century Gothic", 8.139131F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogOut.ForeColor = System.Drawing.Color.Green;
+            this.lblLogOut.Location = new System.Drawing.Point(851, 6);
+            this.lblLogOut.Name = "lblLogOut";
+            this.lblLogOut.Size = new System.Drawing.Size(53, 32);
+            this.lblLogOut.TabIndex = 11;
+            this.lblLogOut.Text = "Cerrar \r\nsesión";
+            this.lblLogOut.Click += new System.EventHandler(this.lblLogOut_Click);
             // 
             // frmDirector
             // 
@@ -346,12 +360,12 @@
             this.Text = "frmDirector";
             this.Load += new System.EventHandler(this.frmDirector_Load);
             this.panelCabecera.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDesliz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flpMenu.ResumeLayout(false);
             this.pnlEnvioDoc.ResumeLayout(false);
             this.pnlReunion.ResumeLayout(false);
@@ -387,5 +401,6 @@
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Panel panelContenedorDirector;
+        private System.Windows.Forms.Label lblLogOut;
     }
 }

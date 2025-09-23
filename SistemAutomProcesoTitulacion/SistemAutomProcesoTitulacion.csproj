@@ -114,6 +114,12 @@
     <Compile Include="frmModDocumentosEstud.Designer.cs">
       <DependentUpon>frmModDocumentosEstud.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRecuperarContrasena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecuperarContrasena.Designer.cs">
+      <DependentUpon>frmRecuperarContrasena.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTribunal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmModDocumentosEstud.resx">
       <DependentUpon>frmModDocumentosEstud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecuperarContrasena.resx">
+      <DependentUpon>frmRecuperarContrasena.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTribunal.resx">
       <DependentUpon>frmTribunal.cs</DependentUpon>
