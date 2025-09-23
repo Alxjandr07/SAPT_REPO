@@ -47,6 +47,11 @@
             this.btnAutoridades = new System.Windows.Forms.Button();
             this.pnlEstadoProceso = new System.Windows.Forms.Panel();
             this.btnEstadoProceso = new System.Windows.Forms.Button();
+            this.panelInformacion = new System.Windows.Forms.Panel();
+            this.lblRol = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelContenedorEstud = new System.Windows.Forms.Panel();
             this.panelCabecera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
@@ -60,6 +65,9 @@
             this.pnlReunion.SuspendLayout();
             this.pnlAutoridades.SuspendLayout();
             this.pnlEstadoProceso.SuspendLayout();
+            this.panelInformacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCabecera
@@ -75,7 +83,7 @@
             this.panelCabecera.Location = new System.Drawing.Point(0, 0);
             this.panelCabecera.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelCabecera.Name = "panelCabecera";
-            this.panelCabecera.Size = new System.Drawing.Size(1279, 62);
+            this.panelCabecera.Size = new System.Drawing.Size(1279, 41);
             this.panelCabecera.TabIndex = 11;
             this.panelCabecera.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelCabecera_MouseDown_1);
             // 
@@ -139,7 +147,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Image = global::SistemAutomProcesoTitulacion.Properties.Resources.gire_a_la_izquierda;
             this.pictureBox1.Location = new System.Drawing.Point(1117, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(37, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -169,10 +177,10 @@
             this.flpMenu.Controls.Add(this.pnlAutoridades);
             this.flpMenu.Controls.Add(this.pnlEstadoProceso);
             this.flpMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flpMenu.Location = new System.Drawing.Point(0, 62);
-            this.flpMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flpMenu.Location = new System.Drawing.Point(0, 41);
+            this.flpMenu.Margin = new System.Windows.Forms.Padding(4);
             this.flpMenu.Name = "flpMenu";
-            this.flpMenu.Size = new System.Drawing.Size(327, 540);
+            this.flpMenu.Size = new System.Drawing.Size(327, 561);
             this.flpMenu.TabIndex = 13;
             // 
             // pnlEnvioDoc
@@ -281,16 +289,68 @@
             this.btnEstadoProceso.Text = "Estado del Proceso";
             this.btnEstadoProceso.UseVisualStyleBackColor = false;
             // 
+            // panelInformacion
+            // 
+            this.panelInformacion.Controls.Add(this.lblRol);
+            this.panelInformacion.Controls.Add(this.lblNombre);
+            this.panelInformacion.Controls.Add(this.pictureBox2);
+            this.panelInformacion.Controls.Add(this.pictureBox3);
+            this.panelInformacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelInformacion.Location = new System.Drawing.Point(327, 41);
+            this.panelInformacion.Name = "panelInformacion";
+            this.panelInformacion.Size = new System.Drawing.Size(952, 47);
+            this.panelInformacion.TabIndex = 18;
+            // 
+            // lblRol
+            // 
+            this.lblRol.AutoSize = true;
+            this.lblRol.Location = new System.Drawing.Point(791, 26);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(44, 16);
+            this.lblRol.TabIndex = 9;
+            this.lblRol.Text = "label2";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(783, 6);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(44, 16);
+            this.lblNombre.TabIndex = 8;
+            this.lblNombre.Text = "label1";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(737, 3);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(39, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(915, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(34, 28);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
+            // 
             // panelContenedorEstud
             // 
-            this.panelContenedorEstud.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelContenedorEstud.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedorEstud.Location = new System.Drawing.Point(327, 62);
-            this.panelContenedorEstud.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelContenedorEstud.Location = new System.Drawing.Point(327, 88);
             this.panelContenedorEstud.Name = "panelContenedorEstud";
-            this.panelContenedorEstud.Size = new System.Drawing.Size(952, 540);
-            this.panelContenedorEstud.TabIndex = 14;
-            this.panelContenedorEstud.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorEstud_Paint_1);
+            this.panelContenedorEstud.Size = new System.Drawing.Size(952, 514);
+            this.panelContenedorEstud.TabIndex = 19;
+            this.panelContenedorEstud.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorEstud_Paint_2);
             // 
             // FrmMenuEstudiantes
             // 
@@ -298,6 +358,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1279, 602);
             this.Controls.Add(this.panelContenedorEstud);
+            this.Controls.Add(this.panelInformacion);
             this.Controls.Add(this.flpMenu);
             this.Controls.Add(this.panelCabecera);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -316,6 +377,10 @@
             this.pnlReunion.ResumeLayout(false);
             this.pnlAutoridades.ResumeLayout(false);
             this.pnlEstadoProceso.ResumeLayout(false);
+            this.panelInformacion.ResumeLayout(false);
+            this.panelInformacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -329,7 +394,6 @@
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMaximizar;
         private System.Windows.Forms.FlowLayoutPanel flpMenu;
-        private System.Windows.Forms.Panel panelContenedorEstud;
         private System.Windows.Forms.Panel pnlEnvioDoc;
         private System.Windows.Forms.Button btnEnvioDoc;
         private System.Windows.Forms.Panel pnlReunion;
@@ -339,5 +403,11 @@
         private System.Windows.Forms.Panel pnlAutoridades;
         private System.Windows.Forms.Button btnAutoridades;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panelInformacion;
+        private System.Windows.Forms.Label lblRol;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panelContenedorEstud;
     }
 }

@@ -12,6 +12,12 @@ namespace SistemAutomProcesoTitulacion
 {
     public partial class frmMenuCoordinador : Form
     {
+        public frmMenuCoordinador(string nombre, string rol)
+        {
+            InitializeComponent();
+            lblNombre.Text = nombre;
+            lblRol.Text = rol;
+        }
         public frmMenuCoordinador()
         {
             InitializeComponent();
@@ -104,6 +110,11 @@ namespace SistemAutomProcesoTitulacion
         private void btnReunion_Click(object sender, EventArgs e)
         {
             AbrirFormularioEnPanel(new frmGestionReunion());
+        }
+
+        private void panelCabecera_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
