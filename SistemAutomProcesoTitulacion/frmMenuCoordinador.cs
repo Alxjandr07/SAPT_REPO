@@ -143,5 +143,17 @@ namespace SistemAutomProcesoTitulacion
         {
 
         }
+
+        private void btnAutoridades_Click(object sender, EventArgs e)
+        {
+            frmNotificacion notificacion = new frmNotificacion(coordinador);
+            notificacion.Owner = this; // 'this' es frmMenuCoordinador
+            funciones.AbrirFormularioEnPanel(notificacion, panelContenedor);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
