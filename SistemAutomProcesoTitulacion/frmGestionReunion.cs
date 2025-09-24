@@ -94,6 +94,8 @@ namespace SistemAutomProcesoTitulacion
 
         private void frmGestionReunion_Load(object sender, EventArgs e)
         {
+            // Establece la fecha mínima como hoy
+            monthCalendar1.MinDate = DateTime.Today;
             MensajeReuniones = ConexionBD.ObtenerTodasLasInformacionesReuniones();
         }
 

@@ -10,6 +10,13 @@ namespace SistemAutomProcesoTitulacion
         public frmModDocumentosEstud()
         {
             InitializeComponent();
+
+            cmbTipoDocumento.Items.AddRange(new string[]
+            { "Todos", "Anteproyecto", "Avance", "Proyecto Terminado"
+    });
+            cmbTipoDocumento.SelectedIndex = 0;
+
+            cmbTipoDocumento.SelectedIndexChanged += cmbTipoDocumento_SelectedIndexChanged;
         }
 
         private void frmModDocumentosEstud_Load(object sender, EventArgs e)
@@ -39,7 +46,7 @@ namespace SistemAutomProcesoTitulacion
             }
 
             string nombre = Path.GetFileName(ruta);
-            string tipo = Path.GetExtension(ruta).Replace(".", "").ToUpper();
+            string tipo = cmbTipoDocumento.SelectedItem.ToString();
             byte[] datos = File.ReadAllBytes(ruta);
 
             int nuevoId = ConexionBD.InsertarDocumento(nombre, tipo, datos);
@@ -47,6 +54,9 @@ namespace SistemAutomProcesoTitulacion
             {
                 MessageBox.Show("✅ Documento subido correctamente con ID: " + nuevoId);
                 CargarDocumentos();
+
+                string tipoSeleccionado = cmbTipoDocumento.SelectedItem.ToString();
+                dgvDocumentos.DataSource = ConexionBD.ObtenerDocumentosPorTipo(tipoSeleccionado);
             }
             else
             {
@@ -161,6 +171,20 @@ namespace SistemAutomProcesoTitulacion
             if (!visualizado)
             {
                 MessageBox.Show("❌ Error al visualizar el documento.");
+            }
+        }
+
+        private void cmbTipoDocumento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string tipoSeleccionado = cmbTipoDocumento.SelectedItem.ToString();
+
+            if (tipoSeleccionado == "Todos")
+            {
+                dgvDocumentos.DataSource = ConexionBD.ObtenerDocumentos(); // sin filtro
+            }
+            else
+            {
+                dgvDocumentos.DataSource = ConexionBD.ObtenerDocumentosPorTipo(tipoSeleccionado); // con filtro
             }
         }
     }

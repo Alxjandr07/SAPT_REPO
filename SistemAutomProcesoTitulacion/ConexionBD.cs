@@ -467,7 +467,22 @@ namespace SistemAutomProcesoTitulacion
             }
             return dt;
         }
-
+        public static void GuardarDocumento(string nombre, string tipo, DateTime fecha)
+        {
+            using (SqlConnection con = new SqlConnection(cadena))
+            {
+                con.Open();
+                string query = "INSERT INTO Documentos (Nombre, Tipo, FechaSubida) VALUES (@Nombre, @Tipo, @Fecha)";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@Nombre", nombre);
+                    cmd.Parameters.AddWithValue("@Tipo", tipo);
+                    cmd.Parameters.AddWithValue("@Fecha", fecha);
+                    cmd.ExecuteNonQuery();
+                }
+                con.Close();
+            }
+        }
         public static bool EliminarDocumento(int id)
         {
             bool exito = false;
@@ -525,6 +540,28 @@ namespace SistemAutomProcesoTitulacion
             }
             return exito;
         }
+        public static DataTable ObtenerDocumentosPorTipo(string tipo)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(cadena))
+                using (SqlCommand cmd = new SqlCommand("SELECT IdDocumento, Nombre, Tipo, FechaSubida FROM SbrDocumento WHERE Tipo = @Tipo", conn))
+                {
+                    cmd.Parameters.AddWithValue("@Tipo", tipo);
+                    conn.Open();
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Error al filtrar documentos por tipo: " + ex.Message);
+            }
+            return dt;
+        }
 
         public static bool VisualizarDocumento(int idDocumento)
         {
@@ -567,4 +604,5 @@ namespace SistemAutomProcesoTitulacion
             return exito;
         }
     }
+
 }

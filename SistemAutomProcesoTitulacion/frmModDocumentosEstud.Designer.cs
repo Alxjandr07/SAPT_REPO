@@ -48,6 +48,7 @@
             this.btnExaminar = new System.Windows.Forms.Button();
             this.txtRutaArchivo = new System.Windows.Forms.TextBox();
             this.btnVer = new System.Windows.Forms.Button();
+            this.cmbTipoDocumento = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaTitulacionUTEQDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbrDocumentoBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
@@ -66,7 +67,7 @@
             this.btnSubir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubir.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubir.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnSubir.Location = new System.Drawing.Point(287, 267);
+            this.btnSubir.Location = new System.Drawing.Point(310, 267);
             this.btnSubir.Name = "btnSubir";
             this.btnSubir.Size = new System.Drawing.Size(104, 43);
             this.btnSubir.TabIndex = 13;
@@ -82,7 +83,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.Red;
-            this.btnEliminar.Location = new System.Drawing.Point(397, 267);
+            this.btnEliminar.Location = new System.Drawing.Point(420, 267);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(104, 43);
             this.btnEliminar.TabIndex = 15;
@@ -111,7 +112,7 @@
             this.panel1.Controls.Add(this.dgvDocumentos);
             this.panel1.Location = new System.Drawing.Point(20, 42);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(477, 106);
+            this.panel1.Size = new System.Drawing.Size(500, 106);
             this.panel1.TabIndex = 17;
             // 
             // dgvDocumentos
@@ -131,7 +132,7 @@
             this.dgvDocumentos.Location = new System.Drawing.Point(0, 0);
             this.dgvDocumentos.Name = "dgvDocumentos";
             this.dgvDocumentos.ReadOnly = true;
-            this.dgvDocumentos.Size = new System.Drawing.Size(477, 106);
+            this.dgvDocumentos.Size = new System.Drawing.Size(500, 106);
             this.dgvDocumentos.TabIndex = 0;
             this.dgvDocumentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDocumentos_CellContentClick);
             // 
@@ -228,12 +229,22 @@
             this.btnVer.UseVisualStyleBackColor = true;
             this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
             // 
+            // cmbTipoDocumento
+            // 
+            this.cmbTipoDocumento.FormattingEnabled = true;
+            this.cmbTipoDocumento.Location = new System.Drawing.Point(20, 15);
+            this.cmbTipoDocumento.Name = "cmbTipoDocumento";
+            this.cmbTipoDocumento.Size = new System.Drawing.Size(121, 21);
+            this.cmbTipoDocumento.TabIndex = 21;
+            this.cmbTipoDocumento.SelectedIndexChanged += new System.EventHandler(this.cmbTipoDocumento_SelectedIndexChanged);
+            // 
             // frmModDocumentosEstud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(513, 333);
+            this.ClientSize = new System.Drawing.Size(536, 333);
+            this.Controls.Add(this.cmbTipoDocumento);
             this.Controls.Add(this.btnVer);
             this.Controls.Add(this.txtRutaArchivo);
             this.Controls.Add(this.btnExaminar);
@@ -278,5 +289,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaSubidaDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource sbrDocumentoBindingSource2;
         private System.Windows.Forms.Button btnVer;
+        private System.Windows.Forms.ComboBox cmbTipoDocumento;
     }
 }
