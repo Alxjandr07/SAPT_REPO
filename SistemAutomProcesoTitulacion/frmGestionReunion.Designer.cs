@@ -105,7 +105,6 @@
             // 
             // tstFiltro
             // 
-            this.tstFiltro.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tstFiltro.Name = "tstFiltro";
             this.tstFiltro.Size = new System.Drawing.Size(168, 26);
             // 
