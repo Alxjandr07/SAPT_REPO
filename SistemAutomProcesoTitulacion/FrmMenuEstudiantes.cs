@@ -190,7 +190,16 @@ namespace SistemAutomProcesoTitulacion
 
         private void btnReunion_Click(object sender, EventArgs e)
         {
+            panelContenedor.Controls.Clear();
 
+            var frm = new frmGestionReunion();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+            frm.ConfigurarModo(false); // Solo visualización para el estudiante
+
+            panelContenedor.Controls.Add(frm);
+            frm.Show();
         }
 
         private void panelContenedor_Paint(object sender, PaintEventArgs e)
