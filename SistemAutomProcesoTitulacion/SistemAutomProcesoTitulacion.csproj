@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -121,6 +122,12 @@
     <Compile Include="frmModDocumentosEstud.Designer.cs">
       <DependentUpon>frmModDocumentosEstud.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNotificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNotificacion.Designer.cs">
+      <DependentUpon>frmNotificacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRecuperarContrasena.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmModDocumentosEstud.resx">
       <DependentUpon>frmModDocumentosEstud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNotificacion.resx">
+      <DependentUpon>frmNotificacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRecuperarContrasena.resx">
       <DependentUpon>frmRecuperarContrasena.cs</DependentUpon>
@@ -289,6 +299,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\actualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adjuntar-archivo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
