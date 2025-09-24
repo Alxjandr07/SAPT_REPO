@@ -82,6 +82,7 @@ namespace SistemAutomProcesoTitulacion
         {
             btnMarcar.Visible = esCoordinador;
             btnDesmarcar.Visible = esCoordinador;
+            btnEliminarReuniones.Visible = esCoordinador;
             monthCalendar1.Enabled = esCoordinador;
         }
 
@@ -118,6 +119,11 @@ namespace SistemAutomProcesoTitulacion
 
             // Limpia el label
             lblMensaje.Text = "No hay reuniones programadas.";
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
