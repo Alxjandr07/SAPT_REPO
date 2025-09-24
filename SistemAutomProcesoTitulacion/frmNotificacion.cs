@@ -37,5 +37,44 @@ namespace SistemAutomProcesoTitulacion
         {
 
         }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            string para = cmbPara.Text.Trim();
+            string asunto = txtAsunto.Text.Trim();
+            string mensaje = txtMensaje.Text.Trim();
+
+            // Validación: "Para" y "Mensaje" no pueden estar vacíos
+            if (string.IsNullOrWhiteSpace(para))
+            {
+                MessageBox.Show("El campo 'Para' no puede estar vacío.");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(mensaje))
+            {
+                MessageBox.Show("El campo 'Mensaje' no puede estar vacío.");
+                return;
+            }
+
+            bool exito = coordinador.EnviarNotificacion(para, asunto, mensaje);
+
+            if (exito)
+            {
+                MessageBox.Show("Notificación enviada correctamente.");
+                LimpiarCampos();
+            }
+            else
+            {
+                MessageBox.Show("Error al enviar la notificación.");
+            }
+        }
+
+        // Método para limpiar los campos
+        private void LimpiarCampos()
+        {
+            cmbPara.SelectedIndex = -1; // O cmbPara.Text = "";
+            txtAsunto.Text = "";
+            txtMensaje.Text = "";
+        }
     }
 }

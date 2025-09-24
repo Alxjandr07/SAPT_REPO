@@ -314,7 +314,7 @@ namespace SistemAutomProcesoTitulacion
             return exito;
         }
 
-        public static (string Nombre, string Rol) ValidarLoginDatos(string correo, string contrasena)
+        public static (int IdUsuario, string Nombre, string Rol) ValidarLoginDatos(string correo, string contrasena)
         {
             using (SqlConnection conn = new SqlConnection(cadena))
             {
@@ -328,13 +328,14 @@ namespace SistemAutomProcesoTitulacion
 
                 if (reader.Read())
                 {
+                    int idUsuario = Convert.ToInt32(reader["IdUsuario"]);
                     string nombre = reader["NombreCompleto"].ToString();
                     string rol = reader["Rol"].ToString();
-                    return (nombre, rol);
+                    return (idUsuario, nombre, rol);
                 }
                 else
                 {
-                    return (null, null);
+                    return (0, null, null);
                 }
             }
         }
@@ -565,6 +566,25 @@ namespace SistemAutomProcesoTitulacion
                 MessageBox.Show("❌ Error al visualizar el documento: " + ex.Message);
             }
             return exito;
+        }
+
+        public static bool AgregarNotificacion(int idUsuario, string para, string asunto, string mensaje)
+        {
+            using (SqlConnection conn = new SqlConnection(cadena))
+            {
+                using (SqlCommand cmd = new SqlCommand("AgregarNotificacion", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                    cmd.Parameters.AddWithValue("@Para", para);
+                    cmd.Parameters.AddWithValue("@Asunto", asunto ?? (object)DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Mensaje", mensaje);
+
+                    conn.Open();
+                    int rows = cmd.ExecuteNonQuery();
+                    return rows > 0;
+                }
+            }
         }
     }
 }

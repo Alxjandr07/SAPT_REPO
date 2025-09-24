@@ -94,6 +94,7 @@
             this.btnEnviar.TabIndex = 14;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // cmbPara
             // 

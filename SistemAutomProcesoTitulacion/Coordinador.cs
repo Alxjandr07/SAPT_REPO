@@ -70,5 +70,10 @@ namespace SistemAutomProcesoTitulacion
             // Utiliza el método de ConexionBD para filtrar usuarios
             return ConexionBD.FiltrarUsuarios(filtro);
         }
+
+        public bool EnviarNotificacion(string para, string asunto, string mensaje)
+        {
+            return ConexionBD.AgregarNotificacion(this.IdCoordinador, para, asunto, mensaje);
+        }
     }
 }
