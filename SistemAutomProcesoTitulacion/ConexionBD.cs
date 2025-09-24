@@ -48,6 +48,26 @@ namespace SistemAutomProcesoTitulacion
                 MessageBox.Show("⚠️ Error al cerrar la conexión: " + ex.Message);
             }
         }
+        public static void EliminarTodasLasReuniones()
+        {
+            try
+            {
+                SqlConnection conn = ObtenerConexion();
+
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM InformacionReuniones", conn))
+                {
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("✅ Todas las reuniones han sido eliminadas de la base de datos.");
+                }
+
+                CerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Error al eliminar reuniones: " + ex.Message);
+            }
+        }
+
 
         public static string ValidarLogin(string correo, string contrasena)
         {
@@ -321,22 +341,28 @@ namespace SistemAutomProcesoTitulacion
 
         public static void AgregarInformacionReunion(string texto)
         {
-            try
+            using (SqlConnection con = new SqlConnection(cadena))
             {
-                using (SqlConnection con = new SqlConnection(cadena))
+                con.Open();
+
+                string verificarQuery = "SELECT COUNT(*) FROM InformacionReuniones WHERE TextoInformacion = @Texto";
+                using (SqlCommand verificarCmd = new SqlCommand(verificarQuery, con))
                 {
-                    con.Open();
-                    string query = "INSERT INTO InformacionReuniones (TextoInformacion) VALUES (@Texto)";
-                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    verificarCmd.Parameters.AddWithValue("@Texto", texto);
+                    int existe = (int)verificarCmd.ExecuteScalar();
+
+                    if (existe == 0)
                     {
-                        cmd.Parameters.AddWithValue("@Texto", texto);
-                        cmd.ExecuteNonQuery();
+                        string insertarQuery = "INSERT INTO InformacionReuniones (TextoInformacion) VALUES (@Texto)";
+                        using (SqlCommand insertarCmd = new SqlCommand(insertarQuery, con))
+                        {
+                            insertarCmd.Parameters.AddWithValue("@Texto", texto);
+                            insertarCmd.ExecuteNonQuery();
+                        }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("❌ Error al guardar la información de reuniones: " + ex.Message);
+
+                con.Close();
             }
         }
 

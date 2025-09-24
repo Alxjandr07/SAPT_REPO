@@ -231,6 +231,7 @@ namespace SistemAutomProcesoTitulacion
                 MessageBoxIcon.Question
             );
 
+
             if (result == DialogResult.Yes)
             {
                 this.Hide(); // Ocultamos el formulario principal
@@ -244,6 +245,11 @@ namespace SistemAutomProcesoTitulacion
         private void lblNombre_Click(object sender, EventArgs e)
         {
 
+
         }
+
+        
+
+        
     }
 }

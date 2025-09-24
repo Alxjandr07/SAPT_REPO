@@ -28,12 +28,17 @@ namespace SistemAutomProcesoTitulacion
         private void btnMarcar_Click(object sender, EventArgs e)
         {
             DateTime dia = monthCalendar1.SelectionStart;
+
             if (!monthCalendar1.BoldedDates.Contains(dia))
             {
                 monthCalendar1.AddBoldedDate(dia);
                 monthCalendar1.UpdateBoldedDates();
+
+                string texto = $"El día {dia.ToShortDateString()} se convoca a una reunión.";
+                ConexionBD.AgregarInformacionReunion(texto);
+
+                ActualizarLabelReuniones(); // Solo actualiza visualmente
             }
-            ActualizarLabelReuniones();
         }
 
         private void btnDesmarcar_Click(object sender, EventArgs e)
@@ -62,10 +67,6 @@ namespace SistemAutomProcesoTitulacion
             {
                 lblMensaje.Text = "No hay reuniones programadas.";
             }
-            else if (monthCalendar1.BoldedDates.Length == 1)
-            {
-                lblMensaje.Text = $"El día {monthCalendar1.BoldedDates[0].ToShortDateString()} se convoca a una reunión.";
-            }
             else
             {
                 var fechas = monthCalendar1.BoldedDates
@@ -75,8 +76,6 @@ namespace SistemAutomProcesoTitulacion
 
                 lblMensaje.Text = "Reuniones programadas:\n" + string.Join("\n", fechas);
             }
-
-            ConexionBD.AgregarInformacionReunion(lblMensaje.Text);
         }
 
         public void ConfigurarModo(bool esCoordinador)
@@ -95,6 +94,30 @@ namespace SistemAutomProcesoTitulacion
         private void frmGestionReunion_Load(object sender, EventArgs e)
         {
             MensajeReuniones = ConexionBD.ObtenerTodasLasInformacionesReuniones();
+        }
+
+        private void btnEliminarReuniones_Click(object sender, EventArgs e)
+        {
+            DialogResult confirmacion = MessageBox.Show(
+           "¿Estás seguro de que deseas eliminar TODAS las reuniones?",
+           "Confirmar eliminación",
+           MessageBoxButtons.YesNo,
+           MessageBoxIcon.Warning);
+
+            if (confirmacion != DialogResult.Yes)
+                return;
+
+            ConexionBD.EliminarTodasLasReuniones();
+
+            // Limpia el calendario visualmente
+            foreach (DateTime fecha in monthCalendar1.BoldedDates)
+            {
+                monthCalendar1.RemoveBoldedDate(fecha);
+            }
+            monthCalendar1.UpdateBoldedDates();
+
+            // Limpia el label
+            lblMensaje.Text = "No hay reuniones programadas.";
         }
     }
 }
