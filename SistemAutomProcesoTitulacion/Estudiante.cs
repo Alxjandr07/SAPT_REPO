@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace SistemAutomProcesoTitulacion
 {
-    internal class Estudiante
+    public class Estudiante
     {
+        public int IdTutor { get; set; }
+        public string Nombre { get; set; }
+        public string Correo { get; set; }
     }
 }
