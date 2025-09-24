@@ -32,9 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnSubir = new System.Windows.Forms.Button();
             this.panelContenedorDocEst = new System.Windows.Forms.Panel();
+            this.btnSubir = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +48,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(800, 48);
             this.panel3.TabIndex = 5;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label1
             // 
@@ -78,26 +78,29 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.panelContenedorDocEst);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnSubir);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 48);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 402);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label2
+            // panelContenedorDocEst
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 22);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Descripciòn de la actividad";
+            this.panelContenedorDocEst.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelContenedorDocEst.Location = new System.Drawing.Point(92, 41);
+            this.panelContenedorDocEst.Margin = new System.Windows.Forms.Padding(2);
+            this.panelContenedorDocEst.Name = "panelContenedorDocEst";
+            this.panelContenedorDocEst.Size = new System.Drawing.Size(616, 301);
+            this.panelContenedorDocEst.TabIndex = 16;
+            this.panelContenedorDocEst.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorDocEst_Paint);
             // 
             // btnSubir
             // 
@@ -107,25 +110,13 @@
             this.btnSubir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubir.Font = new System.Drawing.Font("Century Gothic", 8.765218F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubir.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnSubir.Location = new System.Drawing.Point(112, 322);
+            this.btnSubir.Location = new System.Drawing.Point(92, 347);
             this.btnSubir.Name = "btnSubir";
             this.btnSubir.Size = new System.Drawing.Size(104, 43);
             this.btnSubir.TabIndex = 12;
             this.btnSubir.Text = "Mostrar";
             this.btnSubir.UseVisualStyleBackColor = true;
             this.btnSubir.Click += new System.EventHandler(this.btnDescargar_Click);
-            // 
-            // panelContenedorDocEst
-            // 
-            this.panelContenedorDocEst.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelContenedorDocEst.Location = new System.Drawing.Point(112, 66);
-            this.panelContenedorDocEst.Margin = new System.Windows.Forms.Padding(2);
-            this.panelContenedorDocEst.Name = "panelContenedorDocEst";
-            this.panelContenedorDocEst.Size = new System.Drawing.Size(576, 251);
-            this.panelContenedorDocEst.TabIndex = 16;
-            this.panelContenedorDocEst.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorDocEst_Paint);
             // 
             // frmEntregarDocumentos
             // 
@@ -141,7 +132,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -153,7 +143,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSubir;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelContenedorDocEst;
     }
 }

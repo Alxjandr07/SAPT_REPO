@@ -56,10 +56,15 @@ namespace SistemAutomProcesoTitulacion
             switch (rol)
             {
                 case "Estudiante":
+                    var estudiante = new Estudiante
+                    {
+                        Nombre = nombre,
+                        Correo = correo
+                    };
+
                     destino = new FrmMenuEstudiantes(nombre, rol);
                     break;
                 case "Tutor":
-                    destino = new frmTutor(nombre, rol);
                     var tutor = new Tutor
                     {
                         Nombre = nombre,
@@ -79,7 +84,6 @@ namespace SistemAutomProcesoTitulacion
                     {
                         Nombre = nombre,
                         Correo = correo
-                        // Si tienes IdCoordinador, asígnalo también
                     };
                     destino = new frmMenuCoordinador(coordinador, nombre, rol);
                     break;

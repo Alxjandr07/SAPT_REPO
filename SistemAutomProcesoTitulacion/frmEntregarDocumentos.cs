@@ -12,6 +12,14 @@ namespace SistemAutomProcesoTitulacion
 {
     public partial class frmEntregarDocumentos : Form
     {
+        private Estudiante estudiante;
+
+        public frmEntregarDocumentos(Estudiante estudiante)
+        {
+            InitializeComponent();
+            this.estudiante = estudiante;
+            this.Load += frmEntregarDocumentos_Load;
+        }
         public frmEntregarDocumentos()
         {
             InitializeComponent();
@@ -24,8 +32,7 @@ namespace SistemAutomProcesoTitulacion
 
             formHijo.TopLevel = false;
             formHijo.FormBorderStyle = FormBorderStyle.None;
-            formHijo.Dock = DockStyle.Fill; // Ajusta el formulario hijo al tamaño del panel
-            formHijo.Size = panelContenedorDocEst.ClientSize; // Opcional, asegura el tamaño inicial
+            formHijo.Dock = DockStyle.Fill;
 
             this.panelContenedorDocEst.Controls.Add(formHijo);
             this.panelContenedorDocEst.Tag = formHijo;
@@ -58,6 +65,17 @@ namespace SistemAutomProcesoTitulacion
         }
 
         private void panelContenedorDocEst_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void frmEntregarDocumentos_Load(object sender, EventArgs e)
+        {
+            // Asegura que el panel se ajuste al tamaño del formulario
+            panelContenedorDocEst.Dock = DockStyle.Fill;
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
