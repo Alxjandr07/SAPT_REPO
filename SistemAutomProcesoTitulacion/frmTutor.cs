@@ -12,6 +12,16 @@ namespace SistemAutomProcesoTitulacion
 {
     public partial class frmTutor : Form
     {
+        private Tutor tutor;
+
+        public frmTutor(Tutor tutor, string nombre, string rol)
+        {
+            InitializeComponent();
+            this.tutor = tutor;
+            lblNombre.Text = nombre;
+            lblRol.Text = rol;
+        }
+
         public frmTutor(string nombre, string rol)
         {
             InitializeComponent();
@@ -59,11 +69,6 @@ namespace SistemAutomProcesoTitulacion
             btnMaximizar.Visible = false;
         }
 
-        private void btnAutoridades_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             {
@@ -109,6 +114,25 @@ namespace SistemAutomProcesoTitulacion
                     login.Show();
                 }
             }
+        }
+
+        private void panelContenedorTutor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnRevisionDoc_Click(object sender, EventArgs e)
+        {
+            // Modificamos la creación de frmGestionDoc para usar un constructor válido
+            frmGestionDoc gestionDoc = new frmGestionDoc(tutor); // Eliminamos el argumento 'tutor'
+            gestionDoc.Owner = this;
+            gestionDoc.TopLevel = false;
+            gestionDoc.FormBorderStyle = FormBorderStyle.None;
+            gestionDoc.Dock = DockStyle.Fill;
+            gestionDoc.Size = panelContenedorTutor.ClientSize;
+            panelContenedorTutor.Controls.Clear();
+            panelContenedorTutor.Controls.Add(gestionDoc);
+            gestionDoc.Show();
         }
     }
 }
